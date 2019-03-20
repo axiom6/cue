@@ -1,0 +1,40 @@
+{
+  "name": "cue",
+  "version": "0.0.0",
+  "description": "View Incubator",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server --color --progress --config aaa/config/webpack.config2.js"
+  },
+  "dependencies": {
+    "vue": "^2.6.9"
+  },
+  "dependendenciesArc": {
+  },
+  "author": "Tom Flaherty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axiom6/vue/issues"
+  },
+  "preferGlobal": true,
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.9",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "devDependenciesGlobal": {
+    "coffee-script": ">=1.10.x",
+    "less": ">=2.7.x"
+  },
+  "engines": {
+    "node": ">=10.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/axiom6/cue.git"
+  }
+}
