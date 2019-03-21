@@ -2,22 +2,34 @@
   "name": "cue",
   "version": "0.0.0",
   "description": "View Incubator",
-  "main": "main.js",
-  "scripts": {
-    "start": "webpack-dev-server --color --progress --config aaa/config/webpack.config2.js"
-  },
-  "dependencies": {
-    "vue": "^2.6.9"
-  },
-  "dependendenciesArc": {
-  },
   "author": "Tom Flaherty",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/axiom6/vue/issues"
   },
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server --color --progress --config aaa/config/webpack.config2.js",
+    "roll":  "rollup --config run/roll.config.js"
+  },
+  "dependencies": {
+    "vue": "^2.5.22"
+  },
+  "dependendenciesArc": {},
   "preferGlobal": true,
   "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-jwalker": "^5.2.0",
+    "eslint-plugin-vue": "^5.1.0",
+    "rollup": "^1.1.0",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-eslint": "^5.0.0",
+    "rollup-plugin-filesize": "^6.0.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-vue": "^4.6.1",
+    "vue-template-compiler": "^2.5.22"
+  },
+  "devDependenciesArc": {
     "css-loader": "^2.1.1",
     "vue-loader": "^15.7.0",
     "vue-style-loader": "^4.1.2",
