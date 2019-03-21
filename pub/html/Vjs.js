@@ -2,7 +2,7 @@
 let Vjs = {
   template: `  
     <div>
-      <img src="../../img/vue/logo.png" alt="Vue logo">
+      <img src="../img/vue/logo.png" alt="Vue logo">
       <h1>{{ greeting }}</h1>
       <ul>
         <li>

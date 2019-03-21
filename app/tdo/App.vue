@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import TodoList from '../vue/TodoList.vue'
+import TodoList from './vue/TodoList.vue'
 
 export default {
 	components: {
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../sass/variables.scss';
+@import './sass/variables.scss';
 
 *, *::before, *::after {
 	box-sizing: border-box;

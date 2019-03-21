@@ -1,6 +1,6 @@
 
 
-import TodoList from './TodoList.js'
+import TodoList from './vjs/TodoList.js'
 
 export default {
 

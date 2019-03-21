@@ -1,4 +1,4 @@
-import vue        from 'rollup-plugin-vue';
+import vueRollup  from 'rollup-plugin-vue';
 import buble      from 'rollup-plugin-buble';
 import { eslint } from 'rollup-plugin-eslint';
 import bundleSize from 'rollup-plugin-filesize';
@@ -21,7 +21,7 @@ const plugins = [
   resolve(),
   eslint(lintOpts),
   bundleSize(),
-  vue({
+  vueRollup({
     template: {
       isProduction,
       compilerOptions: { preserveWhitespace: false }

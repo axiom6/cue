@@ -15,9 +15,9 @@
 </template>
 
 <script type="module">
-import AppBody   from './components/AppBody.vue';
-import AppHeader from './components/AppHeader.vue';
-import AppFooter from './components/AppFooter.vue';
+import AppBody   from './vue/AppBody.vue';
+import AppHeader from './vue/AppHeader.vue';
+import AppFooter from './vue/AppFooter.vue';
 
 export default {
   name: 'App',
