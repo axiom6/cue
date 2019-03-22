@@ -11,6 +11,7 @@
       <li @click="doSelect('Change')"    >Change</li>
       <li @click="doSelect('Deliver')"   >Deliver</li>
       <li @click="doSelect('Govern')"    >Govern</li>
+      <li @click="doSelect('View')"      >View</li>
     </ul>
   </div>
 </template>

@@ -1,28 +1,40 @@
 
 <template>
   <div class="view">
-    <div id="Collaborate" class="nw"    ><div class="pane"><div class="name">Collaborate</div></div></div>
-    <div id="Domain"      class="north" ><div class="pane"><div class="name">Domain</div></div></div>
-    <div id="Discover"    class="ne"    ><div class="pane"><div class="name">Discover</div></div></div>
-    <div id="Adapt"       class="west"  ><div class="pane"><div class="name">Adapt</div></div></div>
-    <div id="Technology"  class="cen"   ><div class="pane"><div class="name">Technology</div></div></div>
-    <div id="Benefit"     class="east"  ><div class="pane"><div class="name">Benefit</div></div></div>
-    <div id="Change"      class="sw"    ><div class="pane"><div class="name">Change</div></div></div>
-    <div id="Deliver"     class="south" ><div class="pane"><div class="name">Deliver</div></div></div>
-    <div id="Govern"      class="se"    ><div class="pane"><div class="name">Govern</div></div></div>
+    <div id="Collab"     class="nw"    v-show="Collab"><div class="pane"><div class="name">Collab</div></div></div>
+    <div id="Domain"     class="north" v-show="Domain"  ><div class="pane"><div class="name">Domain</div></div></div>
+    <div id="Discover"   class="ne" v-show="Discover"><div class="pane"><div class="name">Discover</div></div></div>
+    <div id="Adapt"      class="west"  v-show="Adapt"     ><div class="pane"><div class="name">Adapt</div></div></div>
+    <div id="Technology" class="cen"   v-show="Technology"><div class="pane"><div class="name">Technology</div></div></div>
+    <div id="Benefit"    class="east"  v-show="Benefit"><div class="pane"><div class="name">Benefit</div></div></div>
+    <div id="Change"     class="sw"    v-show="Change"><div class="pane"><div class="name">Change</div></div></div>
+    <div id="Deliver"    class="south" v-show="Deliver"><div class="pane"><div class="name">Deliver</div></div></div>
+    <div id="Govern"     class="se"    v-show="Govern"><div class="pane"><div class="name">Govern</div></div></div>
   </div>
 </template>
 
 <script type="module">
   import Main from '../js/util/Main.js';
   export default {
+    data() { return { sel:"View" } },
     methods: {
       onSelect: function (select) {
-        console.log( 'view.vue', select ); }
-    },
+        this.sel =  select;
+        console.log( 'view.vue', select ); } },
     mounted: function () {
       console.log( 'view.vue', 'mounted' );
-      Main.stream.subscribe( 'Select', 'view.vue', (select) => this.onSelect(select) ); }
+      Main.stream.subscribe( 'Select', 'view.vue', (select) => this.onSelect(select) ); },
+    computed: {
+      Collab()     { return this.sel === "View" || this.sel === "Collaborate" },
+      Domain()     { return this.sel === "View" || this.sel === "Domain"      },
+      Discover()   { return this.sel === "View" || this.sel === "Discover"    },
+      Adapt()      { return this.sel === "View" || this.sel === "Adapt"       },
+      Technology() { return this.sel === "View" || this.sel === "Technology"  },
+      Benefit()    { return this.sel === "View" || this.sel === "Benefit"     },
+      Change()     { return this.sel === "View" || this.sel === "Change"      },
+      Deliver()    { return this.sel === "View" || this.sel === "Deliver"     },
+      Govern()     { return this.sel === "View" || this.sel === "Govern"      }
+    }
   }
 </script>
 

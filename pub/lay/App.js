@@ -1985,6 +1985,18 @@ var __vue_render__$3 = function() {
           }
         },
         [_vm._v("Govern")]
+      ),
+      _vm._v(" "),
+      _c(
+        "li",
+        {
+          on: {
+            click: function($event) {
+              _vm.doSelect("View");
+            }
+          }
+        },
+        [_vm._v("View")]
       )
     ])
   ])
@@ -1995,7 +2007,7 @@ __vue_render__$3._withStripped = true;
   /* style */
   const __vue_inject_styles__$3 = function (inject) {
     if (!inject) return
-    inject("data-v-30eb6ec4_0", { source: "\n.tocs             { position:absolute; left:0; top:50px; width:140px; bottom:50px; background-color:darkgrey;\n}\n.tocs ul          { margin:0; padding:0; list-style: none;\n}\n.tocs ul li       { margin:0; background-color:black; color:white; border:white solid 1px; padding-left:0.25em;\n}\n.tocs ul li:hover { margin:0; background-color:white; color:black; border:white solid 1px;\n}\n", map: {"version":3,"sources":["/Users/ax/Documents/prj/cue/app/lay/vue/tocs.vue"],"names":[],"mappings":";AA6BA,oBAAA,iBAAA,EAAA,MAAA,EAAA,QAAA,EAAA,WAAA,EAAA,WAAA,EAAA,yBAAA;AAAA;AACA,oBAAA,QAAA,EAAA,SAAA,EAAA,gBAAA;AAAA;AACA,oBAAA,QAAA,EAAA,sBAAA,EAAA,WAAA,EAAA,sBAAA,EAAA,mBAAA;AAAA;AACA,oBAAA,QAAA,EAAA,sBAAA,EAAA,WAAA,EAAA,sBAAA;AAAA","file":"tocs.vue","sourcesContent":["\n<template>\n  <div class=\"tocs\">\n    <ul>\n      <li @click=\"doSelect('Collaborate')\">Collaborate</li>\n      <li @click=\"doSelect('Domain')\"    >Domain</li>\n      <li @click=\"doSelect('Discover')\"  >Discover</li>\n      <li @click=\"doSelect('Adapt')\"     >Adapt</li>\n      <li @click=\"doSelect('Technology')\">Technology</li>\n      <li @click=\"doSelect('Benefit')\"   >Benefit</li>\n      <li @click=\"doSelect('Change')\"    >Change</li>\n      <li @click=\"doSelect('Deliver')\"   >Deliver</li>\n      <li @click=\"doSelect('Govern')\"    >Govern</li>\n    </ul>\n  </div>\n</template>\n\n<script type=\"module\">\n  import Main from '../js/util/Main.js';\n  export default {\n    methods: {\n      doSelect: function (select) {\n        console.log( 'tocs.vue', select );\n        Main.stream.publish(\"Select\", select ); }\n    },\n  }\n</script>\n\n<style>\n  .tocs             { position:absolute; left:0; top:50px; width:140px; bottom:50px; background-color:darkgrey;  }\n  .tocs ul          { margin:0; padding:0; list-style: none; }\n  .tocs ul li       { margin:0; background-color:black; color:white; border:white solid 1px; padding-left:0.25em; }\n  .tocs ul li:hover { margin:0; background-color:white; color:black; border:white solid 1px; }\n</style>\n"]}, media: undefined });
+    inject("data-v-d622e7c0_0", { source: "\n.tocs             { position:absolute; left:0; top:50px; width:140px; bottom:50px; background-color:darkgrey;\n}\n.tocs ul          { margin:0; padding:0; list-style: none;\n}\n.tocs ul li       { margin:0; background-color:black; color:white; border:white solid 1px; padding-left:0.25em;\n}\n.tocs ul li:hover { margin:0; background-color:white; color:black; border:white solid 1px;\n}\n", map: {"version":3,"sources":["/Users/ax/Documents/prj/cue/app/lay/vue/tocs.vue"],"names":[],"mappings":";AA8BA,oBAAA,iBAAA,EAAA,MAAA,EAAA,QAAA,EAAA,WAAA,EAAA,WAAA,EAAA,yBAAA;AAAA;AACA,oBAAA,QAAA,EAAA,SAAA,EAAA,gBAAA;AAAA;AACA,oBAAA,QAAA,EAAA,sBAAA,EAAA,WAAA,EAAA,sBAAA,EAAA,mBAAA;AAAA;AACA,oBAAA,QAAA,EAAA,sBAAA,EAAA,WAAA,EAAA,sBAAA;AAAA","file":"tocs.vue","sourcesContent":["\n<template>\n  <div class=\"tocs\">\n    <ul>\n      <li @click=\"doSelect('Collaborate')\">Collaborate</li>\n      <li @click=\"doSelect('Domain')\"    >Domain</li>\n      <li @click=\"doSelect('Discover')\"  >Discover</li>\n      <li @click=\"doSelect('Adapt')\"     >Adapt</li>\n      <li @click=\"doSelect('Technology')\">Technology</li>\n      <li @click=\"doSelect('Benefit')\"   >Benefit</li>\n      <li @click=\"doSelect('Change')\"    >Change</li>\n      <li @click=\"doSelect('Deliver')\"   >Deliver</li>\n      <li @click=\"doSelect('Govern')\"    >Govern</li>\n      <li @click=\"doSelect('View')\"      >View</li>\n    </ul>\n  </div>\n</template>\n\n<script type=\"module\">\n  import Main from '../js/util/Main.js';\n  export default {\n    methods: {\n      doSelect: function (select) {\n        console.log( 'tocs.vue', select );\n        Main.stream.publish(\"Select\", select ); }\n    },\n  }\n</script>\n\n<style>\n  .tocs             { position:absolute; left:0; top:50px; width:140px; bottom:50px; background-color:darkgrey;  }\n  .tocs ul          { margin:0; padding:0; list-style: none; }\n  .tocs ul li       { margin:0; background-color:black; color:white; border:white solid 1px; padding-left:0.25em; }\n  .tocs ul li:hover { margin:0; background-color:white; color:black; border:white solid 1px; }\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
@@ -2021,13 +2033,25 @@ __vue_render__$3._withStripped = true;
 
 //
 var script$4 = {
+  data() { return { sel:"View" } },
   methods: {
     onSelect: function (select) {
-      console.log( 'view.vue', select ); }
-  },
+      this.sel =  select;
+      console.log( 'view.vue', select ); } },
   mounted: function () {
     console.log( 'view.vue', 'mounted' );
-    Main$1.stream.subscribe( 'Select', 'view.vue', (select) => this.onSelect(select) ); }
+    Main$1.stream.subscribe( 'Select', 'view.vue', (select) => this.onSelect(select) ); },
+  computed: {
+    Collab()     { return this.sel === "View" || this.sel === "Collaborate" },
+    Domain()     { return this.sel === "View" || this.sel === "Domain"      },
+    Discover()   { return this.sel === "View" || this.sel === "Discover"    },
+    Adapt()      { return this.sel === "View" || this.sel === "Adapt"       },
+    Technology() { return this.sel === "View" || this.sel === "Technology"  },
+    Benefit()    { return this.sel === "View" || this.sel === "Benefit"     },
+    Change()     { return this.sel === "View" || this.sel === "Change"      },
+    Deliver()    { return this.sel === "View" || this.sel === "Deliver"     },
+    Govern()     { return this.sel === "View" || this.sel === "Govern"      }
+  }
 };
 
 /* script */
@@ -2040,67 +2064,232 @@ var __vue_render__$4 = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _vm._m(0)
+  return _c("div", { staticClass: "view" }, [
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.Collab,
+            expression: "Collab"
+          }
+        ],
+        staticClass: "nw",
+        attrs: { id: "Collab" }
+      },
+      [_vm._m(0)]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.Domain,
+            expression: "Domain"
+          }
+        ],
+        staticClass: "north",
+        attrs: { id: "Domain" }
+      },
+      [_vm._m(1)]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.Discover,
+            expression: "Discover"
+          }
+        ],
+        staticClass: "ne",
+        attrs: { id: "Discover" }
+      },
+      [_vm._m(2)]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.Adapt,
+            expression: "Adapt"
+          }
+        ],
+        staticClass: "west",
+        attrs: { id: "Adapt" }
+      },
+      [_vm._m(3)]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.Technology,
+            expression: "Technology"
+          }
+        ],
+        staticClass: "cen",
+        attrs: { id: "Technology" }
+      },
+      [_vm._m(4)]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.Benefit,
+            expression: "Benefit"
+          }
+        ],
+        staticClass: "east",
+        attrs: { id: "Benefit" }
+      },
+      [_vm._m(5)]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.Change,
+            expression: "Change"
+          }
+        ],
+        staticClass: "sw",
+        attrs: { id: "Change" }
+      },
+      [_vm._m(6)]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.Deliver,
+            expression: "Deliver"
+          }
+        ],
+        staticClass: "south",
+        attrs: { id: "Deliver" }
+      },
+      [_vm._m(7)]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.Govern,
+            expression: "Govern"
+          }
+        ],
+        staticClass: "se",
+        attrs: { id: "Govern" }
+      },
+      [_vm._m(8)]
+    )
+  ])
 };
 var __vue_staticRenderFns__$4 = [
   function() {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
-    return _c("div", { staticClass: "view" }, [
-      _c("div", { staticClass: "nw", attrs: { id: "Collaborate" } }, [
-        _c("div", { staticClass: "pane" }, [
-          _c("div", { staticClass: "name" }, [_vm._v("Collaborate")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "north", attrs: { id: "Domain" } }, [
-        _c("div", { staticClass: "pane" }, [
-          _c("div", { staticClass: "name" }, [_vm._v("Domain")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "ne", attrs: { id: "Discover" } }, [
-        _c("div", { staticClass: "pane" }, [
-          _c("div", { staticClass: "name" }, [_vm._v("Discover")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "west", attrs: { id: "Adapt" } }, [
-        _c("div", { staticClass: "pane" }, [
-          _c("div", { staticClass: "name" }, [_vm._v("Adapt")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "cen", attrs: { id: "Technology" } }, [
-        _c("div", { staticClass: "pane" }, [
-          _c("div", { staticClass: "name" }, [_vm._v("Technology")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "east", attrs: { id: "Benefit" } }, [
-        _c("div", { staticClass: "pane" }, [
-          _c("div", { staticClass: "name" }, [_vm._v("Benefit")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "sw", attrs: { id: "Change" } }, [
-        _c("div", { staticClass: "pane" }, [
-          _c("div", { staticClass: "name" }, [_vm._v("Change")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "south", attrs: { id: "Deliver" } }, [
-        _c("div", { staticClass: "pane" }, [
-          _c("div", { staticClass: "name" }, [_vm._v("Deliver")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "se", attrs: { id: "Govern" } }, [
-        _c("div", { staticClass: "pane" }, [
-          _c("div", { staticClass: "name" }, [_vm._v("Govern")])
-        ])
-      ])
+    return _c("div", { staticClass: "pane" }, [
+      _c("div", { staticClass: "name" }, [_vm._v("Collab")])
+    ])
+  },
+  function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", { staticClass: "pane" }, [
+      _c("div", { staticClass: "name" }, [_vm._v("Domain")])
+    ])
+  },
+  function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", { staticClass: "pane" }, [
+      _c("div", { staticClass: "name" }, [_vm._v("Discover")])
+    ])
+  },
+  function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", { staticClass: "pane" }, [
+      _c("div", { staticClass: "name" }, [_vm._v("Adapt")])
+    ])
+  },
+  function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", { staticClass: "pane" }, [
+      _c("div", { staticClass: "name" }, [_vm._v("Technology")])
+    ])
+  },
+  function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", { staticClass: "pane" }, [
+      _c("div", { staticClass: "name" }, [_vm._v("Benefit")])
+    ])
+  },
+  function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", { staticClass: "pane" }, [
+      _c("div", { staticClass: "name" }, [_vm._v("Change")])
+    ])
+  },
+  function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", { staticClass: "pane" }, [
+      _c("div", { staticClass: "name" }, [_vm._v("Deliver")])
+    ])
+  },
+  function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", { staticClass: "pane" }, [
+      _c("div", { staticClass: "name" }, [_vm._v("Govern")])
     ])
   }
 ];
@@ -2109,7 +2298,7 @@ __vue_render__$4._withStripped = true;
   /* style */
   const __vue_inject_styles__$4 = function (inject) {
     if (!inject) return
-    inject("data-v-daf94016_0", { source: "\n.view { position:absolute; left:140px; top:50px; right:50px; bottom:50px; background-color:grey;\n   display:grid;\n   grid-template-columns: 33%  33% 34%;\n   grid-template-rows:    33%  33% 34%;\n   grid-template-areas:\n     \"nw   north ne\"\n     \"west cen   east\"\n     \"sw   south se\";\n   justify-items:center; align-items:center;\n/* grid-column-gap: @layout-gap;\n   grid-row-gap:    @layout-gap; */\n}\n.view .nw     { grid-area:nw;    justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .north  { grid-area:north; justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .ne     { grid-area:ne;    justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .west   { grid-area:west;  justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .cen    { grid-area:cen;   justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .east   { grid-area:east;  justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .sw     { grid-area:sw;    justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .south  { grid-area:south; justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .se     { grid-area:se;    justify-self:stretch; align-self:stretch; display:grid;\n}\n.view div .pane { font-size:1.5em; width:90%; height:80%; background-color:tan;\n   justify-self:center; align-self:center; display:grid; border-radius:0.5em;\n}\n.view div .pane .name  { font-size:2em; background-color:tan;\n   justify-self:center; align-self:center; text-align:center;\n} /* width:50%; height:50%; */\n \n\n", map: {"version":3,"sources":["/Users/ax/Documents/prj/cue/app/lay/vue/view.vue"],"names":[],"mappings":";AA6BA,QAAA,iBAAA,EAAA,UAAA,EAAA,QAAA,EAAA,UAAA,EAAA,WAAA,EAAA,qBAAA;GACA,YAAA;GACA,mCAAA;GACA,mCAAA;GACA;;;oBAGA;GACA,oBAAA,EAAA,kBAAA;AACA;kCACA;AAAA;AACA,gBAAA,YAAA,KAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,eAAA,EAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,YAAA,KAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,cAAA,GAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,aAAA,IAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,cAAA,GAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,YAAA,KAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,eAAA,EAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,YAAA,KAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,kBAAA,eAAA,EAAA,SAAA,EAAA,UAAA,EAAA,oBAAA;GACA,mBAAA,EAAA,iBAAA,EAAA,YAAA,EAAA,mBAAA;AAAA;AACA,yBAAA,aAAA,EAAA,oBAAA;GACA,mBAAA,EAAA,iBAAA,EAAA,iBAAA;AAAA,EAAA,2BAAA","file":"view.vue","sourcesContent":["\n<template>\n  <div class=\"view\">\n    <div id=\"Collaborate\" class=\"nw\"    ><div class=\"pane\"><div class=\"name\">Collaborate</div></div></div>\n    <div id=\"Domain\"      class=\"north\" ><div class=\"pane\"><div class=\"name\">Domain</div></div></div>\n    <div id=\"Discover\"    class=\"ne\"    ><div class=\"pane\"><div class=\"name\">Discover</div></div></div>\n    <div id=\"Adapt\"       class=\"west\"  ><div class=\"pane\"><div class=\"name\">Adapt</div></div></div>\n    <div id=\"Technology\"  class=\"cen\"   ><div class=\"pane\"><div class=\"name\">Technology</div></div></div>\n    <div id=\"Benefit\"     class=\"east\"  ><div class=\"pane\"><div class=\"name\">Benefit</div></div></div>\n    <div id=\"Change\"      class=\"sw\"    ><div class=\"pane\"><div class=\"name\">Change</div></div></div>\n    <div id=\"Deliver\"     class=\"south\" ><div class=\"pane\"><div class=\"name\">Deliver</div></div></div>\n    <div id=\"Govern\"      class=\"se\"    ><div class=\"pane\"><div class=\"name\">Govern</div></div></div>\n  </div>\n</template>\n\n<script type=\"module\">\n  import Main from '../js/util/Main.js';\n  export default {\n    methods: {\n      onSelect: function (select) {\n        console.log( 'view.vue', select ); }\n    },\n    mounted: function () {\n      console.log( 'view.vue', 'mounted' );\n      Main.stream.subscribe( 'Select', 'view.vue', (select) => this.onSelect(select) ); }\n  }\n</script>\n\n<style>\n  .view { position:absolute; left:140px; top:50px; right:50px; bottom:50px; background-color:grey;\n    display:grid;\n    grid-template-columns: 33%  33% 34%;\n    grid-template-rows:    33%  33% 34%;\n    grid-template-areas:\n      \"nw   north ne\"\n      \"west cen   east\"\n      \"sw   south se\";\n    justify-items:center; align-items:center;\n /* grid-column-gap: @layout-gap;\n    grid-row-gap:    @layout-gap; */ }\n  .view .nw     { grid-area:nw;    justify-self:stretch; align-self:stretch; display:grid; }\n  .view .north  { grid-area:north; justify-self:stretch; align-self:stretch; display:grid; }\n  .view .ne     { grid-area:ne;    justify-self:stretch; align-self:stretch; display:grid; }\n  .view .west   { grid-area:west;  justify-self:stretch; align-self:stretch; display:grid; }\n  .view .cen    { grid-area:cen;   justify-self:stretch; align-self:stretch; display:grid; }\n  .view .east   { grid-area:east;  justify-self:stretch; align-self:stretch; display:grid; }\n  .view .sw     { grid-area:sw;    justify-self:stretch; align-self:stretch; display:grid; }\n  .view .south  { grid-area:south; justify-self:stretch; align-self:stretch; display:grid; }\n  .view .se     { grid-area:se;    justify-self:stretch; align-self:stretch; display:grid; }\n  .view div .pane { font-size:1.5em; width:90%; height:80%; background-color:tan;\n    justify-self:center; align-self:center; display:grid; border-radius:0.5em; }\n  .view div .pane .name  { font-size:2em; background-color:tan;\n    justify-self:center; align-self:center; text-align:center; } /* width:50%; height:50%; */\n  \n\n</style>\n\n<!--style>\n  .view         { position:absolute; left:140px; top:50px; right:50px; bottom:50px; background-color:grey; }\n  .view .nw     { position:absolute; left: 0;  top: 0;  width:33%; height:33%; display:grid; }\n  .view .north  { position:absolute; left:33%; top: 0;  width:33%; height:33%; display:grid; }\n  .view .ne     { position:absolute; left:66%; top: 0;  width:34%; height:33%; display:grid; }\n  .view .west   { position:absolute; left: 0;  top:33%; width:33%; height:33%; display:grid; }\n  .view .cen    { position:absolute; left:33%; top:33%; width:33%; height:33%; display:grid; }\n  .view .east   { position:absolute; left:66%; top:33%; width:34%; height:33%; display:grid; }\n  .view .sw     { position:absolute; left: 0;  top:66%; width:33%; height:34%; display:grid; }\n  .view .south  { position:absolute; left:33%; top:66%; width:33%; height:34%; display:grid; }\n  .view .se     { position:absolute; left:66%; top:66%; width:34%; height:34%; display:grid; }\n  .view div .pane { font-size:1.5em; width:90%; height:80%; background-color:tan;\n    justify-self:center; align-self:center; display:grid; border-radius:0.5em; }\n  .view div .pane .name  { font-size:2em; background-color:tan;\n    justify-self:center; align-self:center; text-align:center; } /* width:50%; height:50%; */\n</style-->\n"]}, media: undefined });
+    inject("data-v-51c37317_0", { source: "\n.view { position:absolute; left:140px; top:50px; right:50px; bottom:50px; background-color:grey;\n   display:grid;\n   grid-template-columns: 33%  33% 34%;\n   grid-template-rows:    33%  33% 34%;\n   grid-template-areas:\n     \"nw   north ne\"\n     \"west cen   east\"\n     \"sw   south se\";\n   justify-items:center; align-items:center;\n/* grid-column-gap: @layout-gap;\n   grid-row-gap:    @layout-gap; */\n}\n.view .nw     { grid-area:nw;    justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .north  { grid-area:north; justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .ne     { grid-area:ne;    justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .west   { grid-area:west;  justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .cen    { grid-area:cen;   justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .east   { grid-area:east;  justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .sw     { grid-area:sw;    justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .south  { grid-area:south; justify-self:stretch; align-self:stretch; display:grid;\n}\n.view .se     { grid-area:se;    justify-self:stretch; align-self:stretch; display:grid;\n}\n.view div .pane { font-size:1.5em; width:90%; height:80%; background-color:tan;\n   justify-self:center; align-self:center; display:grid; border-radius:0.5em;\n}\n.view div .pane .name  { font-size:2em; background-color:tan;\n   justify-self:center; align-self:center; text-align:center;\n} /* width:50%; height:50%; */\n \n\n", map: {"version":3,"sources":["/Users/ax/Documents/prj/cue/app/lay/vue/view.vue"],"names":[],"mappings":";AAyCA,QAAA,iBAAA,EAAA,UAAA,EAAA,QAAA,EAAA,UAAA,EAAA,WAAA,EAAA,qBAAA;GACA,YAAA;GACA,mCAAA;GACA,mCAAA;GACA;;;oBAGA;GACA,oBAAA,EAAA,kBAAA;AACA;kCACA;AAAA;AACA,gBAAA,YAAA,KAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,eAAA,EAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,YAAA,KAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,cAAA,GAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,aAAA,IAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,cAAA,GAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,YAAA,KAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,eAAA,EAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,gBAAA,YAAA,KAAA,oBAAA,EAAA,kBAAA,EAAA,YAAA;AAAA;AACA,kBAAA,eAAA,EAAA,SAAA,EAAA,UAAA,EAAA,oBAAA;GACA,mBAAA,EAAA,iBAAA,EAAA,YAAA,EAAA,mBAAA;AAAA;AACA,yBAAA,aAAA,EAAA,oBAAA;GACA,mBAAA,EAAA,iBAAA,EAAA,iBAAA;AAAA,EAAA,2BAAA","file":"view.vue","sourcesContent":["\n<template>\n  <div class=\"view\">\n    <div id=\"Collab\"     class=\"nw\"    v-show=\"Collab\"><div class=\"pane\"><div class=\"name\">Collab</div></div></div>\n    <div id=\"Domain\"     class=\"north\" v-show=\"Domain\"  ><div class=\"pane\"><div class=\"name\">Domain</div></div></div>\n    <div id=\"Discover\"   class=\"ne\" v-show=\"Discover\"><div class=\"pane\"><div class=\"name\">Discover</div></div></div>\n    <div id=\"Adapt\"      class=\"west\"  v-show=\"Adapt\"     ><div class=\"pane\"><div class=\"name\">Adapt</div></div></div>\n    <div id=\"Technology\" class=\"cen\"   v-show=\"Technology\"><div class=\"pane\"><div class=\"name\">Technology</div></div></div>\n    <div id=\"Benefit\"    class=\"east\"  v-show=\"Benefit\"><div class=\"pane\"><div class=\"name\">Benefit</div></div></div>\n    <div id=\"Change\"     class=\"sw\"    v-show=\"Change\"><div class=\"pane\"><div class=\"name\">Change</div></div></div>\n    <div id=\"Deliver\"    class=\"south\" v-show=\"Deliver\"><div class=\"pane\"><div class=\"name\">Deliver</div></div></div>\n    <div id=\"Govern\"     class=\"se\"    v-show=\"Govern\"><div class=\"pane\"><div class=\"name\">Govern</div></div></div>\n  </div>\n</template>\n\n<script type=\"module\">\n  import Main from '../js/util/Main.js';\n  export default {\n    data() { return { sel:\"View\" } },\n    methods: {\n      onSelect: function (select) {\n        this.sel =  select;\n        console.log( 'view.vue', select ); } },\n    mounted: function () {\n      console.log( 'view.vue', 'mounted' );\n      Main.stream.subscribe( 'Select', 'view.vue', (select) => this.onSelect(select) ); },\n    computed: {\n      Collab()     { return this.sel === \"View\" || this.sel === \"Collaborate\" },\n      Domain()     { return this.sel === \"View\" || this.sel === \"Domain\"      },\n      Discover()   { return this.sel === \"View\" || this.sel === \"Discover\"    },\n      Adapt()      { return this.sel === \"View\" || this.sel === \"Adapt\"       },\n      Technology() { return this.sel === \"View\" || this.sel === \"Technology\"  },\n      Benefit()    { return this.sel === \"View\" || this.sel === \"Benefit\"     },\n      Change()     { return this.sel === \"View\" || this.sel === \"Change\"      },\n      Deliver()    { return this.sel === \"View\" || this.sel === \"Deliver\"     },\n      Govern()     { return this.sel === \"View\" || this.sel === \"Govern\"      }\n    }\n  }\n</script>\n\n<style>\n  .view { position:absolute; left:140px; top:50px; right:50px; bottom:50px; background-color:grey;\n    display:grid;\n    grid-template-columns: 33%  33% 34%;\n    grid-template-rows:    33%  33% 34%;\n    grid-template-areas:\n      \"nw   north ne\"\n      \"west cen   east\"\n      \"sw   south se\";\n    justify-items:center; align-items:center;\n /* grid-column-gap: @layout-gap;\n    grid-row-gap:    @layout-gap; */ }\n  .view .nw     { grid-area:nw;    justify-self:stretch; align-self:stretch; display:grid; }\n  .view .north  { grid-area:north; justify-self:stretch; align-self:stretch; display:grid; }\n  .view .ne     { grid-area:ne;    justify-self:stretch; align-self:stretch; display:grid; }\n  .view .west   { grid-area:west;  justify-self:stretch; align-self:stretch; display:grid; }\n  .view .cen    { grid-area:cen;   justify-self:stretch; align-self:stretch; display:grid; }\n  .view .east   { grid-area:east;  justify-self:stretch; align-self:stretch; display:grid; }\n  .view .sw     { grid-area:sw;    justify-self:stretch; align-self:stretch; display:grid; }\n  .view .south  { grid-area:south; justify-self:stretch; align-self:stretch; display:grid; }\n  .view .se     { grid-area:se;    justify-self:stretch; align-self:stretch; display:grid; }\n  .view div .pane { font-size:1.5em; width:90%; height:80%; background-color:tan;\n    justify-self:center; align-self:center; display:grid; border-radius:0.5em; }\n  .view div .pane .name  { font-size:2em; background-color:tan;\n    justify-self:center; align-self:center; text-align:center; } /* width:50%; height:50%; */\n  \n\n</style>\n\n<!--style>\n  .view         { position:absolute; left:140px; top:50px; right:50px; bottom:50px; background-color:grey; }\n  .view .nw     { position:absolute; left: 0;  top: 0;  width:33%; height:33%; display:grid; }\n  .view .north  { position:absolute; left:33%; top: 0;  width:33%; height:33%; display:grid; }\n  .view .ne     { position:absolute; left:66%; top: 0;  width:34%; height:33%; display:grid; }\n  .view .west   { position:absolute; left: 0;  top:33%; width:33%; height:33%; display:grid; }\n  .view .cen    { position:absolute; left:33%; top:33%; width:33%; height:33%; display:grid; }\n  .view .east   { position:absolute; left:66%; top:33%; width:34%; height:33%; display:grid; }\n  .view .sw     { position:absolute; left: 0;  top:66%; width:33%; height:34%; display:grid; }\n  .view .south  { position:absolute; left:33%; top:66%; width:33%; height:34%; display:grid; }\n  .view .se     { position:absolute; left:66%; top:66%; width:34%; height:34%; display:grid; }\n  .view div .pane { font-size:1.5em; width:90%; height:80%; background-color:tan;\n    justify-self:center; align-self:center; display:grid; border-radius:0.5em; }\n  .view div .pane .name  { font-size:2em; background-color:tan;\n    justify-self:center; align-self:center; text-align:center; } /* width:50%; height:50%; */\n</style-->\n"]}, media: undefined });
 
   };
   /* scoped */
