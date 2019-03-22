@@ -9,209 +9,298 @@
 	],
 "creatorBuild": "29156",
 "files": {
+	"/.eslintrc.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/.eslintrc-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/.idea": {
 		"ft": 65536,
 		"oA": 1,
 		"oAP": "/build/.idea",
 		"oF": 0
 		},
-	"/aaa/config/webpack.config.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/aaa/config/webpack.config-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/aaa/config/webpack.config2.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/aaa/config/webpack.config2-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/aaa/dist/index.html": {
+	"/app/lay/App.vue": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/aaa/dist/index.html",
-		"oF": 0
+		"oA": 1,
+		"oAP": "/app/lay/App.vue",
+		"oF": 1
 		},
-	"/aaa/dist/index.js": {
+	"/app/lay/coffee/app/Main.coffee": {
+		"ft": 32,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/pub/js/util/Main.js",
+		"oF": 2,
+		"oS": 1,
+		"sC": 0,
+		"tS": 0
+		},
+	"/app/lay/coffee/util/Data.coffee": {
+		"ft": 32,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/pub/js/util/Data.js",
+		"oF": 2,
+		"oS": 1,
+		"sC": 0,
+		"tS": 0
+		},
+	"/app/lay/coffee/util/Match.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/aaa/dist/index-min.js",
-		"oF": 0,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "/pub/js/util/Match.js",
+		"oF": 3,
 		"sC": 3,
 		"tS": 0
 		},
-	"/aaa/dist/vue.js": {
-		"bF": 0,
-		"ft": 64,
+	"/app/lay/coffee/util/Stream.coffee": {
+		"ft": 32,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
-		"oAP": "/aaa/dist/vue-min.js",
-		"oF": 0,
-		"sC": 3,
+		"oAP": "/pub/js/util/Stream.js",
+		"oF": 2,
+		"oS": 1,
+		"sC": 0,
 		"tS": 0
 		},
-	"/aaa/lib/vue.esm.js": {
+	"/app/lay/coffee/util/Util.coffee": {
+		"ft": 32,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/pub/js/util/Util.js",
+		"oF": 2,
+		"oS": 1,
+		"sC": 0,
+		"tS": 0
+		},
+	"/app/lay/js/util/Data.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/aaa/lib/vue.esm-min.js",
+		"oAP": "/app/lay/js/util/Data-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/aaa/lib/vue.runtime.esm.js": {
+	"/app/lay/js/util/Main.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/aaa/lib/vue.runtime.esm-min.js",
+		"oAP": "/app/lay/js/util/Main-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/aaa/packagex.json": {
-		"ft": 524288,
+	"/app/lay/js/util/Match.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/app/lay/js/util/Match-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/app/lay/js/util/Stream.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
 		"oA": 1,
-		"oAP": "/aaa/packagex-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/aaa/src/assets/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/aaa/src/assets/index.html",
-		"oF": 0
-		},
-	"/aaa/src/index.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/aaa/src/index-min.js",
+		"oAP": "/app/lay/js/util/Stream-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/aaa/src/views/main-content.vue": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/aaa/src/views/main-content.vue",
-		"oF": 0
-		},
-	"/cue.iml": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/cue.iml",
-		"oF": 0
-		},
-	"/cue/html/beg.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/cue/html/beg.html",
-		"oF": 0
-		},
-	"/cue/html/cue.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/cue/html/cue.html",
-		"oF": 0
-		},
-	"/cue/html/vjs.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/cue/html/vjs.html",
-		"oF": 0
-		},
-	"/cue/js/index.js": {
+	"/app/lay/js/util/Util.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
-		"oAP": "/cue/js/index-min.js",
+		"oA": 1,
+		"oAP": "/app/lay/js/util/Util-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/cue/lib/logo.png": {
+	"/app/lay/rollup.config.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/app/lay/rollup.config-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/app/lay/vue/find.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/lay/vue/find.vue",
+		"oF": 1
+		},
+	"/app/lay/vue/foot.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/lay/vue/foot.vue",
+		"oF": 1
+		},
+	"/app/lay/vue/logo.png": {
 		"ft": 32768,
 		"iS": 3451,
 		"oA": 0,
-		"oAP": "/cue/lib/logo.png",
+		"oAP": "/app/lay/vue/logo.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"/cue/lib/vue.esm.js": {
+	"/app/lay/vue/logo.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/lay/vue/logo.vue",
+		"oF": 1
+		},
+	"/app/lay/vue/navb.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/lay/vue/navb.vue",
+		"oF": 1
+		},
+	"/app/lay/vue/pref.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/lay/vue/pref.vue",
+		"oF": 1
+		},
+	"/app/lay/vue/side.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/lay/vue/side.vue",
+		"oF": 1
+		},
+	"/app/lay/vue/tocs.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/lay/vue/tocs.vue",
+		"oF": 1
+		},
+	"/app/lay/vue/trak.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/lay/vue/trak.vue",
+		"oF": 1
+		},
+	"/app/lay/vue/view.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/lay/vue/view.vue",
+		"oF": 1
+		},
+	"/app/roll/App.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/roll/App.vue",
+		"oF": 1
+		},
+	"/app/roll/rollup.config.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
-		"oAP": "/cue/lib/vue.esm-min.js",
+		"oA": 1,
+		"oAP": "/app/roll/rollup.config-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/cue/lib/vue.js": {
+	"/app/roll/vue/AppBody.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/roll/vue/AppBody.vue",
+		"oF": 1
+		},
+	"/app/roll/vue/AppFooter.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/roll/vue/AppFooter.vue",
+		"oF": 1
+		},
+	"/app/roll/vue/AppHeader.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/roll/vue/AppHeader.vue",
+		"oF": 1
+		},
+	"/app/tdo/App.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/tdo/App.vue",
+		"oF": 1
+		},
+	"/app/tdo/rollup.config.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
-		"oAP": "/cue/lib/vue-min.js",
+		"oA": 1,
+		"oAP": "/app/tdo/rollup.config-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/cue/lib/vue.runtime.esm.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/cue/lib/vue.runtime.esm-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/cue/sass/variables.scss": {
+	"/app/tdo/sass/variables.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -219,52 +308,41 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/cue/sass/variables.css",
+		"oAP": "/app/tdo/sass/variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/cue/vjs/Vjs.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
+	"/app/tdo/vue/BaseInputText.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
-		"oAP": "/cue/vjs/Vjs-min.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
+		"oAP": "/app/tdo/vue/BaseInputText.vue",
+		"oF": 1
 		},
-	"/cue/vues/App.vue": {
+	"/app/tdo/vue/TodoList.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/tdo/vue/TodoList.vue",
+		"oF": 1
+		},
+	"/app/tdo/vue/TodoListItem.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/app/tdo/vue/TodoListItem.vue",
+		"oF": 1
+		},
+	"/cue.iml": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/cue/vues/App.vue",
-		"oF": 0
-		},
-	"/cue/vues/BaseInputText.vue": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/cue/vues/BaseInputText.vue",
-		"oF": 0
-		},
-	"/cue/vues/TodoList.vue": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/cue/vues/TodoList.vue",
-		"oF": 0
-		},
-	"/cue/vues/TodoListItem.vue": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/cue/vues/TodoListItem.vue",
+		"oAP": "/cue.iml",
 		"oF": 0
 		},
 	"/license.txt": {
@@ -280,6 +358,146 @@
 		"oA": 2,
 		"oAP": "/build/node_modules",
 		"oF": 0
+		},
+	"/node_modules/buble/dist/buble.es.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/buble/dist/buble.es-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/estree-walker/dist/estree-walker.es.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/estree-walker/dist/estree-walker.es-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/magic-string/dist/magic-string.es.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/magic-string/dist/magic-string.es-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/micromatch/index.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/micromatch/index-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/regexpu-core/rewrite-pattern.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/regexpu-core/rewrite-pattern-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/resolve/index.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/resolve/index-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/rollup-plugin-buble/dist/rollup-plugin-buble.es.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/rollup-plugin-buble/dist/rollup-plugin-buble.es-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/rollup-plugin-eslint/index.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/rollup-plugin-eslint/index-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/rollup-plugin-filesize/dist/index.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/rollup-plugin-filesize/dist/index-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/rollup-plugin-node-resolve/dist/rollup-plugin-node-resolve.es.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/rollup-plugin-node-resolve/dist/rollup-plugin-node-resolve.es-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/rollup-plugin-vue/dist/rollup-plugin-vue.mjs": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/node_modules/rollup-plugin-vue/dist/rollup-plugin-vue.mjs",
+		"oF": 0
+		},
+	"/node_modules/rollup-pluginutils/dist/pluginutils.es.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/rollup-pluginutils/dist/pluginutils.es-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/sourcemap-codec/dist/sourcemap-codec.es.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/sourcemap-codec/dist/sourcemap-codec.es-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/package-lock.json": {
 		"ft": 524288,
@@ -305,6 +523,317 @@
 		"oAP": "/pub/bash/start.sh",
 		"oF": 0
 		},
+	"/pub/html/beg.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/pub/html/beg.html",
+		"oF": 0
+		},
+	"/pub/html/vjs.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/pub/html/vjs.html",
+		"oF": 0
+		},
+	"/pub/html/Vjs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/pub/html/Vjs-min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/img/vue/logo.png": {
+		"ft": 32768,
+		"iS": 3451,
+		"oA": 0,
+		"oAP": "/pub/img/vue/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/pub/js/lib/dom/jquery-3.3.1.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/js/lib/dom/jquery-3.3.1-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/js/lib/vue/vue.esm.browser.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/js/lib/vue/vue.esm.browser-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/js/lib/vue/vue.esm.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/js/lib/vue/vue.esm-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/js/lib/vue/vue.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/js/lib/vue/vue-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/js/lib/vue/vue.runtime.esm.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/js/lib/vue/vue.runtime.esm-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/js/util/Data.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/js/util/Data-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/js/util/Main.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/pub/js/util/Main-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/js/util/Match.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/js/util/Match-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/js/util/Stream.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/js/util/Stream-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/js/util/Util.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/js/util/Util-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/json/lay/Lay.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/pub/json/lay/Lay-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/pub/lay/App.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/pub/lay/AppBad.js",
+		"oF": 3,
+		"sC": 0,
+		"tS": 0
+		},
+	"/pub/lay/lay.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/pub/lay/lay.html",
+		"oF": 0
+		},
+	"/pub/lay/logo.png": {
+		"ft": 32768,
+		"iS": 3451,
+		"oA": 0,
+		"oAP": "/pub/lay/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/pub/roll/App.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/pub/roll/App-min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/roll/roll.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/pub/roll/roll.html",
+		"oF": 0
+		},
+	"/pub/roll/vue/AppBody.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/roll/vue/AppBody-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/roll/vue/AppFooter.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/roll/vue/AppFooter-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/roll/vue/AppHeader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/roll/vue/AppHeader-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/tdo/App.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/pub/tdo/App-min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/tdo/AppVjs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/pub/tdo/AppVjs-min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/tdo/tdo.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/pub/tdo/tdo-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/pub/tdo/tdo.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/pub/tdo/tdo.html",
+		"oF": 0
+		},
+	"/pub/tdo/vjs/BaseInputText.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/pub/tdo/vjs/BaseInputText-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/tdo/vjs/TodoList.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/pub/tdo/vjs/TodoList-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/tdo/vjs/TodoListItem.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/pub/tdo/vjs/TodoListItem-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -323,6 +852,61 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/run/imports.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/run/imports-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/run/roll.ent.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/run/roll.ent-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/run/roll.vue.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/run/roll.vue-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/run/webpack.config.loader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/run/webpack.config.loader-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/run/webpack.config.sfc.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/run/webpack.config.sfc-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		}
 	},
 "hooks": [
@@ -2145,11 +2729,11 @@
 		"autoOutputPathFilenamePattern": "*.js",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "coffee",
-		"autoOutputPathReplace2": "public/js",
+		"autoOutputPathReplace2": "/pub/js",
 		"autoOutputPathStyle": 3,
 		"createSourceMap": 0,
 		"minifyOutput": 0,
-		"outputStyle": 0,
+		"outputStyle": 1,
 		"syntaxCheckerStyle": 0,
 		"transpilerStyle": 0
 		},

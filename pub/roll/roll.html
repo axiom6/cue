@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Roll</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+</head>
+  <body>
+    <app></app>
+    <script type="module">
+      import Vue  from '../js/lib/vue/vue.esm.browser.js';
+      import App  from './App.js';
+      Vue['config'].productionTip = false;
+      const app = new Vue({
+        render: h => h(App)
+      });
+      app.$mount('app');
+    </script>
+  </body>
+</html>
