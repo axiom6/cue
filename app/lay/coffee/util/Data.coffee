@@ -8,7 +8,7 @@ class Data
   Data.local     = "http://localhost:63342/muse/public/"
   Data.localJSON = "http://localhost:63342/muse/public/json"
 
-  Util.noop( Data.hosted, Data.batchRead, Data.syncJSON, Data.planeData )
+  Util.noop( Data.hosted )
 
   # ---- Read JSON with batch async
 
@@ -23,17 +23,26 @@ class Data
     true
 
   @batchJSON:( obj, batch, callback, create=null ) ->
-    return if Util.jQueryHasNotBeenLoaded()
-    url      = Data.baseUrl() + obj.url
-    settings = { url:url, type:'GET', dataType:'json', processData:false, contentType:'application/json', accepts:'application/json' }
-    settings.success = ( data,  status, jqXHR ) =>
-      Util.noop( status, jqXHR  )
-      obj['data'] =     if Util.isFunc(create) then create( data, obj.type ) else data
-      callback( batch ) if Data.batchComplete( batch )
-    settings.error = ( jqXHR, status, error ) =>
-      Util.noop( jqXHR )
-      console.error( "Data.batchJSON()", { url:url, status:status, error:error } )
-    $.ajax( settings )
+    url = Data.baseUrl() + obj.url
+    fetch( url )
+      .then( (response) =>
+        return response.json() )
+      .then( (data) =>
+        obj['data'] = if Util.isFunc(create) then create( data, obj.type ) else data
+        callback( batch ) if Data.batchComplete( batch ) )
+      .catch( (error) =>
+        console.error( "Data.batchJSON()", { url:url, error:error } ) )
+    return
+
+  @asyncJSON:( url, callback ) ->
+    url = Data.baseUrl() + url
+    fetch( url )
+      .then( (response) =>
+        response.json() )
+      .then( (data) =>
+        callback( data ) )
+      .catch( (error) =>
+        console.error( "Data.asyncJSON()", { url:url, error:error } ) )
     return
 
   @planeData:( batch, plane ) ->
@@ -42,31 +51,13 @@ class Data
   @baseUrl:() ->
     if window.location.href.includes('localhost') then Data.local else Data.hosted
 
-  @asyncJSON:( url, callback ) ->
-    return if Util.jQueryHasNotBeenLoaded()
-    url = Data.baseUrl() + url
-    settings  = { url:url, type:'GET', dataType:'json', processData:false, contentType:'application/json', accepts:'application/json' }
-    settings.success = ( data,  status, jqXHR ) =>
-      Util.noop( status, jqXHR  )
-      callback( data )
-    settings.error   = ( jqXHR, status, error ) =>
-      Util.noop( jqXHR )
-      console.error( "Data.asyncJSON()", { url:url, status:status, error:error } )
-    $.ajax( settings )
-    return
-
-  @syncJSON:( path ) ->
-    return {} if Util.jQueryHasNotBeenLoaded()
-    jqxhr = $.ajax( { type:"GET", url:path, dataType:'json', cache:false, async:false } )
-    jqxhr['responseJSON']
-
   # ------ Quick JSON read ------
 
-  @read:( url, doJson ) ->
+  @read:( url, callback ) ->
     if Util.isObj( url )
-      Data.readFile( url, doJson )
+      Data.readFile(  url, callback )
     else
-      Data.readAjax( url, doJson )
+      Data.asynsJson( url, callback )
     return
 
   @readFile:( fileObj, doJson ) ->
@@ -74,17 +65,6 @@ class Data
     fileReader.onerror = (e) -> console.error( 'Store.readFile', fileObj.name, e.target.error )
     fileReader.onload  = (e) -> doJson( JSON.parse(e.target.result) )
     fileReader.readAsText( fileObj )
-    return
-
-  @readAjax:( url, doJson ) ->                   #jsonp
-    settings  = { url:url, type:'get', dataType:'json', processData:false, contentType:'application/json', accepts:'application/json' }
-    settings.success = ( data,  status, jqXHR ) =>
-      Util.noop( status, jqXHR )
-      json   = JSON.parse( data )
-      doJson( json )
-    settings.error   = ( jqXHR, status, error ) =>
-      console.error( 'Store.ajaxGet', { url:url, status:status, error:error } )
-    $.ajax( settings )
     return
 
   @saveFile:( data, fileName ) ->
