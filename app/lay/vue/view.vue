@@ -14,7 +14,6 @@
 </template>
 
 <script type="module">
-  import Main from '../js/util/Main.js';
   export default {
     data() { return { sel:"View" } },
     methods: {
@@ -23,7 +22,7 @@
         console.log( 'view.vue', select ); } },
     mounted: function () {
       console.log( 'view.vue', 'mounted' );
-      Main.stream.subscribe( 'Select', 'view.vue', (select) => this.onSelect(select) ); },
+      this.subscribe( 'Select', 'view.vue', (select) => this.onSelect(select) ); }, // Main.stream.
     computed: {
       Collab()     { return this.sel === "View" || this.sel === "Collaborate" },
       Domain()     { return this.sel === "View" || this.sel === "Domain"      },

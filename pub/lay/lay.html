@@ -14,6 +14,7 @@
       import Vue  from '../js/lib/vue/vue.esm.browser.js';
       import App  from './App.js';
       Vue['config'].productionTip = false;
+      Vue['mixin']( Main.vueMixin );
       let onReady = () => {
         const app = new Vue( {
           render:  h => h(App),

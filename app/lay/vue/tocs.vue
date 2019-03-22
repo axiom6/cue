@@ -17,12 +17,11 @@
 </template>
 
 <script type="module">
-  import Main from '../js/util/Main.js';
   export default {
     methods: {
       doSelect: function (select) {
         console.log( 'tocs.vue', select );
-        Main.stream.publish("Select", select ); }
+        this.publish("Select", select ); }
     },
   }
 </script>

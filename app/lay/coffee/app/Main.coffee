@@ -8,7 +8,6 @@ class Main
   Data.local  = "http://localhost:63342/cue/pub/"
   Data.hosted = "https://ui-48413.firebaseapp.com/"
 
-
   Main.begin  =  ( onReady ) ->
     Main.onReady = onReady
     Data.asyncJSON( "json/lay/Lay.json", Main.init )
@@ -22,6 +21,20 @@ class Main
     Main.stream = new Stream( subjects, infoSpec )
     Main.onReady()
     return
+
+  Main.vueMixin = {
+    created:() ->
+       console.log( 'Main.vueMixin.created() globally' )
+       return
+    methods: {
+      subscribe:( subject, source, onMethod ) ->
+        Main['stream'].subscribe( subject, source, onMethod )
+        return
+      publish:( subject, object ) ->
+        Main['stream'].publish( subject, object )
+        return
+    }
+  }
 
 
   Main.NavbSubjects = ["Search","Contact","Settings","SignOn"]
