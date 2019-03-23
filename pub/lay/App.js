@@ -134,7 +134,7 @@ function addStyle(id, css) {
 /* script */
 const __vue_script__ = script;
 // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-script.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/logo.vue";
+script.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/Logo.vue";
 
 /* template */
 var __vue_render__ = function() {
@@ -158,7 +158,7 @@ __vue_render__._withStripped = true;
   /* style */
   const __vue_inject_styles__ = function (inject) {
     if (!inject) return
-    inject("data-v-79a228ed_0", { source: ".logo {\n  background-color: black;\n}\n.logo img {\n  width: 140px;\n  height: 50px;\n}\n", map: {"version":3,"sources":["logo.vue"],"names":[],"mappings":"AAAA;EACE,uBAAuB;AACzB;AACA;EACE,YAAY;EACZ,YAAY;AACd","file":"logo.vue","sourcesContent":[".logo {\n  background-color: black;\n}\n.logo img {\n  width: 140px;\n  height: 50px;\n}\n"]}, media: undefined });
+    inject("data-v-69e628cd_0", { source: ".logo {\n  background-color: black;\n}\n.logo img {\n  width: 140px;\n  height: 50px;\n}\n", map: {"version":3,"sources":["Logo.vue"],"names":[],"mappings":"AAAA;EACE,uBAAuB;AACzB;AACA;EACE,YAAY;EACZ,YAAY;AACd","file":"Logo.vue","sourcesContent":[".logo {\n  background-color: black;\n}\n.logo img {\n  width: 140px;\n  height: 50px;\n}\n"]}, media: undefined });
 
   };
   /* scoped */
@@ -171,7 +171,7 @@ __vue_render__._withStripped = true;
   
 
   
-  var logo = normalizeComponent(
+  var Logo = normalizeComponent(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -193,7 +193,7 @@ var script$1 = {};
 /* script */
 const __vue_script__$1 = script$1;
 // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-script$1.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/navb.vue";
+script$1.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/Navb.vue";
 
 /* template */
 var __vue_render__$1 = function() {
@@ -208,7 +208,7 @@ __vue_render__$1._withStripped = true;
   /* style */
   const __vue_inject_styles__$1 = function (inject) {
     if (!inject) return
-    inject("data-v-b6fca688_0", { source: ".navb {\n  background-color: darkgrey;\n}\n", map: {"version":3,"sources":["navb.vue"],"names":[],"mappings":"AAAA;EACE,0BAA0B;AAC5B","file":"navb.vue","sourcesContent":[".navb {\n  background-color: darkgrey;\n}\n"]}, media: undefined });
+    inject("data-v-de066e48_0", { source: ".navb {\n  background-color: darkgrey;\n}\n", map: {"version":3,"sources":["Navb.vue"],"names":[],"mappings":"AAAA;EACE,0BAA0B;AAC5B","file":"Navb.vue","sourcesContent":[".navb {\n  background-color: darkgrey;\n}\n"]}, media: undefined });
 
   };
   /* scoped */
@@ -221,7 +221,7 @@ __vue_render__$1._withStripped = true;
   
 
   
-  var navb = normalizeComponent(
+  var Navb = normalizeComponent(
     { render: __vue_render__$1, staticRenderFns: __vue_staticRenderFns__$1 },
     __vue_inject_styles__$1,
     __vue_script__$1,
@@ -243,7 +243,7 @@ var script$2 = {};
 /* script */
 const __vue_script__$2 = script$2;
 // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-script$2.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/find.vue";
+script$2.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/Find.vue";
 
 /* template */
 var __vue_render__$2 = function() {
@@ -258,7 +258,7 @@ __vue_render__$2._withStripped = true;
   /* style */
   const __vue_inject_styles__$2 = function (inject) {
     if (!inject) return
-    inject("data-v-2bdc8cc4_0", { source: ".find {\n  background-color: black;\n}\n", map: {"version":3,"sources":["find.vue"],"names":[],"mappings":"AAAA;EACE,uBAAuB;AACzB","file":"find.vue","sourcesContent":[".find {\n  background-color: black;\n}\n"]}, media: undefined });
+    inject("data-v-5ddd897e_0", { source: ".find {\n  background-color: black;\n}\n", map: {"version":3,"sources":["Find.vue"],"names":[],"mappings":"AAAA;EACE,uBAAuB;AACzB","file":"Find.vue","sourcesContent":[".find {\n  background-color: black;\n}\n"]}, media: undefined });
 
   };
   /* scoped */
@@ -287,123 +287,34 @@ __vue_render__$2._withStripped = true;
 //
 //
 //
-
-var script$3 = {};
-
-/* script */
-const __vue_script__$3 = script$3;
-// For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-script$3.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/side.vue";
-
-/* template */
-var __vue_render__$3 = function() {
-  var _vm = this;
-  var _h = _vm.$createElement;
-  var _c = _vm._self._c || _h;
-  return _c("div", { staticClass: "side" })
-};
-var __vue_staticRenderFns__$3 = [];
-__vue_render__$3._withStripped = true;
-
-  /* style */
-  const __vue_inject_styles__$3 = function (inject) {
-    if (!inject) return
-    inject("data-v-22649c06_0", { source: ".side {\n  background-color: darkgrey;\n}\n", map: {"version":3,"sources":["side.vue"],"names":[],"mappings":"AAAA;EACE,0BAA0B;AAC5B","file":"side.vue","sourcesContent":[".side {\n  background-color: darkgrey;\n}\n"]}, media: undefined });
-
-  };
-  /* scoped */
-  const __vue_scope_id__$3 = undefined;
-  /* module identifier */
-  const __vue_module_identifier__$3 = undefined;
-  /* functional template */
-  const __vue_is_functional_template__$3 = false;
-  /* style inject SSR */
-  
-
-  
-  var Side = normalizeComponent(
-    { render: __vue_render__$3, staticRenderFns: __vue_staticRenderFns__$3 },
-    __vue_inject_styles__$3,
-    __vue_script__$3,
-    __vue_scope_id__$3,
-    __vue_is_functional_template__$3,
-    __vue_module_identifier__$3,
-    createInjector,
-    undefined
-  );
-
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
 //
 //
 
-var script$4 = {};
-
-/* script */
-const __vue_script__$4 = script$4;
-// For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-script$4.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/trak.vue";
-
-/* template */
-var __vue_render__$4 = function() {
-  var _vm = this;
-  var _h = _vm.$createElement;
-  var _c = _vm._self._c || _h;
-  return _c("div", { staticClass: "trak" })
-};
-var __vue_staticRenderFns__$4 = [];
-__vue_render__$4._withStripped = true;
-
-  /* style */
-  const __vue_inject_styles__$4 = function (inject) {
-    if (!inject) return
-    inject("data-v-31c1a351_0", { source: "\n.trak { background-color:black;\n}\n", map: {"version":3,"sources":["/Users/ax/Documents/prj/cue/app/lay/vue/trak.vue"],"names":[],"mappings":";AAUA,QAAA,sBAAA;AAAA","file":"trak.vue","sourcesContent":["\n<template>\n  <div class=\"trak\"></div>\n</template>\n\n<script>\n  export default {}\n</script>\n\n<style type=\"module\">\n     .trak { background-color:black; }\n</style>\n"]}, media: undefined });
-
-  };
-  /* scoped */
-  const __vue_scope_id__$4 = undefined;
-  /* module identifier */
-  const __vue_module_identifier__$4 = undefined;
-  /* functional template */
-  const __vue_is_functional_template__$4 = false;
-  /* style inject SSR */
-  
-
-  
-  var Trak = normalizeComponent(
-    { render: __vue_render__$4, staticRenderFns: __vue_staticRenderFns__$4 },
-    __vue_inject_styles__$4,
-    __vue_script__$4,
-    __vue_scope_id__$4,
-    __vue_is_functional_template__$4,
-    __vue_module_identifier__$4,
-    createInjector,
-    undefined
-  );
-
-//
-   const routes = [
-      { path: '/find', component: Find },
-      { path: '/side', component: Side },
-      { path: '/trak', component: Trak } ];
-   const router = new VueRouter( { routes:routes } ); // again bad router build  */
- var script$5 = {
-  router:router, // again bad router build
+let Tocs = {
   methods: {
     doSelect: function (select) {
       console.log( 'tocs.vue', select );
-      this.publish("Select", select ); }
-  },
-};
+      this.publish("Select",   select ); }
+  } };
 
 /* script */
-const __vue_script__$5 = script$5;
+const __vue_script__$3 = Tocs;
 // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-script$5.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/tocs.vue";
+Tocs.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/Tocs.vue";
 
 /* template */
-var __vue_render__$5 = function() {
+var __vue_render__$3 = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -528,73 +439,35 @@ var __vue_render__$5 = function() {
         },
         [_vm._v("View")]
       )
-    ]),
-    _vm._v(" "),
-    _c("ul", [
-      _c(
-        "li",
-        [
-          _c(
-            "router-link",
-            { staticClass: "router-link", attrs: { to: "/find" } },
-            [_vm._v("Find")]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "li",
-        [
-          _c(
-            "router-link",
-            { staticClass: "router-link", attrs: { to: "/side" } },
-            [_vm._v("Side")]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "li",
-        [
-          _c(
-            "router-link",
-            { staticClass: "router-link", attrs: { to: "/trac" } },
-            [_vm._v("Trak")]
-          )
-        ],
-        1
-      )
     ])
   ])
 };
-var __vue_staticRenderFns__$5 = [];
-__vue_render__$5._withStripped = true;
+var __vue_staticRenderFns__$3 = [];
+__vue_render__$3._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$5 = function (inject) {
+  const __vue_inject_styles__$3 = function (inject) {
     if (!inject) return
-    inject("data-v-35ed6a9a_0", { source: ".tocs {\n  background-color: darkgrey;\n}\n.tocs ul {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n.tocs ul li {\n  margin: 0;\n  background-color: black;\n  color: white;\n  border: white solid 1px;\n  padding-left: 0.25em;\n}\n.tocs ul li:hover {\n  margin: 0;\n  background-color: white;\n  color: black;\n  border: white solid 1px;\n}\n.router-link {\n  background-color: magenta;\n}\n", map: {"version":3,"sources":["tocs.vue"],"names":[],"mappings":"AAAA;EACE,0BAA0B;AAC5B;AACA;EACE,SAAS;EACT,UAAU;EACV,gBAAgB;AAClB;AACA;EACE,SAAS;EACT,uBAAuB;EACvB,YAAY;EACZ,uBAAuB;EACvB,oBAAoB;AACtB;AACA;EACE,SAAS;EACT,uBAAuB;EACvB,YAAY;EACZ,uBAAuB;AACzB;AACA;EACE,yBAAyB;AAC3B","file":"tocs.vue","sourcesContent":[".tocs {\n  background-color: darkgrey;\n}\n.tocs ul {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n.tocs ul li {\n  margin: 0;\n  background-color: black;\n  color: white;\n  border: white solid 1px;\n  padding-left: 0.25em;\n}\n.tocs ul li:hover {\n  margin: 0;\n  background-color: white;\n  color: black;\n  border: white solid 1px;\n}\n.router-link {\n  background-color: magenta;\n}\n"]}, media: undefined });
+    inject("data-v-34ea1403_0", { source: ".tocs {\n  background-color: darkgrey;\n}\n.tocs ul {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n.tocs ul li {\n  margin: 0;\n  background-color: black;\n  color: white;\n  border: white solid 1px;\n  padding-left: 0.25em;\n}\n.tocs ul li:hover {\n  margin: 0;\n  background-color: white;\n  color: black;\n  border: white solid 1px;\n}\n", map: {"version":3,"sources":["Tocs.vue"],"names":[],"mappings":"AAAA;EACE,0BAA0B;AAC5B;AACA;EACE,SAAS;EACT,UAAU;EACV,gBAAgB;AAClB;AACA;EACE,SAAS;EACT,uBAAuB;EACvB,YAAY;EACZ,uBAAuB;EACvB,oBAAoB;AACtB;AACA;EACE,SAAS;EACT,uBAAuB;EACvB,YAAY;EACZ,uBAAuB;AACzB","file":"Tocs.vue","sourcesContent":[".tocs {\n  background-color: darkgrey;\n}\n.tocs ul {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n.tocs ul li {\n  margin: 0;\n  background-color: black;\n  color: white;\n  border: white solid 1px;\n  padding-left: 0.25em;\n}\n.tocs ul li:hover {\n  margin: 0;\n  background-color: white;\n  color: black;\n  border: white solid 1px;\n}\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$5 = undefined;
+  const __vue_scope_id__$3 = undefined;
   /* module identifier */
-  const __vue_module_identifier__$5 = undefined;
+  const __vue_module_identifier__$3 = undefined;
   /* functional template */
-  const __vue_is_functional_template__$5 = false;
+  const __vue_is_functional_template__$3 = false;
   /* style inject SSR */
   
 
   
-  var tocs = normalizeComponent(
-    { render: __vue_render__$5, staticRenderFns: __vue_staticRenderFns__$5 },
-    __vue_inject_styles__$5,
-    __vue_script__$5,
-    __vue_scope_id__$5,
-    __vue_is_functional_template__$5,
-    __vue_module_identifier__$5,
+  var Tocs$1 = normalizeComponent(
+    { render: __vue_render__$3, staticRenderFns: __vue_staticRenderFns__$3 },
+    __vue_inject_styles__$3,
+    __vue_script__$3,
+    __vue_scope_id__$3,
+    __vue_is_functional_template__$3,
+    __vue_module_identifier__$3,
     createInjector,
     undefined
   );
@@ -615,7 +488,7 @@ __vue_render__$5._withStripped = true;
 //
 //
 
-var script$6 = {
+var script$3 = {
   data() { return { sel:"View" } },
   methods: {
     onSelect: function (select) {
@@ -638,12 +511,12 @@ var script$6 = {
 };
 
 /* script */
-const __vue_script__$6 = script$6;
+const __vue_script__$4 = script$3;
 // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-script$6.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/view.vue";
+script$3.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/View.vue";
 
 /* template */
-var __vue_render__$6 = function() {
+var __vue_render__$4 = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -802,7 +675,7 @@ var __vue_render__$6 = function() {
     )
   ])
 };
-var __vue_staticRenderFns__$6 = [
+var __vue_staticRenderFns__$4 = [
   function() {
     var _vm = this;
     var _h = _vm.$createElement;
@@ -876,12 +749,112 @@ var __vue_staticRenderFns__$6 = [
     ])
   }
 ];
+__vue_render__$4._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__$4 = function (inject) {
+    if (!inject) return
+    inject("data-v-1d75a7b8_0", { source: ".view {\n  background-color: grey;\n  display: grid;\n  grid-template-columns: 33%  33% 34%;\n  grid-template-rows: 33%  33% 34%;\n  grid-template-areas: \"nw   north ne\" \"west cen   east\" \"sw   south se\";\n  justify-items: center;\n  align-items: center;\n}\n.view .nw {\n  grid-area: nw;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .north {\n  grid-area: north;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .ne {\n  grid-area: ne;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .west {\n  grid-area: west;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .cen {\n  grid-area: cen;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .east {\n  grid-area: east;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .sw {\n  grid-area: sw;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .south {\n  grid-area: south;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .se {\n  grid-area: se;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .pane {\n  font-size: 1.5em;\n  width: 90%;\n  height: 80%;\n  background-color: tan;\n  justify-self: center;\n  align-self: center;\n  display: grid;\n  border-radius: 0.5em;\n}\n.view .pane .name {\n  font-size: 2em;\n  background-color: tan;\n  justify-self: center;\n  align-self: center;\n  text-align: center;\n}\n", map: {"version":3,"sources":["View.vue","/Users/ax/Documents/prj/cue/app/lay/vue/View.vue"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,aAAa;EACb,mCAAmC;EACnC,gCAAgC;EAChC,sEAAsE;EACtE,qBAAqB;EACrB,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,gBAAgB;EAChB,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,eAAe;EACf,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;ECCA,eAAA;EACA,qBAAA;EACA,mBAAA;EACA,aAAA;AACA;AACA;EACA,aAAA;EACA,qBAAA;EACA,mBAAA;EACA,aAAA;AACA;AACA;EACA,gBAAA;EACA,qBAAA;EACA,mBAAA;EACA,aAAA;AACA;AACA;EACA,aAAA;EACA,qBAAA;EACA,mBAAA;EACA,aAAA;AACA;ADCA;EACE,gBAAgB;EAChB,UAAU;EACV,WAAW;EACX,qBAAqB;EACrB,oBAAoB;EACpB,kBAAkB;EAClB,aAAa;EACb,oBAAoB;AACtB;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,oBAAoB;EACpB,kBAAkB;EAClB,kBAAkB;AACpB","file":"View.vue","sourcesContent":[".view {\n  background-color: grey;\n  display: grid;\n  grid-template-columns: 33%  33% 34%;\n  grid-template-rows: 33%  33% 34%;\n  grid-template-areas: \"nw   north ne\" \"west cen   east\" \"sw   south se\";\n  justify-items: center;\n  align-items: center;\n}\n.view .nw {\n  grid-area: nw;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .north {\n  grid-area: north;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .ne {\n  grid-area: ne;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .west {\n  grid-area: west;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .cen {\n  grid-area: cen;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .east {\n  grid-area: east;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .sw {\n  grid-area: sw;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .south {\n  grid-area: south;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .se {\n  grid-area: se;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .pane {\n  font-size: 1.5em;\n  width: 90%;\n  height: 80%;\n  background-color: tan;\n  justify-self: center;\n  align-self: center;\n  display: grid;\n  border-radius: 0.5em;\n}\n.view .pane .name {\n  font-size: 2em;\n  background-color: tan;\n  justify-self: center;\n  align-self: center;\n  text-align: center;\n}\n","\n<template>\n  <div class=\"view\">\n    <div id=\"Collab\"     class=\"nw\"    v-show=\"Collab\"><div class=\"pane\"><div class=\"name\">Collab</div></div></div>\n    <div id=\"Domain\"     class=\"north\" v-show=\"Domain\"  ><div class=\"pane\"><div class=\"name\">Domain</div></div></div>\n    <div id=\"Discover\"   class=\"ne\"    v-show=\"Discover\"><div class=\"pane\"><div class=\"name\">Discover</div></div></div>\n    <div id=\"Adapt\"      class=\"west\"  v-show=\"Adapt\"     ><div class=\"pane\"><div class=\"name\">Adapt</div></div></div>\n    <div id=\"Technology\" class=\"cen\"   v-show=\"Technology\"><div class=\"pane\"><div class=\"name\">Technology</div></div></div>\n    <div id=\"Benefit\"    class=\"east\"  v-show=\"Benefit\"><div class=\"pane\"><div class=\"name\">Benefit</div></div></div>\n    <div id=\"Change\"     class=\"sw\"    v-show=\"Change\"><div class=\"pane\"><div class=\"name\">Change</div></div></div>\n    <div id=\"Deliver\"    class=\"south\" v-show=\"Deliver\"><div class=\"pane\"><div class=\"name\">Deliver</div></div></div>\n    <div id=\"Govern\"     class=\"se\"    v-show=\"Govern\"><div class=\"pane\"><div class=\"name\">Govern</div></div></div>\n  </div>\n</template>\n\n<script type=\"module\">\n  export default {\n    data() { return { sel:\"View\" } },\n    methods: {\n      onSelect: function (select) {\n        this.sel =  select;\n        console.log( 'view.vue', select ); } },\n    mounted: function () {\n      console.log( 'view.vue', 'mounted' );\n      this.subscribe( 'Select', 'view.vue', (select) => this.onSelect(select) ); }, // Main.stream.\n    computed: {\n      Collab()     { return this.sel === \"View\" || this.sel === \"Collaborate\" },\n      Domain()     { return this.sel === \"View\" || this.sel === \"Domain\"      },\n      Discover()   { return this.sel === \"View\" || this.sel === \"Discover\"    },\n      Adapt()      { return this.sel === \"View\" || this.sel === \"Adapt\"       },\n      Technology() { return this.sel === \"View\" || this.sel === \"Technology\"  },\n      Benefit()    { return this.sel === \"View\" || this.sel === \"Benefit\"     },\n      Change()     { return this.sel === \"View\" || this.sel === \"Change\"      },\n      Deliver()    { return this.sel === \"View\" || this.sel === \"Deliver\"     },\n      Govern()     { return this.sel === \"View\" || this.sel === \"Govern\"      }\n    }\n  }\n</script>\n\n<style lang=\"less\">\n  .view { background-color:grey;\n    display:grid;\n    grid-template-columns: 33%  33% 34%;\n    grid-template-rows:    33%  33% 34%;\n    grid-template-areas:\n      \"nw   north ne\"\n      \"west cen   east\"\n      \"sw   south se\";\n    justify-items:center; align-items:center;\n    .nw     { grid-area:nw;    justify-self:stretch; align-self:stretch; display:grid; }\n    .north  { grid-area:north; justify-self:stretch; align-self:stretch; display:grid; }\n    .ne     { grid-area:ne;    justify-self:stretch; align-self:stretch; display:grid; }\n    .west   { grid-area:west;  justify-self:stretch; align-self:stretch; display:grid; }\n    .cen    { grid-area:cen;   justify-self:stretch; align-self:stretch; display:grid; }\n    .east   { grid-area:east;  justify-self:stretch; align-self:stretch; display:grid; }\n    .sw     { grid-area:sw;    justify-self:stretch; align-self:stretch; display:grid; }\n    .south  { grid-area:south; justify-self:stretch; align-self:stretch; display:grid; }\n    .se     { grid-area:se;    justify-self:stretch; align-self:stretch; display:grid; }\n    .pane { font-size:1.5em; width:90%; height:80%; background-color:tan;\n      justify-self:center; align-self:center; display:grid; border-radius:0.5em; }\n    .pane .name  { font-size:2em; background-color:tan;\n      justify-self:center; align-self:center; text-align:center; }\n  }\n\n</style>\n\n"]}, media: undefined });
+
+  };
+  /* scoped */
+  const __vue_scope_id__$4 = undefined;
+  /* module identifier */
+  const __vue_module_identifier__$4 = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$4 = false;
+  /* style inject SSR */
+  
+
+  
+  var View = normalizeComponent(
+    { render: __vue_render__$4, staticRenderFns: __vue_staticRenderFns__$4 },
+    __vue_inject_styles__$4,
+    __vue_script__$4,
+    __vue_scope_id__$4,
+    __vue_is_functional_template__$4,
+    __vue_module_identifier__$4,
+    createInjector,
+    undefined
+  );
+
+//
+//
+//
+//
+//
+
+var script$4 = {};
+
+/* script */
+const __vue_script__$5 = script$4;
+// For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
+script$4.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/Side.vue";
+
+/* template */
+var __vue_render__$5 = function() {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c("div", { staticClass: "side" })
+};
+var __vue_staticRenderFns__$5 = [];
+__vue_render__$5._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__$5 = function (inject) {
+    if (!inject) return
+    inject("data-v-2a057be6_0", { source: ".side {\n  background-color: darkgrey;\n}\n", map: {"version":3,"sources":["Side.vue"],"names":[],"mappings":"AAAA;EACE,0BAA0B;AAC5B","file":"Side.vue","sourcesContent":[".side {\n  background-color: darkgrey;\n}\n"]}, media: undefined });
+
+  };
+  /* scoped */
+  const __vue_scope_id__$5 = undefined;
+  /* module identifier */
+  const __vue_module_identifier__$5 = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$5 = false;
+  /* style inject SSR */
+  
+
+  
+  var Side = normalizeComponent(
+    { render: __vue_render__$5, staticRenderFns: __vue_staticRenderFns__$5 },
+    __vue_inject_styles__$5,
+    __vue_script__$5,
+    __vue_scope_id__$5,
+    __vue_is_functional_template__$5,
+    __vue_module_identifier__$5,
+    createInjector,
+    undefined
+  );
+
+//
+//
+//
+//
+//
+
+var script$5 = {};
+
+/* script */
+const __vue_script__$6 = script$5;
+// For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
+script$5.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/Pref.vue";
+
+/* template */
+var __vue_render__$6 = function() {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c("div", { staticClass: "pref" })
+};
+var __vue_staticRenderFns__$6 = [];
 __vue_render__$6._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$6 = function (inject) {
     if (!inject) return
-    inject("data-v-e6365e20_0", { source: ".view {\n  background-color: grey;\n  display: grid;\n  grid-template-columns: 33%  33% 34%;\n  grid-template-rows: 33%  33% 34%;\n  grid-template-areas: \"nw   north ne\" \"west cen   east\" \"sw   south se\";\n  justify-items: center;\n  align-items: center;\n  /* grid-column-gap: @layout-gap;\n   grid-row-gap:    @layout-gap; */\n}\n.view .nw {\n  grid-area: nw;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .north {\n  grid-area: north;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .ne {\n  grid-area: ne;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .west {\n  grid-area: west;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .cen {\n  grid-area: cen;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .east {\n  grid-area: east;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .sw {\n  grid-area: sw;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .south {\n  grid-area: south;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .se {\n  grid-area: se;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view div .pane {\n  font-size: 1.5em;\n  width: 90%;\n  height: 80%;\n  background-color: tan;\n  justify-self: center;\n  align-self: center;\n  display: grid;\n  border-radius: 0.5em;\n}\n.view div .pane .name {\n  font-size: 2em;\n  background-color: tan;\n  justify-self: center;\n  align-self: center;\n  text-align: center;\n}\n/* width:50%; height:50%; */\n", map: {"version":3,"sources":["view.vue","/Users/ax/Documents/prj/cue/app/lay/vue/view.vue"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,aAAa;EACb,mCAAmC;EACnC,gCAAgC;EAChC,sEAAsE;EACtE,qBAAqB;EACrB,mBAAmB;EACnB;kCACgC;AAClC;AACA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,gBAAgB;EAChB,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,eAAe;EACf,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;ACCf;AACA;EACA,eAAA;EACA,qBAAA;EACA,mBAAA;EACA,aAAA;AACA;AACA;EACA,aAAA;EACA,qBAAA;EACA,mBAAA;EACA,aAAA;AACA;AACA;EACA,gBAAA;EACA,qBAAA;EACA,mBAAA;EACA,aAAA;AACA;AACA;EACA,aAAA;EACA,qBAAA;EACA,mBAAA;EACA,aAAA;ADCA;AACA;EACE,gBAAgB;EAChB,UAAU;EACV,WAAW;EACX,qBAAqB;EACrB,oBAAoB;EACpB,kBAAkB;EAClB,aAAa;EACb,oBAAoB;AACtB;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,oBAAoB;EACpB,kBAAkB;EAClB,kBAAkB;AACpB;AACA,2BAA2B","file":"view.vue","sourcesContent":[".view {\n  background-color: grey;\n  display: grid;\n  grid-template-columns: 33%  33% 34%;\n  grid-template-rows: 33%  33% 34%;\n  grid-template-areas: \"nw   north ne\" \"west cen   east\" \"sw   south se\";\n  justify-items: center;\n  align-items: center;\n  /* grid-column-gap: @layout-gap;\n   grid-row-gap:    @layout-gap; */\n}\n.view .nw {\n  grid-area: nw;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .north {\n  grid-area: north;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .ne {\n  grid-area: ne;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .west {\n  grid-area: west;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .cen {\n  grid-area: cen;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .east {\n  grid-area: east;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .sw {\n  grid-area: sw;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .south {\n  grid-area: south;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view .se {\n  grid-area: se;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.view div .pane {\n  font-size: 1.5em;\n  width: 90%;\n  height: 80%;\n  background-color: tan;\n  justify-self: center;\n  align-self: center;\n  display: grid;\n  border-radius: 0.5em;\n}\n.view div .pane .name {\n  font-size: 2em;\n  background-color: tan;\n  justify-self: center;\n  align-self: center;\n  text-align: center;\n}\n/* width:50%; height:50%; */\n","\n<template>\n  <div class=\"view\">\n    <div id=\"Collab\"     class=\"nw\"    v-show=\"Collab\"><div class=\"pane\"><div class=\"name\">Collab</div></div></div>\n    <div id=\"Domain\"     class=\"north\" v-show=\"Domain\"  ><div class=\"pane\"><div class=\"name\">Domain</div></div></div>\n    <div id=\"Discover\"   class=\"ne\" v-show=\"Discover\"><div class=\"pane\"><div class=\"name\">Discover</div></div></div>\n    <div id=\"Adapt\"      class=\"west\"  v-show=\"Adapt\"     ><div class=\"pane\"><div class=\"name\">Adapt</div></div></div>\n    <div id=\"Technology\" class=\"cen\"   v-show=\"Technology\"><div class=\"pane\"><div class=\"name\">Technology</div></div></div>\n    <div id=\"Benefit\"    class=\"east\"  v-show=\"Benefit\"><div class=\"pane\"><div class=\"name\">Benefit</div></div></div>\n    <div id=\"Change\"     class=\"sw\"    v-show=\"Change\"><div class=\"pane\"><div class=\"name\">Change</div></div></div>\n    <div id=\"Deliver\"    class=\"south\" v-show=\"Deliver\"><div class=\"pane\"><div class=\"name\">Deliver</div></div></div>\n    <div id=\"Govern\"     class=\"se\"    v-show=\"Govern\"><div class=\"pane\"><div class=\"name\">Govern</div></div></div>\n  </div>\n</template>\n\n<script type=\"module\">\n  export default {\n    data() { return { sel:\"View\" } },\n    methods: {\n      onSelect: function (select) {\n        this.sel =  select;\n        console.log( 'view.vue', select ); } },\n    mounted: function () {\n      console.log( 'view.vue', 'mounted' );\n      this.subscribe( 'Select', 'view.vue', (select) => this.onSelect(select) ); }, // Main.stream.\n    computed: {\n      Collab()     { return this.sel === \"View\" || this.sel === \"Collaborate\" },\n      Domain()     { return this.sel === \"View\" || this.sel === \"Domain\"      },\n      Discover()   { return this.sel === \"View\" || this.sel === \"Discover\"    },\n      Adapt()      { return this.sel === \"View\" || this.sel === \"Adapt\"       },\n      Technology() { return this.sel === \"View\" || this.sel === \"Technology\"  },\n      Benefit()    { return this.sel === \"View\" || this.sel === \"Benefit\"     },\n      Change()     { return this.sel === \"View\" || this.sel === \"Change\"      },\n      Deliver()    { return this.sel === \"View\" || this.sel === \"Deliver\"     },\n      Govern()     { return this.sel === \"View\" || this.sel === \"Govern\"      }\n    }\n  }\n</script>\n\n<style lang=\"less\">\n  .view { background-color:grey;\n    display:grid;\n    grid-template-columns: 33%  33% 34%;\n    grid-template-rows:    33%  33% 34%;\n    grid-template-areas:\n      \"nw   north ne\"\n      \"west cen   east\"\n      \"sw   south se\";\n    justify-items:center; align-items:center;\n /* grid-column-gap: @layout-gap;\n    grid-row-gap:    @layout-gap; */ }\n  .view .nw     { grid-area:nw;    justify-self:stretch; align-self:stretch; display:grid; }\n  .view .north  { grid-area:north; justify-self:stretch; align-self:stretch; display:grid; }\n  .view .ne     { grid-area:ne;    justify-self:stretch; align-self:stretch; display:grid; }\n  .view .west   { grid-area:west;  justify-self:stretch; align-self:stretch; display:grid; }\n  .view .cen    { grid-area:cen;   justify-self:stretch; align-self:stretch; display:grid; }\n  .view .east   { grid-area:east;  justify-self:stretch; align-self:stretch; display:grid; }\n  .view .sw     { grid-area:sw;    justify-self:stretch; align-self:stretch; display:grid; }\n  .view .south  { grid-area:south; justify-self:stretch; align-self:stretch; display:grid; }\n  .view .se     { grid-area:se;    justify-self:stretch; align-self:stretch; display:grid; }\n  .view div .pane { font-size:1.5em; width:90%; height:80%; background-color:tan;\n    justify-self:center; align-self:center; display:grid; border-radius:0.5em; }\n  .view div .pane .name  { font-size:2em; background-color:tan;\n    justify-self:center; align-self:center; text-align:center; } /* width:50%; height:50%; */\n  \n\n</style>\n\n<!--style>\n  .view         { position:absolute; left:140px; top:50px; right:50px; bottom:50px; background-color:grey; }\n  .view .nw     { position:absolute; left: 0;  top: 0;  width:33%; height:33%; display:grid; }\n  .view .north  { position:absolute; left:33%; top: 0;  width:33%; height:33%; display:grid; }\n  .view .ne     { position:absolute; left:66%; top: 0;  width:34%; height:33%; display:grid; }\n  .view .west   { position:absolute; left: 0;  top:33%; width:33%; height:33%; display:grid; }\n  .view .cen    { position:absolute; left:33%; top:33%; width:33%; height:33%; display:grid; }\n  .view .east   { position:absolute; left:66%; top:33%; width:34%; height:33%; display:grid; }\n  .view .sw     { position:absolute; left: 0;  top:66%; width:33%; height:34%; display:grid; }\n  .view .south  { position:absolute; left:33%; top:66%; width:33%; height:34%; display:grid; }\n  .view .se     { position:absolute; left:66%; top:66%; width:34%; height:34%; display:grid; }\n  .view div .pane { font-size:1.5em; width:90%; height:80%; background-color:tan;\n    justify-self:center; align-self:center; display:grid; border-radius:0.5em; }\n  .view div .pane .name  { font-size:2em; background-color:tan;\n    justify-self:center; align-self:center; text-align:center; } /* width:50%; height:50%; */\n</style-->\n"]}, media: undefined });
+    inject("data-v-48c3b080_0", { source: ".pref {\n  background-color: black;\n}\n", map: {"version":3,"sources":["Pref.vue"],"names":[],"mappings":"AAAA;EACE,uBAAuB;AACzB","file":"Pref.vue","sourcesContent":[".pref {\n  background-color: black;\n}\n"]}, media: undefined });
 
   };
   /* scoped */
@@ -894,7 +867,7 @@ __vue_render__$6._withStripped = true;
   
 
   
-  var view = normalizeComponent(
+  var Pref = normalizeComponent(
     { render: __vue_render__$6, staticRenderFns: __vue_staticRenderFns__$6 },
     __vue_inject_styles__$6,
     __vue_script__$6,
@@ -911,19 +884,19 @@ __vue_render__$6._withStripped = true;
 //
 //
 
-var script$7 = {};
+var script$6 = {};
 
 /* script */
-const __vue_script__$7 = script$7;
+const __vue_script__$7 = script$6;
 // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-script$7.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/pref.vue";
+script$6.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/Foot.vue";
 
 /* template */
 var __vue_render__$7 = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("div", { staticClass: "pref" })
+  return _c("div", { staticClass: "foot" })
 };
 var __vue_staticRenderFns__$7 = [];
 __vue_render__$7._withStripped = true;
@@ -931,7 +904,7 @@ __vue_render__$7._withStripped = true;
   /* style */
   const __vue_inject_styles__$7 = function (inject) {
     if (!inject) return
-    inject("data-v-2b86cfe0_0", { source: ".pref {\n  background-color: black;\n}\n", map: {"version":3,"sources":["pref.vue"],"names":[],"mappings":"AAAA;EACE,uBAAuB;AACzB","file":"pref.vue","sourcesContent":[".pref {\n  background-color: black;\n}\n"]}, media: undefined });
+    inject("data-v-00c37d39_0", { source: ".foot {\n  background-color: darkgrey;\n}\n", map: {"version":3,"sources":["Foot.vue"],"names":[],"mappings":"AAAA;EACE,0BAA0B;AAC5B","file":"Foot.vue","sourcesContent":[".foot {\n  background-color: darkgrey;\n}\n"]}, media: undefined });
 
   };
   /* scoped */
@@ -944,7 +917,7 @@ __vue_render__$7._withStripped = true;
   
 
   
-  var pref = normalizeComponent(
+  var Foot = normalizeComponent(
     { render: __vue_render__$7, staticRenderFns: __vue_staticRenderFns__$7 },
     __vue_inject_styles__$7,
     __vue_script__$7,
@@ -961,19 +934,19 @@ __vue_render__$7._withStripped = true;
 //
 //
 
-var script$8 = {};
+var script$7 = {};
 
 /* script */
-const __vue_script__$8 = script$8;
+const __vue_script__$8 = script$7;
 // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-script$8.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/foot.vue";
+script$7.__file = "/Users/ax/Documents/prj/cue/app/lay/vue/Trak.vue";
 
 /* template */
 var __vue_render__$8 = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("div", { staticClass: "foot" })
+  return _c("div", { staticClass: "trak" })
 };
 var __vue_staticRenderFns__$8 = [];
 __vue_render__$8._withStripped = true;
@@ -981,7 +954,7 @@ __vue_render__$8._withStripped = true;
   /* style */
   const __vue_inject_styles__$8 = function (inject) {
     if (!inject) return
-    inject("data-v-14486119_0", { source: ".foot {\n  background-color: darkgrey;\n}\n", map: {"version":3,"sources":["foot.vue"],"names":[],"mappings":"AAAA;EACE,0BAA0B;AAC5B","file":"foot.vue","sourcesContent":[".foot {\n  background-color: darkgrey;\n}\n"]}, media: undefined });
+    inject("data-v-698e011e_0", { source: "\n.trak { background-color:black;\n}\n", map: {"version":3,"sources":["/Users/ax/Documents/prj/cue/app/lay/vue/Trak.vue"],"names":[],"mappings":";AAUA,QAAA,sBAAA;AAAA","file":"Trak.vue","sourcesContent":["\n<template>\n  <div class=\"trak\"></div>\n</template>\n\n<script>\n  export default {}\n</script>\n\n<style type=\"module\">\n     .trak { background-color:black; }\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
@@ -994,7 +967,7 @@ __vue_render__$8._withStripped = true;
   
 
   
-  var foot = normalizeComponent(
+  var Trak = normalizeComponent(
     { render: __vue_render__$8, staticRenderFns: __vue_staticRenderFns__$8 },
     __vue_inject_styles__$8,
     __vue_script__$8,
@@ -1007,17 +980,17 @@ __vue_render__$8._withStripped = true;
 
 //
 
-var script$9 = {
-    name: 'app',
-    components: {
-      'v-logo': logo, 'v-navb': navb, 'v-find': Find,
-      'v-tocs': tocs, 'v-view': view, 'v-side': Side,
-      'v-pref': pref, 'v-foot': foot, 'v-trak': Trak } };
+  let App = {
+      name: 'app',
+      components: {
+        'v-logo': Logo, 'v-navb': Navb, 'v-find': Find,
+        'v-tocs': Tocs$1, 'v-view': View, 'v-side': Side, // 'v-rout': Rout,
+        'v-pref': Pref, 'v-foot': Foot, 'v-trak': Trak } };
 
 /* script */
-const __vue_script__$9 = script$9;
+const __vue_script__$9 = App;
 // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-script$9.__file = "/Users/ax/Documents/prj/cue/app/lay/App.vue";
+App.__file = "/Users/ax/Documents/prj/cue/app/lay/App.vue";
 
 /* template */
 var __vue_render__$9 = function() {
@@ -1055,7 +1028,7 @@ __vue_render__$9._withStripped = true;
   /* style */
   const __vue_inject_styles__$9 = function (inject) {
     if (!inject) return
-    inject("data-v-c170ca3a_0", { source: ".app {\n  font-family: Roboto, sans-serif;\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  display: grid;\n  grid-template-columns: 140px 1fr 50px;\n  grid-template-rows: 50px 1fr 50px;\n  grid-template-areas: \"logo navb find\" \"tocs view side\" \"pref foot trak\";\n}\n.app #logo {\n  grid-area: logo;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #navb {\n  grid-area: navb;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #find {\n  grid-area: find;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #tocs {\n  grid-area: tocs;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #view {\n  grid-area: view;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #side {\n  grid-area: side;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #pref {\n  grid-area: pref;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #foot {\n  grid-area: foot;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #trak {\n  grid-area: trak;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n", map: {"version":3,"sources":["App.vue","/Users/ax/Documents/prj/cue/app/lay/App.vue"],"names":[],"mappings":"AAAA;EACE,+BAA+B;EAC/B,kBAAkB;EAClB,OAAO;EACP,MAAM;EACN,QAAQ;EACR,SAAS;EACT,aAAa;EACb,qCAAqC;EACrC,iCAAiC;EACjC,uEAAuE;AACzE;AACA;EACE,eAAe;EACf,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,eAAe;EACf,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,eAAe;EACf,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,eAAe;EACf,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;ACCf;AACA;EACA,eAAA;EACA,qBAAA;EACA,mBAAA;EACA,aAAA;AACA;AACA;EACA,eAAA;EACA,qBAAA;EDCE,mBAAmB;ECCrB,aAAA;AACA;AACA;EACA,eAAA;EACA,qBAAA;EACA,mBAAA;EACA,aAAA;AACA;AACA;EDCE,eAAe;EACf,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,eAAe;EACf,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf","file":"App.vue","sourcesContent":[".app {\n  font-family: Roboto, sans-serif;\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  display: grid;\n  grid-template-columns: 140px 1fr 50px;\n  grid-template-rows: 50px 1fr 50px;\n  grid-template-areas: \"logo navb find\" \"tocs view side\" \"pref foot trak\";\n}\n.app #logo {\n  grid-area: logo;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #navb {\n  grid-area: navb;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #find {\n  grid-area: find;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #tocs {\n  grid-area: tocs;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #view {\n  grid-area: view;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #side {\n  grid-area: side;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #pref {\n  grid-area: pref;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #foot {\n  grid-area: foot;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #trak {\n  grid-area: trak;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n","\n<template>\n  <div class=\"app\">\n    <v-logo id=\"logo\"></v-logo>\n    <v-navb id=\"navb\"></v-navb>\n    <v-find id=\"find\"></v-find>\n    <v-tocs id=\"tocs\"></v-tocs>\n    <v-view id=\"view\"></v-view>\n    <v-side id=\"side\"></v-side>\n    <v-pref id=\"pref\"></v-pref>\n    <v-foot id=\"foot\"></v-foot>\n    <v-trak id=\"trak\"></v-trak>\n  </div>\n</template>\n\n<script type=\"module\">\n  import logo from './vue/logo.vue'\n  import navb from './vue/navb.vue'\n  import find from './vue/find.vue'\n  import tocs from './vue/tocs.vue'\n  import view from './vue/view.vue'\n  import side from './vue/side.vue'\n  import pref from './vue/pref.vue'\n  import foot from './vue/foot.vue'\n  import trak from './vue/trak.vue'\n\n  export default {\n      name: 'app',\n      components: {\n        'v-logo': logo, 'v-navb': navb, 'v-find': find,\n        'v-tocs': tocs, 'v-view': view, 'v-side': side,\n        'v-pref': pref, 'v-foot': foot, 'v-trak': trak } }\n</script>\n\n<style lang=\"less\">\n   // hey\n   .app { font-family:Roboto, sans-serif;\n     position:absolute; left:0; top:0; right:0; bottom:0;\n     display:grid;\n     grid-template-columns: 140px 1fr 50px;\n     grid-template-rows:     50px 1fr 50px;\n     grid-template-areas:\n       \"logo navb find\"\n       \"tocs view side\"\n       \"pref foot trak\";\n\n    #logo { grid-area:logo; justify-self:stretch; align-self:stretch; display:grid; }\n    #navb { grid-area:navb; justify-self:stretch; align-self:stretch; display:grid; }\n    #find { grid-area:find; justify-self:stretch; align-self:stretch; display:grid; }\n    #tocs { grid-area:tocs; justify-self:stretch; align-self:stretch; display:grid; }\n    #view { grid-area:view; justify-self:stretch; align-self:stretch; display:grid; }\n    #side { grid-area:side; justify-self:stretch; align-self:stretch; display:grid; }\n    #pref { grid-area:pref; justify-self:stretch; align-self:stretch; display:grid; }\n    #foot { grid-area:foot; justify-self:stretch; align-self:stretch; display:grid; }\n    #trak { grid-area:trak; justify-self:stretch; align-self:stretch; display:grid; } }\n  \n</style>"]}, media: undefined });
+    inject("data-v-293649b0_0", { source: ".app {\n  font-family: Roboto, sans-serif;\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  display: grid;\n  grid-template-columns: 140px 1fr 50px;\n  grid-template-rows: 50px 1fr 50px;\n  grid-template-areas: \"logo navb find\" \"tocs view side\" \"pref foot trak\";\n}\n.app #logo {\n  grid-area: logo;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #navb {\n  grid-area: navb;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #find {\n  grid-area: find;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #tocs {\n  grid-area: tocs;\n  justify-self: stretch;\n  align-self: start;\n  display: grid;\n  background-color: gray;\n}\n.app #rout {\n  grid-area: tocs;\n  justify-self: stretch;\n  align-self: center;\n  display: grid;\n  background-color: white;\n}\n.app #view {\n  grid-area: view;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #side {\n  grid-area: side;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #pref {\n  grid-area: pref;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #foot {\n  grid-area: foot;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #trak {\n  grid-area: trak;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n", map: {"version":3,"sources":["App.vue","/Users/ax/Documents/prj/cue/app/lay/App.vue"],"names":[],"mappings":"AAAA;EACE,+BAA+B;EAC/B,kBAAkB;EAClB,OAAO;EACP,MAAM;EACN,QAAQ;EACR,SAAS;EACT,aAAa;EACb,qCAAqC;EACrC,iCAAiC;EACjC,uEAAuE;AACzE;AACA;EACE,eAAe;EACf,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,eAAe;EACf,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,eAAe;EACf,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,eAAe;EACf,qBAAqB;EACrB,iBAAiB;EACjB,aAAa;EACb,sBAAsB;AACxB;AACA;EACE,eAAe;EACf,qBAAqB;EACrB,kBAAkB;EAClB,aAAa;ECCf,uBAAA;AACA;AACA;EACA,eAAA;EACA,qBAAA;EACA,mBAAA;EACA,aAAA;AACA;AACA;EACA,eAAA;EDCE,qBAAqB;ECCvB,mBAAA;EACA,aAAA;AACA;AACA;EACA,eAAA;EACA,qBAAA;EACA,mBAAA;EACA,aAAA;AACA;AACA;EDCE,eAAe;EACf,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,eAAe;EACf,qBAAqB;EACrB,mBAAmB;EACnB,aAAa;AACf","file":"App.vue","sourcesContent":[".app {\n  font-family: Roboto, sans-serif;\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  display: grid;\n  grid-template-columns: 140px 1fr 50px;\n  grid-template-rows: 50px 1fr 50px;\n  grid-template-areas: \"logo navb find\" \"tocs view side\" \"pref foot trak\";\n}\n.app #logo {\n  grid-area: logo;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #navb {\n  grid-area: navb;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #find {\n  grid-area: find;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #tocs {\n  grid-area: tocs;\n  justify-self: stretch;\n  align-self: start;\n  display: grid;\n  background-color: gray;\n}\n.app #rout {\n  grid-area: tocs;\n  justify-self: stretch;\n  align-self: center;\n  display: grid;\n  background-color: white;\n}\n.app #view {\n  grid-area: view;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #side {\n  grid-area: side;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #pref {\n  grid-area: pref;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #foot {\n  grid-area: foot;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n.app #trak {\n  grid-area: trak;\n  justify-self: stretch;\n  align-self: stretch;\n  display: grid;\n}\n","\n<template>\n  <div class=\"app\">\n    <v-logo id=\"logo\"></v-logo>\n    <v-navb id=\"navb\"></v-navb>\n    <v-find id=\"find\"></v-find>\n    <v-tocs id=\"tocs\"></v-tocs>\n <!--v-rout id=\"rout\"></v-rout-->\n    <v-view id=\"view\"></v-view>\n    <v-side id=\"side\"></v-side>\n    <v-pref id=\"pref\"></v-pref>\n    <v-foot id=\"foot\"></v-foot>\n    <v-trak id=\"trak\"></v-trak>\n  </div>\n</template>\n\n<script type=\"module\">\n  import Logo from './vue/Logo.vue';\n  import Navb from './vue/Navb.vue';\n  import Find from './vue/Find.vue';\n  import Tocs from './vue/Tocs.vue';\n//import Rout from './vue/Rout.vue';\n  import View from './vue/View.vue';\n  import Side from './vue/Side.vue';\n  import Pref from './vue/Pref.vue';\n  import Foot from './vue/Foot.vue';\n  import Trak from './vue/Trak.vue';\n\n  let App = {\n      name: 'app',\n      components: {\n        'v-logo': Logo, 'v-navb': Navb, 'v-find': Find,\n        'v-tocs': Tocs, 'v-view': View, 'v-side': Side, // 'v-rout': Rout,\n        'v-pref': Pref, 'v-foot': Foot, 'v-trak': Trak } };\n  \n//App.Rout = Rout;\n  \n  export default App;\n  \n</script>\n\n<style lang=\"less\">\n   // hey\n   .app { font-family:Roboto, sans-serif;\n     position:absolute; left:0; top:0; right:0; bottom:0;\n     display:grid;\n     grid-template-columns: 140px 1fr 50px;\n     grid-template-rows:     50px 1fr 50px;\n     grid-template-areas:\n       \"logo navb find\"\n       \"tocs view side\"\n       \"pref foot trak\";\n\n    #logo { grid-area:logo; justify-self:stretch; align-self:stretch; display:grid; }\n    #navb { grid-area:navb; justify-self:stretch; align-self:stretch; display:grid; }\n    #find { grid-area:find; justify-self:stretch; align-self:stretch; display:grid; }\n    #tocs { grid-area:tocs; justify-self:stretch; align-self:start;   display:grid; background-color:gray;  }\n    #rout { grid-area:tocs; justify-self:stretch; align-self:center;  display:grid; background-color:white; }\n    #view { grid-area:view; justify-self:stretch; align-self:stretch; display:grid; }\n    #side { grid-area:side; justify-self:stretch; align-self:stretch; display:grid; }\n    #pref { grid-area:pref; justify-self:stretch; align-self:stretch; display:grid; }\n    #foot { grid-area:foot; justify-self:stretch; align-self:stretch; display:grid; }\n    #trak { grid-area:trak; justify-self:stretch; align-self:stretch; display:grid; } }\n  \n</style>"]}, media: undefined });
 
   };
   /* scoped */
@@ -1068,7 +1041,7 @@ __vue_render__$9._withStripped = true;
   
 
   
-  var App = normalizeComponent(
+  var App$1 = normalizeComponent(
     { render: __vue_render__$9, staticRenderFns: __vue_staticRenderFns__$9 },
     __vue_inject_styles__$9,
     __vue_script__$9,
@@ -1079,4 +1052,4 @@ __vue_render__$9._withStripped = true;
     undefined
   );
 
-export default App;
+export default App$1;

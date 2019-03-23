@@ -5,6 +5,7 @@
     <v-navb id="navb"></v-navb>
     <v-find id="find"></v-find>
     <v-tocs id="tocs"></v-tocs>
+ <!--v-rout id="rout"></v-rout-->
     <v-view id="view"></v-view>
     <v-side id="side"></v-side>
     <v-pref id="pref"></v-pref>
@@ -14,22 +15,28 @@
 </template>
 
 <script type="module">
-  import logo from './vue/logo.vue'
-  import navb from './vue/navb.vue'
-  import find from './vue/find.vue'
-  import tocs from './vue/tocs.vue'
-  import view from './vue/view.vue'
-  import side from './vue/side.vue'
-  import pref from './vue/pref.vue'
-  import foot from './vue/foot.vue'
-  import trak from './vue/trak.vue'
+  import Logo from './vue/Logo.vue';
+  import Navb from './vue/Navb.vue';
+  import Find from './vue/Find.vue';
+  import Tocs from './vue/Tocs.vue';
+//import Rout from './vue/Rout.vue';
+  import View from './vue/View.vue';
+  import Side from './vue/Side.vue';
+  import Pref from './vue/Pref.vue';
+  import Foot from './vue/Foot.vue';
+  import Trak from './vue/Trak.vue';
 
-  export default {
+  let App = {
       name: 'app',
       components: {
-        'v-logo': logo, 'v-navb': navb, 'v-find': find,
-        'v-tocs': tocs, 'v-view': view, 'v-side': side,
-        'v-pref': pref, 'v-foot': foot, 'v-trak': trak } }
+        'v-logo': Logo, 'v-navb': Navb, 'v-find': Find,
+        'v-tocs': Tocs, 'v-view': View, 'v-side': Side, // 'v-rout': Rout,
+        'v-pref': Pref, 'v-foot': Foot, 'v-trak': Trak } };
+  
+//App.Rout = Rout;
+  
+  export default App;
+  
 </script>
 
 <style lang="less">
@@ -47,7 +54,8 @@
     #logo { grid-area:logo; justify-self:stretch; align-self:stretch; display:grid; }
     #navb { grid-area:navb; justify-self:stretch; align-self:stretch; display:grid; }
     #find { grid-area:find; justify-self:stretch; align-self:stretch; display:grid; }
-    #tocs { grid-area:tocs; justify-self:stretch; align-self:stretch; display:grid; }
+    #tocs { grid-area:tocs; justify-self:stretch; align-self:start;   display:grid; background-color:gray;  }
+    #rout { grid-area:tocs; justify-self:stretch; align-self:center;  display:grid; background-color:white; }
     #view { grid-area:view; justify-self:stretch; align-self:stretch; display:grid; }
     #side { grid-area:side; justify-self:stretch; align-self:stretch; display:grid; }
     #pref { grid-area:pref; justify-self:stretch; align-self:stretch; display:grid; }
