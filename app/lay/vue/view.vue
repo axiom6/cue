@@ -37,8 +37,8 @@
   }
 </script>
 
-<style>
-  .view { position:absolute; left:140px; top:50px; right:50px; bottom:50px; background-color:grey;
+<style lang="less">
+  .view { background-color:grey;
     display:grid;
     grid-template-columns: 33%  33% 34%;
     grid-template-rows:    33%  33% 34%;

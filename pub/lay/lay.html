@@ -5,13 +5,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <script src="../js/lib/vue/vue-router.js"></script>
 </head>
   <body>
     <app></app>
     <script type="module">
-      import Main from '../js/util/Main.js';
-      import Vue  from '../js/lib/vue/vue.esm.browser.js';
-      import App  from './App.js';
+      import Main      from '../js/util/Main.js';
+      import Vue       from '../js/lib/vue/vue.esm.browser.js';
+      import App       from './App.js';
+   // import VueRouter from '../js/lib/vue/vue-router.esm.js'; // vue-router.esm.browser.js build just like Vue
+      Vue.use(VueRouter); // throws ReferenceError: process is not defined
+   // console.log( window );
       Vue['config'].productionTip = false;
       Vue['mixin']( Main.vueMixin );
       let onReady = () => {

@@ -7,7 +7,7 @@
   export default {}
 </script>
 
-<style>
-  .logo { position:absolute; left:0; top:0; width:140px; height:50px; background-color:black; }
+<style lang="less">
+  .logo     { background-color:black; }
   .logo img { width:140px; height:50px; }
 </style>

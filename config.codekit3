@@ -89,6 +89,28 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"/app/lay/js/lib/vue/vue-router.esm.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/app/lay/js/lib/vue/vue-router.esm-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/app/lay/js/lib/vue/vue-router.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/app/lay/js/lib/vue/vue-router-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/app/lay/js/lib/vue/vue.esm.browser.js": {
 		"bF": 0,
 		"ft": 64,
@@ -469,6 +491,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/node_modules/rollup-plugin-less/dist/rollup-plugin-less.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/rollup-plugin-less/dist/rollup-plugin-less-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/node_modules/rollup-plugin-node-resolve/dist/rollup-plugin-node-resolve.es.js": {
 		"bF": 0,
 		"ft": 64,
@@ -579,6 +612,28 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/pub/js/lib/dom/jquery-3.3.1-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/js/lib/vue/vue-router.esm.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/js/lib/vue/vue-router.esm-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pub/js/lib/vue/vue-router.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/pub/js/lib/vue/vue-router-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -863,6 +918,17 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/run/imports-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/run/imports-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/run/imports.js": {
 		"bF": 0,
@@ -2969,6 +3035,17 @@
 		"targetECMAVersion": 0
 		},
 	"languageDefaultsUserDefined": [
+		{
+			"autoOutputAction": 0,
+			"autoOutputPathFilenamePattern": "*.vue",
+			"autoOutputPathRelativePath": "",
+			"autoOutputPathReplace1": "",
+			"autoOutputPathReplace2": "",
+			"autoOutputPathStyle": 0,
+			"fileExtension": "vue",
+			"shouldRunCacheBuster": 0,
+			"shouldRunHTMLMinifier": 0
+			}
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",

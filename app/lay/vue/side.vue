@@ -7,6 +7,6 @@
   export default {}
 </script>
 
-<style>
-  .side { position:absolute; right:0; top:50px; width:50px; bottom:50px; background-color:darkgrey;  }
+<style lang="less">
+     .side { background-color:darkgrey;  }
 </style>
