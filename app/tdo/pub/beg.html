@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Beg</title>
+  <meta charset="utf-8">
+  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+</head>
+<body style="display:grid;">
+  <div id="app" style="font-family:Roboto, sans-serif; justify-self:center;">
+    <img src="../vue/logo.png" alt="Vue logo">
+    <h1>{{ greeting }}</h1>
+    <ul>
+      <li>
+        To learn more about Vue, visit
+        <a :href="docsURL" target="_blank">
+          {{ humanizeURL(docsURL) }}
+        </a>
+      </li>
+      <li>
+        For live help with simple questions, check out
+        <a :href="discordURL" target="_blank">
+          the Discord chat
+        </a>
+      </li>
+      <li>
+        For more complex questions, post to
+        <a :href="forumURL" target="_blank">
+          the forum
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <script type="module">
+    import Vue from './js/lib/vue.esm.browser.js';
+    Vue.config.productionTip = false;
+    new Vue({
+      el: '#app',
+      data: {
+        greeting: 'Welcome to your Vue.js app!',
+        docsURL: 'http://vuejs.org/guide/',
+        discordURL: 'https://chat.vuejs.org',
+        forumURL: 'http://forum.vuejs.org/'
+      },
+      methods: {
+        humanizeURL: function (url) {
+          return url
+            .replace(/^https?:\/\//, '')
+            .replace(/\/$/, '')
+        }
+      }
+    });
+  </script>
+</body>
+</html>

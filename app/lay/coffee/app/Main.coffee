@@ -5,12 +5,12 @@ import Stream from '../util/Stream.js'
 
 class Main
 
-  Data.local  = "http://localhost:63342/cue/pub/"
+  Data.local  = "http://localhost:63342/cue/app/lay/pub/"
   Data.hosted = "https://ui-48413.firebaseapp.com/"
 
   Main.begin  =  ( onReady ) ->
     Main.onReady = onReady
-    Data.asyncJSON( "json/lay/Lay.json", Main.init )
+    Data.asyncJSON( "json/Info.json", Main.init )
     return
 
   Main.init = ( data ) ->

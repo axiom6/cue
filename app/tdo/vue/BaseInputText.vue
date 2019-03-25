@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../sass/variables.scss';
+@import 'variables.scss';
 
 .input {
   width: 100%;

@@ -8,7 +8,7 @@ class Data
   Data.local     = "http://localhost:63342/muse/public/"
   Data.localJSON = "http://localhost:63342/muse/public/json"
 
-  Util.noop( Data.hosted )
+  Util.noop( Data.hosted, Data.expandStudys )
 
   # ---- Read JSON with batch async
 
