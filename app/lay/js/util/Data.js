@@ -28,35 +28,35 @@ Data = (function() {
     }
 
     static batchJSON(obj, batch, callback, create = null) {
-      var settings, url;
-      if (Util.jQueryHasNotBeenLoaded()) {
-        return;
-      }
+      var url;
       url = Data.baseUrl() + obj.url;
-      settings = {
-        url: url,
-        type: 'GET',
-        dataType: 'json',
-        processData: false,
-        contentType: 'application/json',
-        accepts: 'application/json'
-      };
-      settings.success = (data, status, jqXHR) => {
-        Util.noop(status, jqXHR);
+      fetch(url).then((response) => {
+        return response.json();
+      }).then((data) => {
         obj['data'] = Util.isFunc(create) ? create(data, obj.type) : data;
         if (Data.batchComplete(batch)) {
           return callback(batch);
         }
-      };
-      settings.error = (jqXHR, status, error) => {
-        Util.noop(jqXHR);
+      }).catch((error) => {
         return console.error("Data.batchJSON()", {
           url: url,
-          status: status,
           error: error
         });
-      };
-      $.ajax(settings);
+      });
+    }
+
+    static asyncJSON(url, callback) {
+      url = Data.baseUrl() + url;
+      fetch(url).then((response) => {
+        return response.json();
+      }).then((data) => {
+        return callback(data);
+      }).catch((error) => {
+        return console.error("Data.asyncJSON()", {
+          url: url,
+          error: error
+        });
+      });
     }
 
     static planeData(batch, plane) {
@@ -71,56 +71,12 @@ Data = (function() {
       }
     }
 
-    static asyncJSON(url, callback) {
-      var settings;
-      if (Util.jQueryHasNotBeenLoaded()) {
-        return;
-      }
-      url = Data.baseUrl() + url;
-      settings = {
-        url: url,
-        type: 'GET',
-        dataType: 'json',
-        processData: false,
-        contentType: 'application/json',
-        accepts: 'application/json'
-      };
-      settings.success = (data, status, jqXHR) => {
-        Util.noop(status, jqXHR);
-        return callback(data);
-      };
-      settings.error = (jqXHR, status, error) => {
-        Util.noop(jqXHR);
-        return console.error("Data.asyncJSON()", {
-          url: url,
-          status: status,
-          error: error
-        });
-      };
-      $.ajax(settings);
-    }
-
-    static syncJSON(path) {
-      var jqxhr;
-      if (Util.jQueryHasNotBeenLoaded()) {
-        return {};
-      }
-      jqxhr = $.ajax({
-        type: "GET",
-        url: path,
-        dataType: 'json',
-        cache: false,
-        async: false
-      });
-      return jqxhr['responseJSON'];
-    }
-
     // ------ Quick JSON read ------
-    static read(url, doJson) {
+    static read(url, callback) {
       if (Util.isObj(url)) {
-        Data.readFile(url, doJson);
+        Data.readFile(url, callback);
       } else {
-        Data.readAjax(url, doJson);
+        Data.asynsJson(url, callback);
       }
     }
 
@@ -134,32 +90,6 @@ Data = (function() {
         return doJson(JSON.parse(e.target.result));
       };
       fileReader.readAsText(fileObj);
-    }
-
-    static readAjax(url, doJson) { //jsonp
-      var settings;
-      settings = {
-        url: url,
-        type: 'get',
-        dataType: 'json',
-        processData: false,
-        contentType: 'application/json',
-        accepts: 'application/json'
-      };
-      settings.success = (data, status, jqXHR) => {
-        var json;
-        Util.noop(status, jqXHR);
-        json = JSON.parse(data);
-        return doJson(json);
-      };
-      settings.error = (jqXHR, status, error) => {
-        return console.error('Store.ajaxGet', {
-          url: url,
-          status: status,
-          error: error
-        });
-      };
-      $.ajax(settings);
     }
 
     static saveFile(data, fileName) {
@@ -184,7 +114,7 @@ Data = (function() {
 
   Data.localJSON = "http://localhost:63342/muse/public/json";
 
-  Util.noop(Data.hosted, Data.batchRead, Data.syncJSON, Data.planeData);
+  Util.noop(Data.hosted);
 
   Data.Databases = {
     color: {

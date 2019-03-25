@@ -15,16 +15,16 @@
 </template>
 
 <script type="module">
-  import Logo from './vue/Logo.vue';
-  import Navb from './vue/Navb.vue';
-  import Find from './vue/Find.vue';
-  import Tocs from './vue/Tocs.vue';
-//import Rout from './vue/Rout.vue';
-  import View from './vue/View.vue';
-  import Side from './vue/Side.vue';
-  import Pref from './vue/Pref.vue';
-  import Foot from './vue/Foot.vue';
-  import Trak from './vue/Trak.vue';
+  import Logo from './Logo.vue';
+  import Navb from './Navb.vue';
+  import Find from './Find.vue';
+  import Tocs from './Tocs.vue';
+//import Rout from './Rout.vue';
+  import View from './View.vue';
+  import Side from './Side.vue';
+  import Pref from './Pref.vue';
+  import Foot from './Foot.vue';
+  import Trak from './Trak.vue';
 
   let App = {
       name: 'app',

@@ -26,20 +26,12 @@
 		"oAP": "/build/.idea",
 		"oF": 0
 		},
-	"/app/lay/App.vue": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/app/lay/App.vue",
-		"oF": 1
-		},
 	"/app/lay/coffee/app/Main.coffee": {
 		"ft": 32,
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/pub/js/util/Main.js",
+		"oAP": "/app/lay/js/app/Main.js",
 		"oF": 2,
 		"oS": 1,
 		"sC": 0,
@@ -50,7 +42,7 @@
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/pub/js/util/Data.js",
+		"oAP": "/app/lay/js/util/Data.js",
 		"oF": 2,
 		"oS": 1,
 		"sC": 0,
@@ -62,7 +54,7 @@
 		"ma": 0,
 		"mi": 0,
 		"oA": 2,
-		"oAP": "/pub/js/util/Match.js",
+		"oAP": "/app/lay/js/util/Match.js",
 		"oF": 3,
 		"sC": 3,
 		"tS": 0
@@ -72,7 +64,7 @@
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/pub/js/util/Stream.js",
+		"oAP": "/app/lay/js/util/Stream.js",
 		"oF": 2,
 		"oS": 1,
 		"sC": 0,
@@ -83,10 +75,43 @@
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/pub/js/util/Util.js",
+		"oAP": "/app/lay/js/util/Util.js",
 		"oF": 2,
 		"oS": 1,
 		"sC": 0,
+		"tS": 0
+		},
+	"/app/lay/js/app/App.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/app/lay/js/app/App-min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
+	"/app/lay/js/app/Main.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/app/lay/js/app/Main-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/app/lay/js/bin/rollup.config.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/app/lay/js/bin/rollup.config-min.js",
+		"oF": 0,
+		"sC": 3,
 		"tS": 0
 		},
 	"/app/lay/js/lib/vue/vue-router.esm.js": {
@@ -127,19 +152,8 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 1,
-		"oAP": "/app/lay/js/util/Data-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/app/lay/js/util/Main.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
 		"oA": 0,
-		"oAP": "/app/lay/js/util/Main-min.js",
+		"oAP": "/app/lay/js/util/Data-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -149,9 +163,9 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/app/lay/js/util/Match-min.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 3,
 		"tS": 0
 		},
@@ -177,16 +191,21 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/app/lay/rollup.config.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/app/lay/rollup.config-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
+	"/app/lay/lay.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app/lay/lay.html",
+		"oF": 0
+		},
+	"/app/lay/vue/App.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app/lay/vue/App.vue",
+		"oF": 0
 		},
 	"/app/lay/vue/find.vue": {
 		"cB": 0,
@@ -215,12 +234,12 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/app/lay/vue/logo.vue": {
+	"/app/lay/vue/Logo.vue": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/app/lay/vue/logo.vue",
+		"oAP": "/app/lay/vue/Logo.vue",
 		"oF": 1
 		},
 	"/app/lay/vue/navb.vue": {
@@ -239,6 +258,14 @@
 		"oAP": "/app/lay/vue/pref.vue",
 		"oF": 1
 		},
+	"/app/lay/vue/Rout.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app/lay/vue/Rout.vue",
+		"oF": 0
+		},
 	"/app/lay/vue/side.vue": {
 		"cB": 0,
 		"ft": 8192,
@@ -252,7 +279,7 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/app/lay/vue/tocs.vue",
+		"oAP": "/app/lay/vue/Tocs.vue",
 		"oF": 1
 		},
 	"/app/lay/vue/trak.vue": {
@@ -268,8 +295,19 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/app/lay/vue/view.vue",
+		"oAP": "/app/lay/vue/View.vue",
 		"oF": 1
+		},
+	"/app/lay/vue/Zzzz.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/app/lay/vue/Zzzz-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/app/roll/App.vue": {
 		"cB": 0,
@@ -687,7 +725,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/pub/js/util/Data-min.js",
 		"oF": 0,
 		"sC": 3,
@@ -720,7 +758,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/pub/js/util/Stream-min.js",
 		"oF": 0,
 		"sC": 3,
@@ -984,6 +1022,22 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/txt/quasar/install.log.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/txt/quasar/install.log.txt",
+		"oF": 0
+		},
+	"/txt/vue/vue-cli.install.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/txt/vue/vue-cli.install.txt",
+		"oF": 0
 		}
 	},
 "hooks": [

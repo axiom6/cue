@@ -13,8 +13,8 @@
     "rollent": "rollup --config run/roll.ent.js",
     "rollapp": "rollup --config run/roll.vue.js",
     "roll": "rollup --config app/roll/rollup.config.js",
-    "tdo": "rollup --config app/tdo/rollup.config.js",
-    "lay": "rollup --config app/lay/rollup.config.js"
+    "tdo":  "rollup --config app/tdo/rollup.config.js",
+    "lay":  "rollup --config app/lay/js/bin/rollup.config.js"
   },
   "dependencies": {
     "vue":        "^2.5.22",

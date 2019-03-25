@@ -8,6 +8,11 @@ import Stream from '../util/Stream.js';
 
 Main = (function() {
   class Main {
+    static begin(onReady) {
+      Main.onReady = onReady;
+      Data.asyncJSON("json/lay/Lay.json", Main.init);
+    }
+
     static init(data) {
       var infoSpec, subjects;
       Main.Spec = data;
@@ -19,19 +24,8 @@ Main = (function() {
         subjects: ["Select", "Choice", "Test"]
       };
       Main.stream = new Stream(subjects, infoSpec);
-      Main.main = new Main();
-      Main.main.onReady();
+      Main.onReady();
     }
-
-    constructor(stream) {
-      this.onReady = this.onReady.bind(this);
-      this.stream = stream;
-      Main.stream.subscribe("Ready", "Main", () => {
-        return this.onReady();
-      });
-    }
-
-    onReady() {}
 
   };
 
@@ -39,7 +33,19 @@ Main = (function() {
 
   Data.hosted = "https://ui-48413.firebaseapp.com/";
 
-  Data.asyncJSON("json/lay/Lay.json", Main.init);
+  Main.vueMixin = {
+    created: function() {
+      console.log('Main.vueMixin.created() globally');
+    },
+    methods: {
+      subscribe: function(subject, source, onMethod) {
+        Main['stream'].subscribe(subject, source, onMethod);
+      },
+      publish: function(subject, object) {
+        Main['stream'].publish(subject, object);
+      }
+    }
+  };
 
   Main.NavbSubjects = ["Search", "Contact", "Settings", "SignOn"];
 
