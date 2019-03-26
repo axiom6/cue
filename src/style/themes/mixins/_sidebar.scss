@@ -1,0 +1,116 @@
+@mixin sidebar-theme-mixin(
+  $mainBG,
+  $groupTitleColor,
+  $headerColor,
+  $headerBG,
+  $headerHoverBG,
+  $headerActiveColor,
+  $headerActiveBG,
+  $headerActiveBoxShadow,
+  $scrollareaThumbBG,
+  $scrollareaThumbHoverBG,
+  $itemBG,
+  $itemColor,
+  $itemSubstringColor,
+  $itemIconColor,
+  $itemToggleIconColor,
+  $itemTextIconColor,
+  $itemActiveStateColor,
+  $itemActiveStateIconColor,
+  $itemActiveStateBG,
+  $itemHoverBG,
+  $itemHoverColor,
+  $itemHoverColorTextLinks,
+  $itemActiveColorTextLinks,
+  $itemActiveStateColorTextLinks,
+  $itemActiveFocusColor,
+  $itemActiveFocusBG,
+  $itemActiveFocusBoxShadow,
+  $itemFocusOutline,
+  $topDivBoxShadow
+) {
+  background: $mainBG;
+
+    &.#{$class-prefix}-sidebar-text-links {
+      .#{$class-prefix}-sidebar-group-item {
+        &:hover {
+          color: $itemHoverColorTextLinks !important;
+        }
+        &:active {
+          color: $itemActiveColorTextLinks !important;
+        }
+        &.active {
+          color: $itemActiveStateColorTextLinks !important;
+        }
+      }
+    }
+
+
+  .#{$class-prefix}-sidebar-group-title {
+    color: $groupTitleColor;
+  }
+  .#{$class-prefix}-sidebar-header {
+    .#{$class-prefix}-btn {
+      color: $headerColor;
+      background: $headerBG;
+      &:hover {
+        background: $headerHoverBG;
+      }
+      &:active {
+        color: $headerActiveColor;
+        background: $headerActiveBG;
+        -webkit-box-shadow: $headerActiveBoxShadow;
+        -moz-box-shadow: $headerActiveBoxShadow;
+        box-shadow: $headerActiveBoxShadow;
+      }
+    }
+  }
+  .#{$class-prefix}-sidebar-scrollarea {
+    &-topdiv {
+      box-shadow: $topDivBoxShadow;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $scrollareaThumbBG;
+      &:hover {
+        background: $scrollareaThumbHoverBG;
+      }
+    }
+  }
+  .#{$class-prefix}-sidebar-group-item {
+    background: $itemBG;
+    color: $itemColor;
+    &-substring {
+      color: $itemSubstringColor;
+    }
+    &-icon {
+      color: $itemIconColor;
+    }
+    &-text-icon, &-toggle-icon {
+      color: $itemToggleIconColor;
+    }
+    &-text {
+      &-icon {
+        color: $itemTextIconColor;
+      }
+    }
+    &.active {
+      color: $itemActiveStateColor;
+      background: $itemActiveStateBG;
+      .#{$class-prefix}-sidebar-group-item-icon {
+        color: $itemActiveStateIconColor !important;
+      }
+    }
+    &:hover {
+      background: $itemHoverBG;
+      color: $itemHoverColor;
+    }
+    &:active, &:focus {
+      color: $itemActiveFocusColor;
+      background: $itemActiveFocusBG;
+      box-shadow: $itemActiveFocusBoxShadow;
+    }
+    &:focus {
+      outline: $itemFocusOutline !important;
+    }
+  }
+}
