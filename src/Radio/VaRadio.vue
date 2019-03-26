@@ -116,6 +116,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 @mixin radio-focus-mixin($color, $opacity: 0.6) {
   &:focus:not(:active):not(:hover),
   &-focused:not(:active):not(:hover) {

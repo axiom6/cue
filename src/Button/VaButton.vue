@@ -27,9 +27,11 @@
 
 <script>
 import EventListener from '../utils/EventListener'
+import VaIcon        from '../Icon/VaIcon.vue'
 
 export default {
   name: 'VaButton',
+  components: { 'va-icon':VaIcon },
   props: {
     type: {
       type: String,
@@ -297,7 +299,7 @@ export default {
 
       this.componentWasMounted = true
 
-      this._clickEvent = EventListener.listen( window, 'click', e => {
+      this._clickEvent = EventListener.listen( window,document, 'click', e => {
         if (!el.contains(e.target)) {
           this.isFocused = false
         }
@@ -347,21 +349,24 @@ export default {
   // ring on hover
   &:focus:not(:active):not(.#{$class-prefix}-select-btn-open):not(.#{$class-prefix}-btn-disabled),
   &-focused:not(:active):not(.#{$class-prefix}-select-btn-open):not(.#{$class-prefix}-btn-disabled) {
-    box-shadow: inset $boxShadowColor 0px 0px 0px 2px;
-    /* fallback */
-    box-shadow: inset rgba($boxShadowColor, $boxShadowOpacity) 0px 0px 0px 2px;
+    box-shadow: inset $boxShadowColor 0 0 0 2px;
+
     outline: none;
   }
 }
 
 @mixin button-outline-mixin($outlineColor, $outlineWidth, $activeOutlineColor) {
-  box-shadow: inset $outlineColor 0px 0px 0px $outlineWidth;
+  box-shadow: inset $outlineColor 0 0 0 $outlineWidth;
   outline: none;
 
   &:active {
-    box-shadow: inset $activeOutlineColor 0px 0px 0px $outlineWidth;
+    box-shadow: inset $activeOutlineColor 0 0 0 $outlineWidth;
   }
 }
+
+@mixin button-size-mixin( $padding, $fontSize, $lineHeight, $borderRadius ) {}
+
+
 
 .#{$class-prefix}-btn {
   &-default {

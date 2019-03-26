@@ -78,6 +78,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 .#{$class-prefix}-page-loading-con {
   display: inline-block;
   z-index: 1000;

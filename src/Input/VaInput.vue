@@ -355,6 +355,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 @mixin input-theme-mixin($iconColor, $iconHoverColor, $iconActiveColor) {
   .#{$class-prefix}-input-clearable,
   .#{$class-prefix}-input-show-icon {

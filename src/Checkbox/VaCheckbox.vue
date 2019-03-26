@@ -34,7 +34,7 @@
 <script>
 import events from '../utils/events'
 import validationMixin from '../Mixin/validationMixin'
-import validate from '../validate'
+import validate from '../validate.vue'
 
 export default {
   name: 'VaCheckbox',

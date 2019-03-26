@@ -53,6 +53,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import "../variables.scss";
 .#{$class-prefix}-tooltip_wrapper,
 .#{$class-prefix}-tooltip_trigger {
   display: inline-block;

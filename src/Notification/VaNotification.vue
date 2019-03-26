@@ -217,6 +217,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 .#{$class-prefix}-notification {
   position: fixed;
   top: 0px;

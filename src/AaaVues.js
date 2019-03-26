@@ -20,7 +20,7 @@ const AaaVues = { // 'va-app':VaApp,
   'va-button':VaButton,          'va-modal':VaModal,                 'va-aside':VaAside
 };
 /* va-button va-icon va-modal va-mobile va-desktop va-tabs va-tab va-row va-column va-select */
-/* va-option va-form va-form-item va-input va-color-picker va-checkbox va-range va-sidebar-group */
+/* va-option va-form va-form-item va-input va-color-picker va-checkbox va-range va-sidebar-group  */
 /* <va-collapse-transition va-loading */
 
 export default AaaVues;

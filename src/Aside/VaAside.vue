@@ -4,13 +4,12 @@
       <div :class="`${classPrefix}-aside-dialog`">
         <div :class="`${classPrefix}-aside-content`">
           <div :class="`${classPrefix}-aside-header`" v-if="header">
-            <button
+            <va-button
               :class="`${classPrefix}-close`"
               @click="close"
-              type="button"
-            >
+              type="button">
               <span>&times;</span>
-            </button>
+            </va-button>
             <div :class="`${classPrefix}-aside-title`">{{title}}</div>
           </div>
           <div :class="`${classPrefix}-aside-body`">
@@ -26,9 +25,11 @@
 import EventListener from '../utils/EventListener'
 //import createFocusTrap from 'focus-trap'
 import element from '../utils/element'
+import VaButton from '../Button/VaButton.vue'
 
 export default {
   name: 'VaAside',
+  components: { 'va-button': VaButton },
   props: {
     placement: {
       type: String,
@@ -86,10 +87,10 @@ export default {
     })
   },
   mounted () {
-    document.querySelector('body').appendChild(this.$refs.aside)
-    this.$once('hook:beforeDestroy', () => {
-      document.querySelector('body').removeChild(this.$refs.aside)
-    })
+    //document.querySelector('body').appendChild(this.$refs.aside)
+    //this.$once('hook:beforeDestroy', () => {
+    //  document.querySelector('body').removeChild(this.$refs.aside)
+    //}),
 
 /*this.focusTrap = createFocusTrap(this.$refs.aside, {
       clickOutsideDeactivates: true,
@@ -112,15 +113,15 @@ export default {
         element.addClass(body, classPrefix + '-modal-open')
 
         // This timeout is included to allow for opacity transition.
-        setTimeout(() => {
+        setTimeout( (backdrop) => {
           backdrop.className += ' ' + classPrefix + '-aside-in'
-          this._clickEvent = EventListener.listen(backdrop, 'click', this.close)
+          this._clickEvent = EventListener.listen( backdrop, 'click', this.close)
           this.$emit('show')
         }, 20)
 
         this.focusTrap.activate()
       } else {
-        this.focusTrap.deactivate()
+        this.focusTrap['deactivate']()
         this.performClose()
       }
     }

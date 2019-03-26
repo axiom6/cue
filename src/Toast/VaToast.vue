@@ -106,6 +106,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 $toastTop: 20px;
 $toastBottom: 20px;
 $toastRight: 20px;

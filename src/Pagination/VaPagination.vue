@@ -195,6 +195,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 .#{$class-prefix}-pagination {
   display: flex;
   justify-content: space-around;

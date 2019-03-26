@@ -196,6 +196,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 .#{$class-prefix}-range-barCnt {
   position: relative;
   height: 10px;

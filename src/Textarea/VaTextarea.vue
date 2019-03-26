@@ -330,6 +330,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 .#{$class-prefix}-textarea-con {
   overflow-y: hidden;
   .#{$class-prefix}-form-control {

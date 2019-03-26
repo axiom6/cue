@@ -304,9 +304,42 @@
 
 <script>
 import events from '../utils/events'
+import VaButton from '../Button/VaButton.vue'
+import VaModal from '../Modal/VaModal.vue'
+import VaDesktop from '../Desktop/VaDesktop.vue'
+import VaTabs from '../Tabs/VaTabs.vue'
+import VaTab from '../Tabs/VaTab.vue'
+import VaApp from '../App/VaApp.vue'
+import VaPage from '../Page/VaPage.vue'
+import VaSidebar from '../Sidebar/VaSidebar.vue'
+import VaSidebarGroup from '../Sidebar/VaSidebarGroup.js'
+import VaMinibar from '../Minibar/VaMinibar.vue'
+import VaTopbar from '../Topbar/VaTopbar.vue'
+import VaColumn from '../Grid/VaColumn.vue'
+import VaRow from '../Grid/VaRow.vue'
+import VaRange from '../Range/VaRange.vue'
+import VaCheckbox from '../Checkbox/VaCheckbox.vue'
+import VaTooltip  from '../Tooltip/VaTooltip.vue'
+import VaSelect  from '../Select/VaSelect.vue'
+import VaOption  from '../Select/VaOption.vue'
+import VaForm  from '../Form/VaForm.vue'
+import VaFormItem  from '../Form/VaFormItem.vue'
+import VaColorPicker from '../ColorPicker/VaColorPicker.vue'
+import VaMobile from '../Mobile/VaMobile.vue'
+import VaIcon from '../Icon/VaIcon.vue'
+
+/* va-button va-icon va-modal va-mobile va-desktop va-tabs va-tab va-row va-column va-select */
+/* va-option va-form va-form-item va-input va-color-picker va-checkbox va-range va-sidebar-group  */
+/* <va-collapse-transition va-loading */
 
 export default {
   name: 'VaAppConfig',
+  components:{ 'va-button':VaButton, 'va-modal':VaModal, 'va-desktop':VaDesktop, 'va-tabs':VaTabs,
+    'va-tab':VaTab, 'va-app':VaApp,  'va-page':VaPage, 'va-sidebar-group':VaSidebarGroup,
+    'va-sidebar':VaSidebar, 'va-minibar':VaMinibar, 'va-topbar':VaTopbar, 'va-row':VaRow,
+    'va-column':VaColumn, 'va-range':VaRange, 'va-checkbox':VaCheckbox, 'va-tooltip':VaTooltip,
+    'va-select':VaSelect, 'va-option':VaOption, 'va-form':VaForm, 'va-form-item':VaFormItem,
+    'va-color-picker':VaColorPicker, 'va-mobile':VaMobile, 'va-icon':VaIcon },
   mixins: [events],
   props: {
     classPrefix: {
@@ -473,6 +506,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 .themeModalBody {
   hr {
     margin-bottom: 5px;

@@ -110,6 +110,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 @mixin dropdown-theme-mixin(
   $menuBackground,
   $menuBoxShadow,

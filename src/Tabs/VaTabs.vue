@@ -158,6 +158,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 .#{$class-prefix}-nav-tabs {
   list-style-type: none;
   margin: 0;

@@ -41,6 +41,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 .#{$class-prefix}-table {
   margin: 1em 0;
   &-fullwidth {

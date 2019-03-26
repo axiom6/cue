@@ -35,6 +35,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 @function rem($pixels, $context: $browser-context) {
   @if (unitless($pixels)) {
     $pixels: $pixels * 1px;

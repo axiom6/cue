@@ -277,6 +277,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../variables.scss";
 .#{$class-prefix}-timepicker {
   position: relative;
   display: inline-block;
