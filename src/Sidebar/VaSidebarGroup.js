@@ -6,6 +6,8 @@
 import { insertMetadataToItems, generateLevel } from './core'
 import events from '../utils/events'
 
+
+
 const VaSidebarGroup = {
   mixins: [events],
   props: {

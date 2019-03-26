@@ -1,11 +1,11 @@
 <template>
   <div :class="classObj" :style="styleObj" ref="modal">
     <div :class="`${classPrefix}-modal-dialog`" :style="{'width': width }">
-      <va-collapse-transition>
+      <!--va-collapse-transition>
         <div :class="`${classPrefix}-modal-loading`" v-show="modalIsLoading">
           <va-loading color="#888" size="md"/>
         </div>
-      </va-collapse-transition>
+      </va-collapse-transition-->
 
       <div :class="`${classPrefix}-modal-content`" v-show="!modalIsLoading">
         <slot name="header">
@@ -48,8 +48,16 @@ import EventListener from '../utils/EventListener'
 import element from '../utils/element'
 import localeMixin from '../Mixin/localeMixin'
 
+//port VaCollapseTransition from '../Collapse/VaCollapseTransition.vue';
+import VaLoading            from '../Loading/VaLoading.vue';
+import VaButton             from '../Button/VaButton.vue';
+import VaIcon               from '../Icon/VaIcon.vue';
+
+const components = { 'va-loading':VaLoading, 'va-button':VaButton, 'va-icon':VaIcon };
+
 export default {
   name: 'VaModal',
+  components: components,
   mixins: [localeMixin('VaModal')],
   props: {
     title: {
@@ -145,10 +153,9 @@ export default {
       fallbackFocus: this.$refs.modal
     })*/
 
-    document.querySelector('body').appendChild(this.$refs.modal)
-    this.$once('hook:beforeDestroy', () => {
-      document.querySelector('body').removeChild(this.$refs.modal)
-    })
+    //document.querySelector('body').appendChild(this.$refs.modal)
+    //this.$once('hook:beforeDestroy', () => {
+    //  document.querySelector('body').removeChild(this.$refs.modal) } )
   },
   watch: {
     modalIsLoading (val) {
@@ -260,7 +267,7 @@ export default {
           this.$emit('closed', { type: 'closed' })
         }, 300)
 
-        this.focusTrap.deactivate()
+        this.focusTrap['deactivate']()
       }
     }
   },

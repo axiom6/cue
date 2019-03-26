@@ -4,8 +4,8 @@
   </transition>
 </template>
 
-<script>
-import velocity from 'velocity-animate'
+<script type="module">
+import velocity from '../velocity.js'
 
 function animate (node, show, transitionName, done) {
   let ok

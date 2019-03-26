@@ -128,10 +128,6 @@ export default {
 
 .#{$class-prefix}-radio-con {
   margin-right: 10px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   .#{$class-prefix}-label {
     margin-left: 8px;
     outline: none;

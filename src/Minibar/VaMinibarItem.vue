@@ -9,18 +9,25 @@
       arrow
     >
       <div :class="classObj">
-        <slot/>
+        <slot></slot>
       </div>
     </va-tooltip>
     <div v-else :class="classObj">
-      <slot/>
+      <slot></slot>
     </div>
   </div>
 </template>
 
-<script>
+<script type="module">
+
+import VaTooltip from '../Tooltip/VaTooltip.vue';
+
+const components = { 'va-tooltip':VaTooltip };
+
+
 export default {
   name: 'VaMinibarItem',
+  components: components,
   props: {
     brand: {
       type: Boolean,

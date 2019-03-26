@@ -9,13 +9,13 @@
           @touchstart="gradientOnMousedown"
           :class="`${classPrefix}-color-picker-gradient`"
         >
-          <div :class="`${classPrefix}-color-picker-gradient-white`"/>
-          <div :class="`${classPrefix}-color-picker-gradient-black`"/>
-          <div :class="`${classPrefix}-color-picker-border`"/>
+          <div :class="`${classPrefix}-color-picker-gradient-white`"></div>
+          <div :class="`${classPrefix}-color-picker-gradient-black`"></div>
+          <div :class="`${classPrefix}-color-picker-border`"></div>
           <div
             ref="gradientCursor"
             :class="`${classPrefix}-color-picker-gradient-cursor`"
-          />
+          ></div>
         </div>
         <div
           ref="hue"
@@ -23,11 +23,11 @@
           @touchstart="hueSliderOnMousedown"
           :class="`${classPrefix}-color-picker-hue-track`"
         >
-          <div :class="`${classPrefix}-color-picker-border`"/>
+          <div :class="`${classPrefix}-color-picker-border`"></div>
           <div
             ref="hueCursor"
             :class="`${classPrefix}-color-picker-hue-cursor`"
-          />
+          ></div>
         </div>
         <div
           ref="alpha"
@@ -38,12 +38,12 @@
           <div
             :style="alphaStyleObj"
             :class="`${classPrefix}-color-picker-alpha-track-color`"
-          />
-          <div :class="`${classPrefix}-color-picker-border`"/>
+          ></div>
+          <div :class="`${classPrefix}-color-picker-border`"></div>
           <div
             ref="alphaCursor"
             :class="`${classPrefix}-color-picker-alpha-cursor`"
-          />
+          ></div>
         </div>
       </div>
       <div :class="`${classPrefix}-color-picker-lower`">
@@ -69,9 +69,13 @@
 
 <script>
 import { rgbToHsb, rgbToHex, hsbToRgb, hexToHsb, hsbToHex } from './conversions'
+import VaInput from '../Input/VaInput.vue';
+
+const components = { 'va-input':VaInput };
 
 export default {
   name: 'VaColorPickerPopup',
+  components: components,
   props: {
     color: {
       type: String
@@ -226,8 +230,8 @@ export default {
        * absolute x and y position of the system cursor
        * in relation to the gradient
        */
-      var arrowx = ''
-      var arrowy = ''
+      let arrowx = ''
+      let arrowy = ''
 
       if (e.clientX && e.clientY) {
         arrowx = e.clientX - this.gradientPosition.left - cursorOffsetArrowLeft
@@ -313,7 +317,7 @@ export default {
        * absolute y position of the system cursor
        * in relation to the hue track
        */
-      var arrowy = ''
+      let arrowy = ''
 
       if (e.clientY) {
         arrowy = e.clientY - this.hueSliderPosition.top - cursorOffsetArrowTop
@@ -416,7 +420,7 @@ export default {
        * absolute y position of the system cursor
        * in relation to the alpha track
        */
-      var arrowy = ''
+      let arrowy = ''
 
       if (e.clientY) {
         arrowy = e.clientY - this.alphaSliderPosition.top - cursorOffsetArrowTop

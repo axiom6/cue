@@ -21,9 +21,16 @@
   </div>
 </template>
 
-<script>
+<script type="module">
+  
+  import VaSidebarGroupItem   from '../Sidebar/VaSidebarGroupItem.vue';
+  import VaSidebarGroupToggle from '../Sidebar/VaSidebarGroupToggle.vue';
+  
+  const  components = { 'va-sidebar-group-item':VaSidebarGroupItem, 'va-sidebar-group-toggle':VaSidebarGroupToggle };
+  
 export default {
   name: 'VaSidebarGroupLevel',
+  components: components,
   props: {
     parentItem: {
       type: Object,

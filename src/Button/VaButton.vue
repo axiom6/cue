@@ -299,7 +299,7 @@ export default {
 
       this.componentWasMounted = true
 
-      this._clickEvent = EventListener.listen( window,document, 'click', e => {
+      this._clickEvent = EventListener.listen( el, 'click', e => {
         if (!el.contains(e.target)) {
           this.isFocused = false
         }
@@ -364,7 +364,7 @@ export default {
   }
 }
 
-@mixin button-size-mixin( $padding, $fontSize, $lineHeight, $borderRadius ) {}
+@mixin btn-size-mixin( $padding, $fontSize, $lineHeight, $borderRadius ) {}
 
 
 
@@ -557,9 +557,7 @@ export default {
       $fontColActive: $N400
     );
 
-    &:hover {
-      text-decoration: underline;
-    }
+    // &:hover { text-decoration: underline; }
 
     &:active,
     &:focus {
@@ -694,16 +692,10 @@ export default {
   text-decoration: none;
   vertical-align: middle;
   white-space: nowrap;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   transition: background 0.1s ease-out,
     box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
 
-  &:hover {
-    text-decoration: none;
-  }
+  // &:hover { text-decoration: none; }
 
   &:focus,
   &:active:focus,
@@ -712,9 +704,6 @@ export default {
   }
 
   &:active {
-    -webkit-transition-property: none;
-    -moz-transition-property: none;
-    -ms-transition-property: none;
     transition-property: none;
   }
 
@@ -727,9 +716,7 @@ export default {
     > a {
       cursor: default;
 
-      &:hover {
-        text-decoration: none !important;
-      }
+      // &:hover { text-decoration: none !important; }
     }
   }
 
@@ -855,18 +842,18 @@ Ready to be confused?
   }
 
   > .#{$class-prefix}-btn:first-child:not(:last-child):not(.#{$class-prefix}-dropdown-toggle),
-  > .#{$class-prefix}-dropdown-con:first-child:not(:last-child):not(.#{$class-prefix}-dropdown-toggle)
-    > span
-    > div
+  > .#{$class-prefix}-dropdown-con:first-child:not(:last-child):not(.#{$class-prefix}-dropdown-toggle),
+    > span,
+    > div,
     > .#{$class-prefix}-btn {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-right: 1px;
   }
 
-  > .#{$class-prefix}-dropdown-con:not(:first-child):not(:last-child)
-    > span
-    > div
+  > .#{$class-prefix}-dropdown-con:not(:first-child):not(:last-child),
+    > span,
+    > div,
     > .#{$class-prefix}-btn {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -889,20 +876,20 @@ Ready to be confused?
     float: left;
   }
 
-  > .#{$class-prefix}-btn-group:not(:first-child):not(:last-child)
+  > .#{$class-prefix}-btn-group:not(:first-child):not(:last-child),
     > .#{$class-prefix}-btn {
     border-radius: 0;
   }
 
-  > .#{$class-prefix}-btn-group:first-child:not(:last-child)
+  > .#{$class-prefix}-btn-group:first-child:not(:last-child),
     > .#{$class-prefix}-btn:last-child,
-  > .#{$class-prefix}-btn-group:first-child:not(:last-child)
+  > .#{$class-prefix}-btn-group:first-child:not(:last-child),
     > .#{$class-prefix}-dropdown-toggle {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  > .#{$class-prefix}-btn-group:last-child:not(:first-child)
+  > .#{$class-prefix}-btn-group:last-child:not(:first-child),
     > .#{$class-prefix}-btn:first-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -937,7 +924,7 @@ And, of course, when the button group is a vertical button group arrangement.
   > .#{$class-prefix}-dropdown-con:not(:first-child):not(:last-child):not(.#{$class-prefix}-dropdown-toggle) {
     border-radius: 0;
     margin-bottom: 1px;
-    margin-right: 0px;
+    margin-right: 0;
   }
 
   > .#{$class-prefix}-btn:first-child {
@@ -949,38 +936,32 @@ And, of course, when the button group is a vertical button group arrangement.
   }
 
   > .#{$class-prefix}-btn:first-child:not(:last-child):not(.#{$class-prefix}-dropdown-toggle) {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
+    border-radius: 4px 4px 0 0;
   }
 
   > .#{$class-prefix}-btn:last-child:not(:first-child),
   > .#{$class-prefix}-dropdown-toggle:not(:first-child) {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-radius: 0 0 4px 4px;
   }
 
   > .#{$class-prefix}-btn-group-vertical {
     float: left;
   }
 
-  > .#{$class-prefix}-btn-group-vertical:not(:first-child):not(:last-child)
+  > .#{$class-prefix}-btn-group-vertical:not(:first-child):not(:last-child),
     > .#{$class-prefix}-btn {
     border-radius: 0;
   }
 
-  > .#{$class-prefix}-btn-group-vertical:first-child:not(:last-child)
+  > .#{$class-prefix}-btn-group-vertical:first-child:not(:last-child),
     > .#{$class-prefix}-btn:last-child,
-  > .#{$class-prefix}-btn-group-vertical:first-child:not(:last-child)
+  > .#{$class-prefix}-btn-group-vertical:first-child:not(:last-child),
     > .#{$class-prefix}-dropdown-toggle {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  > .#{$class-prefix}-btn-group-vertical:last-child:not(:first-child)
+  > .#{$class-prefix}-btn-group-vertical:last-child:not(:first-child),
     > .#{$class-prefix}-btn:first-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;

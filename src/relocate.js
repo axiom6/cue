@@ -1,4 +1,5 @@
-import Vue from 'vue'
+
+import Vue from '../app/aaa/pub/js/lib/vue.esm.browser.js';
 
 const getWindowSize = () => {
   let ww = window.innerWidth;

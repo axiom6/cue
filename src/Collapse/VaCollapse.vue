@@ -56,10 +56,6 @@ export default {
       border-radius: 3px;
       cursor: pointer;
       transition: background 0.2s ease-out;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
 
       i {
         width: 15px;

@@ -15,13 +15,10 @@ import VaBreadcrumbItem from './Breadcrumb/VaBreadcrumbItem.vue';
 
 const AaaVues = { // 'va-app':VaApp,
   'va-app-config':VaAppConfig,   'va-topbar':VaTopbar,               'va-minibar':VaMinibar,
-  'va-sidebar':VaSidebar,        'va-side-bar-group':VaSidebarGroup, 'va-page':VaPage,
+  'va-sidebar':VaSidebar,        'va-sidebar-group':VaSidebarGroup, 'va-page':VaPage,
   'va-page-header':VaPageHeader, 'va-breadcrumb':VaBreadcrumb,       'va-breadcrumb-item':VaBreadcrumbItem,
   'va-button':VaButton,          'va-modal':VaModal,                 'va-aside':VaAside
 };
-/* va-button va-icon va-modal va-mobile va-desktop va-tabs va-tab va-row va-column va-select */
-/* va-option va-form va-form-item va-input va-color-picker va-checkbox va-range va-sidebar-group  */
-/* <va-collapse-transition va-loading */
 
 export default AaaVues;
 

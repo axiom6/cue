@@ -24,7 +24,7 @@
           >
             <span :class="`${classPrefix}-selected-tag__label`">
               <slot :item="item" name="item">
-                <span v-html="format(item)"/>
+                <span v-html="format(item)"></span>
               </slot>
             </span>
             <span :class="`${classPrefix}-selected-tag__icon`">
@@ -35,7 +35,7 @@
         <template v-else>
           <div>
             <slot :item="selectedItems[0]" name="item">
-              <span v-html="format(selectedItems[0])"/>
+              <span v-html="format(selectedItems[0])"></span>
             </slot>
           </div>
         </template>
@@ -49,7 +49,6 @@
         :style="{minWidth: '100%', maxHeight: menuMaxHeight}"
         ref="menu"
         v-show="show"
-        v-va-position="show"
       >
         <li v-if="search">
           <div :class="`${classPrefix}-search-wrap`">
@@ -89,32 +88,38 @@
         </div>
         <div
           :class="`${classPrefix}-notify`"
-          transition="fadeDown"
           v-show="showNotify"
         >Limit: {{limit}}</div>
       </ul>
     </transition>
-    <div class="clearfix"/>
+    <div class="clearfix"></div>
     <validate
       :current="value"
       :custom-validate="customValidate"
       :name="name"
       :rules="rules"
       v-model="validStatus"
-    />
+    ></validate>
   </div>
 </template>
 
 <script>
-import EventListener from '../utils/EventListener'
+import EventListener   from '../utils/EventListener'
 import validationMixin from '../Mixin/validationMixin'
-import validate from '../validate.vue'
-import type from '../utils/type'
-import localeMixin from '../Mixin/localeMixin.js'
-import inputMixin from '../Mixin/inputMixin'
+import validate        from '../validate.vue'
+import type            from '../utils/type'
+import localeMixin     from '../Mixin/localeMixin.js'
+import inputMixin      from '../Mixin/inputMixin'
+
+//port position       from '../relocate' // position
+import VaButton       from '../Button/VaButton.vue';
+import VaIcon         from '../Icon/VaIcon.vue';
+
+const components = { 'va-button':VaButton, 'va-icon':VaIcon, validate };
 
 export default {
   name: 'VaSelect',
+  components: components,
   mixins: [validationMixin, inputMixin, localeMixin('VaSelect')],
   props: {
     showSelected: {
@@ -246,9 +251,6 @@ export default {
       }
     }
   },
-  components: {
-    validate
-  },
   created () {
     document.addEventListener('keyup', this.keyup)
   },
@@ -285,7 +287,7 @@ export default {
     },
     selectedItems: {
       get () {
-        var a
+        let a
         if (type.isArray(this.currentValue)) {
           a = this.currentValue
         } else {
@@ -317,15 +319,15 @@ export default {
       }
     },
     allSelected () {
-      var options = this.filter(this.currentOptions, this.searchText)
-      var values = this.currentValue
+      let options = this.filter(this.currentOptions, this.searchText)
+      let values = this.currentValue
 
       if (!values || options.length !== values.length || options.length === 0) {
         return false
       }
 
-      for (var i = 0, l = options.length; i < l; i++) {
-        var value = options[i].value
+      for (let i = 0, l = options.length; i < l; i++) {
+        let value = options[i].value
         if (values.indexOf(value) === -1) {
           return false
         }
@@ -342,7 +344,7 @@ export default {
   },
   mounted () {
     this.$nextTick(() => {
-      this._closeEvent = EventListener.listen(window, 'click', e => {
+      this._closeEvent = EventListener.listen( this.$el, 'click', e => {
         if (!this.$el.contains(e.target)) this.show = false
       })
     })
@@ -356,16 +358,16 @@ export default {
       return this.findIndex(option.value) !== -1
     },
     keyup (e) {
-      if (e.keyCode === 27) {
+      if (e['keyCode'] === 27) {
         this.show = false
       }
     },
     filter (options, search) {
       if (search === '') return options
-      var ret = []
-      for (var i = 0, l = options.length; i < l; i++) {
-        var v = options[i] && String(options[i].label).replace(/<.*?>/g, '')
-        var s = search
+      let ret = []
+      for (let i = 0, l = options.length; i < l; i++) {
+        let v = options[i] && String(options[i].label).replace(/<.*?>/g, '')
+        let s = search
 
         if (!this.matchCase) {
           v = v.toLocaleLowerCase()
@@ -393,18 +395,18 @@ export default {
       }
     },
     findInOptions (a) {
-      var options = this.currentOptions
-      var ret = []
+      let options = this.currentOptions
+      let ret = []
 
-      for (var i = 0; i < a.length; i++) {
-        var s = this.find(a[i], options)
+      for (let i = 0; i < a.length; i++) {
+        let s = this.find(a[i], options)
         s != null ? ret.push(s) : 0
       }
       return ret
     },
     find (v, array) {
-      var a = array || this.selectedItems
-      for (var i = 0; i < a.length; i++) {
+      let a = array || this.selectedItems
+      for (let i = 0; i < a.length; i++) {
         if (v === a[i].value) {
           return a[i]
         }
@@ -412,8 +414,8 @@ export default {
       return null
     },
     findIndex (v, array) {
-      var a = array || this.selectedItems
-      for (var i = 0; i < a.length; i++) {
+      let a = array || this.selectedItems
+      for (let i = 0; i < a.length; i++) {
         if (v === a[i].value) {
           return i
         }
@@ -438,7 +440,7 @@ export default {
       this.currentOptions.push(option)
     },
     add (option) {
-      var a = this.selectedItems.slice(0)
+      let a = this.selectedItems.slice(0)
       if (this.multiple) {
         a.push(option)
       } else {
@@ -447,16 +449,16 @@ export default {
       this.selectedItems = a
     },
     del (item) {
-      var index = this.findIndex(item.value)
+      let index = this.findIndex(item.value)
       this.remove(this.selectedItems, index, 1)
     },
     remove (array, index, num) {
-      var a = array.slice(0)
+      let a = array.slice(0)
       num ? a.splice(index, num) : a.splice(index)
       this.selectedItems = a
     },
     select (option) {
-      var index = this.findIndex(option.value)
+      let index = this.findIndex(option.value)
       if (this.multiple) {
         index === -1
           ? this.add(option)
@@ -724,7 +726,7 @@ export default {
   }
 
   .#{$class-prefix}-select-search {
-    border: 0px;
+    border: 0;
     padding: 0;
     width: 100%;
     font-size: 14px;
@@ -735,8 +737,7 @@ export default {
     display: block;
     overflow-y: auto;
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+
     position: absolute;
     top: 100%;
     left: 0;
@@ -749,7 +750,6 @@ export default {
     margin-top: 6px;
     margin-bottom: 6px;
     border-radius: 3px;
-    list-style-type: none;
 
     li {
       a {

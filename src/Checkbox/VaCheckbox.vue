@@ -35,9 +35,13 @@
 import events from '../utils/events'
 import validationMixin from '../Mixin/validationMixin'
 import validate from '../validate.vue'
+import VaIcon from '../Icon/VaIcon.vue';
+
+const components = { 'va-icon':VaIcon, validate };
 
 export default {
   name: 'VaCheckbox',
+  components: components,
   mixins: [validationMixin, events],
   props: {
     name: {
@@ -61,9 +65,6 @@ export default {
       type: String,
       default: 'va'
     }
-  },
-  components: {
-    validate
   },
   data () {
     let checked = this.checked
@@ -140,10 +141,7 @@ export default {
   position: relative;
   vertical-align: middle;
   margin-right: 10px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+
 }
 
 .#{$class-prefix}-checkbox-label:not(.#{$class-prefix}-checkbox-checked) {

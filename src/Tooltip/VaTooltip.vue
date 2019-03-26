@@ -66,7 +66,6 @@ export default {
   display: block;
   font-size: 12px;
   font-weight: normal;
-  line-height: 1.4;
   visibility: visible;
   background-color: $N800;
   color: $N0;
@@ -76,10 +75,6 @@ export default {
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: nowrap;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   &-arrow {
     position: absolute;
     width: 0;

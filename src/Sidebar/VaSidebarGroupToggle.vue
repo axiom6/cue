@@ -7,9 +7,14 @@
   </span>
 </template>
 
-<script>
+<script type="module">
+
+  import VaIcon from '../Icon/VaIcon.vue';
+  const components = { 'va-icon':VaIcon };
+  
 export default {
   name: 'VaSidebarGroupToggle',
+  components: components,
   props: {
     open: {
       type: Boolean,

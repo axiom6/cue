@@ -327,6 +327,7 @@ import VaFormItem  from '../Form/VaFormItem.vue'
 import VaColorPicker from '../ColorPicker/VaColorPicker.vue'
 import VaMobile from '../Mobile/VaMobile.vue'
 import VaIcon from '../Icon/VaIcon.vue'
+import VaInput from '../Input/VaInput.vue'
 
 /* va-button va-icon va-modal va-mobile va-desktop va-tabs va-tab va-row va-column va-select */
 /* va-option va-form va-form-item va-input va-color-picker va-checkbox va-range va-sidebar-group  */
@@ -339,7 +340,7 @@ export default {
     'va-sidebar':VaSidebar, 'va-minibar':VaMinibar, 'va-topbar':VaTopbar, 'va-row':VaRow,
     'va-column':VaColumn, 'va-range':VaRange, 'va-checkbox':VaCheckbox, 'va-tooltip':VaTooltip,
     'va-select':VaSelect, 'va-option':VaOption, 'va-form':VaForm, 'va-form-item':VaFormItem,
-    'va-color-picker':VaColorPicker, 'va-mobile':VaMobile, 'va-icon':VaIcon },
+    'va-color-picker':VaColorPicker, 'va-mobile':VaMobile, 'va-icon':VaIcon, 'va-input':VaInput },
   mixins: [events],
   props: {
     classPrefix: {

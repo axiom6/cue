@@ -1,5 +1,5 @@
 import VaDropdown from './VaDropdown.vue'
-import position from '../position'
+import position from '../relocate' // position
 
 export default Vue => {
   Vue.component(VaDropdown.name, VaDropdown)

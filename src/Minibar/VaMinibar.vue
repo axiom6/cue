@@ -51,11 +51,17 @@
   </div>
 </template>
 
-<script>
-import events from '../utils/events'
+<script type="module">
+
+import events          from '../utils/events';
+import VaMinibarItem   from '../Minibar/VaMinibarItem.vue';
+import VaIcon          from '../Icon/VaIcon.vue';
+
+const components = { 'va-icon':VaIcon, 'va-minibar-item':VaMinibarItem };
 
 export default {
   name: 'VaMinibar',
+  components: components,
   mixins: [events],
   props: {
     topItems: {
@@ -174,7 +180,7 @@ export default {
     styleObjInner () {
       let style = {}
 
-      // style['background'] = 'linear-gradient(to left, rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0.15) 1px, rgba(0, 0, 0, 0.1) 1px, rgba(0, 0, 0, 0) 40px)'
+      style['background'] = 'linear-gradient(to left, rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0.15) 1px, rgba(0, 0, 0, 0.1) 1px, rgba(0, 0, 0, 0) 40px)'
 
       return style
     },

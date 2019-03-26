@@ -17,8 +17,16 @@
 </template>
 
 <script>
+  
+  import VaButton            from '../Button/VaButton.vue';
+  import VaDropdown           from '../Dropdown/VaDropdown.vue';
+  import VaColorPickerPopup  from '../ColorPicker/VaColorPickerPopup.vue';
+
+  const components = { 'va-button':VaButton, 'va-dropdown':VaDropdown, 'va-color-picker-popup':VaColorPickerPopup };
+  
 export default {
   name: 'VaColorPicker',
+  components: components,
   props: {
     color: {
       type: String,

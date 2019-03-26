@@ -6,7 +6,6 @@
 
     <transition :name="effect">
       <ul
-        v-va-position="show"
         :class="`${classPrefix}-dropdown-menu`"
         v-show="show"
       >
@@ -81,16 +80,16 @@ export default {
   mounted () {
     this.$nextTick(() => {
       let el = this.$el
-      let trig = this.$refs.trigger.children[0]
+    //let trig = this.$refs.trigger.children[0]
       if (this.triggerEvent === 'click') {
-        this._clickEvent = EventListener.listen(trig, 'click', this.toggle)
-        this._closeEvent = EventListener.listen(window, 'click', e => {
+        this._clickEvent = EventListener.listen( el, 'click', this.toggle)
+        this._closeEvent = EventListener.listen( el, 'click', e => {
           if (!this.clickClose && !el.contains(e.target) && this.show) {
             this.close()
           }
         })
       } else if (this.triggerEvent === 'hover') {
-        this._mouseenterEvent = EventListener.listen(trig, 'mouseenter', () => {
+        this._mouseenterEvent = EventListener.listen(this.$el, 'mouseenter', () => {
           this.open()
         })
         this._closeEvent = EventListener.listen(this.$el, 'mouseleave', () => {
@@ -223,7 +222,6 @@ export default {
     margin-bottom: 6px;
     border-radius: 4px;
     list-style-type: none;
-    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 
     hr {
@@ -236,7 +234,7 @@ export default {
     }
 
     &::-webkit-scrollbar {
-      width: 0px;
+      width: 0;
       padding: 5px 2px 5px 0;
     }
 
@@ -303,13 +301,13 @@ export default {
 /**
 Dropdowns, while active, don't need a focus ring. It shows focus state by changing the background color.
 */
-.#{$class-prefix}-dropdown-con.#{$class-prefix}-dropdown-selected
-  > span
-  > div
+.#{$class-prefix}-dropdown-con.#{$class-prefix}-dropdown-selected,
+  > span,
+  > div,
   > .#{$class-prefix}-btn:focus:not(:active):not(.#{$class-prefix}-select-btn-open),
-.#{$class-prefix}-dropdown-con.#{$class-prefix}-dropdown-selected
-  > span
-  > div
+.#{$class-prefix}-dropdown-con.#{$class-prefix}-dropdown-selected,
+  > span,
+  > div,
   > .#{$class-prefix}-btn-focused:not(:active):not(.#{$class-prefix}-select-btn-open) {
   box-shadow: none !important;
 }
@@ -354,7 +352,7 @@ that resides inside of the va-topbar element.
         height: 100%;
         > a {
           height: 100%;
-          border-radius: 0px !important;
+          border-radius: 0 !important;
         }
       }
     }

@@ -100,9 +100,16 @@
   </span>
 </template>
 
-<script>
+<script type="module">
+  
+  import VaIcon    from '../Icon/VaIcon.vue';
+  import VaLozenge from '../Lozenge/VaLozenge.vue';
+  
+  const  components = { 'va-icon':VaIcon, 'va-lozenge':VaLozenge };
+  
 export default {
   name: 'VaSidebarGroupItem',
+  components: components,
   props: {
     item: {
       type: Object
@@ -197,7 +204,7 @@ export default {
           parentElement.classList.remove('active')
         }
       }
-      if (this.item.route !== undefined) {
+      if (this.item.route !== undefined && this.$route !== undefined ) {
         if (this.$route.path !== undefined) {
           if (this.item.route === this.$route.path) {
             if (parentElement.classList) {
