@@ -21,9 +21,9 @@
   </transition>
 </template>
 
-<script>
+<script type="module">
 import EventListener from '../utils/EventListener'
-//import createFocusTrap from 'focus-trap'
+import createFocusTrap from '../focus-trap.js'
 import element from '../utils/element'
 import VaButton from '../Button/VaButton.vue'
 
@@ -92,11 +92,11 @@ export default {
     //  document.querySelector('body').removeChild(this.$refs.aside)
     //}),
 
-/*this.focusTrap = createFocusTrap(this.$refs.aside, {
+   this.focusTrap = createFocusTrap(this.$refs.aside, {
       clickOutsideDeactivates: true,
       returnFocusOnDeactivate: true,
       fallbackFocus: this.$refs.aside
-    }) */
+    })
   },
   beforeDestroy () {
     this.performClose()

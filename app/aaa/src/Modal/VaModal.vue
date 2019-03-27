@@ -42,7 +42,7 @@
 </template>
 
 <script>
-//import createFocusTrap from 'focus-trap'
+import createFocusTrap   from '../focus-trap.js'
 import getScrollBarWidth from '../utils/getScrollBarWidth'
 import EventListener from '../utils/EventListener'
 import element from '../utils/element'
@@ -147,11 +147,11 @@ export default {
     })
   },
   mounted () {
-    /*this.focusTrap = createFocusTrap(this.$refs.modal, {
+    this.focusTrap = createFocusTrap(this.$refs.modal, {
       clickOutsideDeactivates: true,
       returnFocusOnDeactivate: true,
       fallbackFocus: this.$refs.modal
-    })*/
+    })
 
     //document.querySelector('body').appendChild(this.$refs.modal)
     //this.$once('hook:beforeDestroy', () => {

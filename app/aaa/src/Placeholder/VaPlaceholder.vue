@@ -117,7 +117,7 @@ $placeholderRoundedRadius: 3px;
     display: flex;
     &-image {
       background: $placeholderPrimaryColor;
-      width: 2 * $placeholderLineHeight + $placeholderLineSpacing;
+      width:  2 * $placeholderLineHeight + $placeholderLineSpacing;
       height: 2 * $placeholderLineHeight + $placeholderLineSpacing;
       margin-right: 1.5 * $placeholderLineSpacing;
     }

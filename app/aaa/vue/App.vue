@@ -43,7 +43,7 @@
 
 <script type="module">
   
-  import AaaVues from '../../../src/AaaVues.js';
+  import AaaVues from '../src/AaaVues.js';
   
 export default {
   name: 'va-app',
