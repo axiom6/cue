@@ -9,10 +9,8 @@
 <body>
 <div id="app"></div>
 <script type="module">
-  import Vue     from './js/lib/vue.esm.browser.js';
-  import App     from './js/app/App.js';
-  Vue.config.productionTip = false;
-  new Vue( { el:'#app', template: '<App/>', components:{ App } } );
+  import App from './js/app/App.js';
+  App.startup();
 </script>
 </body>
 </html>
