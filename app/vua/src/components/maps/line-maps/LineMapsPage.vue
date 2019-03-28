@@ -4,9 +4,8 @@
       <div class="flex md12 xs12">
         <vuestic-widget
           class="line-maps-page__widget"
-          headerText="Line Maps"
-        >
-          <line-map v-bind:map-data="lineMapData"/>
+          headerText="Line Maps">
+          <line-map v-bind:map-data="lineMapData"></line-map>
         </vuestic-widget>
       </div>
     </div>
@@ -14,8 +13,8 @@
 </template>
 
 <script>
-import LineMap from './LineMap'
-import LineMapData from 'data/maps/LineMapData'
+import LineMap     from './LineMap.vue'
+import LineMapData from '../../../data/maps/LineMapData.js'
 
 export default {
   name: 'line-maps-page',

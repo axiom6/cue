@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import { Chrome } from 'vue-color'
+import VueColor from '../../../vue-lib/VueColor/VueColor.js'
 
 export default {
   name: 'vuestic-advanced-color-picker',
   components: {
-    ChromePicker: Chrome,
+    ChromePicker: VueColor.Chrome,
   },
   props: {
     value: {

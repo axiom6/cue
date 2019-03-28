@@ -54,6 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import "../../../vuestic-theme/vuestic-sass/resources/resources";
 .vuestic-profile-card {
   margin-left: 1rem;
 

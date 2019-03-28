@@ -4,8 +4,9 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import * as GoogleMapsLoader from 'google-maps'
+
+import { mapGetters }   from '../../../../pub/js/lib/vuex.esm.js'
+import GoogleMapsLoader from './GoogleMapsLoader.js'
 
 export default {
   name: 'google-map',
@@ -25,7 +26,7 @@ export default {
       new google.maps.Map(this.$el, {
         center: new google.maps.LatLng(44.5403, -78.5463),
         zoom: 8,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeId: google.maps['MapTypeId']['ROADMAP'],
       })
     })
   },

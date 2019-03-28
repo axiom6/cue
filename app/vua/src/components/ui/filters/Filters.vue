@@ -9,18 +9,18 @@
                 v-model="name"
                 class="filters-page__filter-bar"
                 label="Name"
-              />
+              ></filter-bar>
               <filter-bar
                 v-model="email"
                 class="filters-page__filter-bar"
                 label="Email"
-              />
+              ></filter-bar>
               <vuestic-simple-select
                 class="filters-page__filter-bar"
                 label="City"
                 v-model="city"
-                :options="cityList"
-              />
+                 :options="cityList" value=""
+              ></vuestic-simple-select>
             </div>
           </div>
           <div class="filters-page__tags">
@@ -29,19 +29,19 @@
               :name="`Name: ${ name }`"
               removable
               @remove="name = ''"
-            />
+            ></vuestic-tag>
             <vuestic-tag
               v-if="email"
               :name="`Email: ${ email }`"
               removable
               @remove="email = ''"
-            />
+            ></vuestic-tag>
             <vuestic-tag
               v-if="city"
               :name="`City: ${ city }`"
               removable
               @remove="city = ''"
-            />
+            ></vuestic-tag>
             <span
               v-if="this.city || this.name || this.email"
               class="filters-page__clear-all-text"
@@ -61,7 +61,7 @@
             <td class="filters-page__table-heading">{{ $t('tables.headings.name') }}</td>
             <td class="filters-page__table-heading">{{ $t('tables.headings.email') }}</td>
             <td class="filters-page__table-heading">{{ $t('tables.headings.city') }}</td>
-            <td align="right" class="filters-page__table-heading">{{ $t('tables.headings.score') }}</td>
+            <td class="filters-page__table-heading">{{ $t('tables.headings.score') }}</td><!--align="right" -->
             <td></td>
           </tr>
           </thead>
@@ -70,7 +70,7 @@
             <td>{{ item.name }}</td>
             <td>{{ item.email }}</td>
             <td>{{ item.city }}</td>
-            <td align="right">{{ item.score }}</td>
+            <td>{{ item.score }}</td><!--align="right" -->
             <td></td>
           </tr>
           </tbody>
@@ -87,12 +87,12 @@ import FilterBar
   from '../../../vuestic-theme/vuestic-components/vuestic-datatable/datatable-components/FilterBar.vue'
 import VuesticSimpleSelect
   from '../../../vuestic-theme/vuestic-components/vuestic-simple-select/VuesticSimpleSelect.vue'
-import { SpringSpinner } from 'epic-spinners'
+//import { SpringSpinner } from 'epic-spinners'
 import { cityList, itemList } from './filtersData'
 export default {
   name: 'filters',
   components: {
-    VuesticWidget, FilterBar, SpringSpinner, VuesticSimpleSelect
+    VuesticWidget, FilterBar, VuesticSimpleSelect
   },
   data () {
     return {

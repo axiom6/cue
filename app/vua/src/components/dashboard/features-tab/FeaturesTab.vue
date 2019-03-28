@@ -76,6 +76,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import "../../../vuestic-theme/vuestic-sass/resources/resources";
 .overview-item {
   display: flex;
   align-items: center;

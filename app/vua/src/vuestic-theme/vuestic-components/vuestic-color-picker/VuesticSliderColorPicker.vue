@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import { Slider } from 'vue-color'
+import VueColor from '../../../vue-lib/VueColor/VueColor.js'
 
 export default {
   name: 'vuestic-slider-color-picker',
   components: {
-    'SliderPicker': Slider,
+    'SliderPicker': VueColor,
   },
   props: {
     value: {

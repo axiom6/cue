@@ -9,7 +9,7 @@
               <div class="row spinners__size">
                 <h5 class="spinners__icon-small">A</h5>
                 <div class="spinners__size-picker">
-                  <vuestic-slider v-model="config.size" :options="sliderSize"/>
+                  <vuestic-slider v-model="config.size" :options="sliderSize" value=""></vuestic-slider>
                 </div>
                 <h3 class="spinners__icon-large">A</h3>
               </div>
@@ -17,11 +17,11 @@
             <div class="flex md3 lg4">
               <div class="va-row spinners__duration">
                 <div class="spinners__icon-duration-slower">
-                  <vuestic-icon-slower/>
+                  <vuestic-icon-slower></vuestic-icon-slower>
                 </div>
                 <div class="spinners__duration-picker">
                   <vuestic-slider v-model="currentDuration"
-                                  :options="sliderDuration"/>
+                                  :options="sliderDuration" value=""/>
                 </div>
                 <div class="spinners__icon-duration-faster">
                   <vuestic-icon-faster/>
@@ -34,10 +34,10 @@
             </div>
           </div>
           <div class="va-row">
-            <div class="spinners__divider-copy"/>
+            <div class="spinners__divider-copy"></div>
           </div>
         </div>
-        <div v-for="(group, i) in groups" :key="i" class="va-row">
+        <!--div v-for="(group, i) in groups" :key="i" class="va-row">
           <div v-for="item in group" :key="item" class="flex sm12 md3">
             <div class="spinner-box-container">
               <div class="spinner-box">
@@ -52,7 +52,7 @@
               <span>{{item | displayName}}</span>
             </div>
           </div>
-        </div>
+        </div-->
         <div class="va-row align-center">
           <div class="text-center">
             {{'spinners.poweredBy' | translate}}
@@ -66,8 +66,8 @@
 </template>
 
 <script>
-import * as spinners from 'epic-spinners'
-import { mapGetters } from 'vuex'
+//import * as spinners from 'epic-spinners'
+import { mapGetters } from '../../../../pub/js/lib/vuex.esm.js'
 import VuesticPalletCustom
   from '../../../vuestic-theme/vuestic-components/vuestic-color-picker/VuesticPalletCustom.vue'
 import { colorArray } from '../../../vuestic-theme/vuestic-components/vuestic-color-picker/VuesticTheme'
@@ -80,7 +80,7 @@ import VuesticIconSlower
 
 export default {
   components: {
-    ...spinners,
+    //...spinners,
     VuesticPalletCustom,
     VuesticSlider,
     VuesticIconFaster,
@@ -112,11 +112,11 @@ export default {
 
     speed () {
       return this.sliderDuration.min + this.sliderDuration.max - this.currentDuration
-    },
+    }
 
-    groups () {
-      return this.groupItems(Object.keys(spinners), this.config.group)
-    },
+    //groups () {
+    //  return this.groupItems(Object.keys(spinners), this.config.group)
+    //},
   },
 
   filters: {
@@ -125,6 +125,7 @@ export default {
     },
   },
   methods: {
+    /*
     groupItems (items, groupSize) {
       let grouped = []
 
@@ -133,7 +134,7 @@ export default {
       }
 
       return grouped
-    },
+    } */
   },
 }
 </script>

@@ -24,7 +24,7 @@
 
 <script>
 
-import { yandexMap, ymapMarker } from 'vue-yandex-maps'
+import { yandexMap, ymapMarker } from './index.js'
 
 export default {
   name: 'yandex-maps-page',

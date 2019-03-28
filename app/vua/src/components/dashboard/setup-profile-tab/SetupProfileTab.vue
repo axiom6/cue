@@ -13,19 +13,21 @@
           their teeth all send a signal. For example, ears flat back means
           trouble, or "you better follow orders!"</p>
         <div class="form-group with-icon-right"
-             :class="{'has-error': errors.has('name'), 'valid': isFormFieldValid('name')}">
+             :class="{'has-error': errors['has']('name'), 'valid': isFormFieldValid('name')}">
           <div class="input-group">
-            <input
-              type="text"
-              name="name"
-              v-model="name"
-              v-validate="'required'"
-              required="required"/>
+            <label>
+              <input
+                type="text"
+                name="name"
+                v-model="name"
+                v-validate="'required'"
+                required="required"/>
+            </label>
             <i
               class="fa fa-exclamation-triangle error-icon icon-right input-icon"></i>
             <i class="fa fa-check valid-icon icon-right input-icon"></i>
             <label class="control-label">Name</label><i class="bar"></i>
-            <small v-show="errors.has('name')" class="help text-danger">{{
+            <small v-show="errors['has']('name')" class="help text-danger">{{
               errors.first('name') }}
             </small>
           </div>
@@ -103,10 +105,10 @@ export default {
           label: 'Step 2. Country',
           slot: 'page2',
           onNext: () => {
-            this.$refs.selectedCountrySelect.validate()
+            this.$refs['selectedCountrySelect'].validate()
           },
           isValid: () => {
-            return this.$refs.selectedCountrySelect.isValid()
+            return this.$refs['selectedCountrySelect'].isValid()
           },
         },
         {
@@ -122,19 +124,20 @@ export default {
   methods: {
     isFormFieldValid (field) {
       let isValid = false
-      if (this.formFields[field]) {
-        isValid = this.formFields[field].validated && this.formFields[field].valid
+      if (this['formFields'][field]) {
+        isValid = this['formFields'][field].validated && this['formFields'][field].valid
       }
       return isValid
     },
     validateFormField (fieldName) {
-      this.$validator.validate(fieldName, this[fieldName])
+      this.$validator.validate(fieldName, this[fieldName]).then()
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+  @import "../../../vuestic-theme/vuestic-sass/resources/resources";
 .form-group {
   min-width: 200px;
   max-width: 360px;

@@ -7,12 +7,12 @@
     :slider-style="sliderOptions.sliderStyle"
     class="vuestic-slider"
     :reverse="reverse"
-  />
+  ></slider>
 </template>
 
 <script>
-import Slider from 'vue-slider-component'
-import store  from '../../../store/index'
+import Slider from '../../../vue-lib/VueSliderComponent.vue'
+import store  from '../../../store/index.js'
 
 export default {
   name: 'vuestic-slider',

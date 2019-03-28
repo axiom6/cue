@@ -96,6 +96,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../../../vuestic-theme/vuestic-sass/resources/resources";
 .vuestic-color-picker-input {
   &__dropdown {
     background: $white;

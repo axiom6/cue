@@ -3,18 +3,18 @@
   </div>
 </template>
 
-<script>
-import 'leaflet-map'
-import * as L from 'leaflet'
+<script type="module">
+import './leaflet-map.js'
+import L from './leaflet-src.js'
 
 export default {
   name: 'leaflet-map',
 
   mounted () {
     //    L.Icon.Default.imagePath = 'assets/vendor/leaflet' TODO: make it work with webpack
-    L.Icon.Default.imagePath = 'https://unpkg.com/leaflet@1.0.3/dist/images'
+    L.Icon.Default.imagePath = './images'
 
-    var map = L.map(this.$el).setView([51.505, -0.09], 13)
+    let map = L.map(this.$el).setView([51.505, -0.09], 13)
 
     L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors',

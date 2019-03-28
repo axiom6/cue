@@ -55,6 +55,7 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+  @import "../../../vuestic-theme/vuestic-sass/resources/resources";
 .toast-position-picker {
   width: 112px;
   height: 76px;

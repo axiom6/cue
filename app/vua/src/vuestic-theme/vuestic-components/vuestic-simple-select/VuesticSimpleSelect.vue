@@ -8,13 +8,15 @@
       <div
         class="input-group dropdown-toggle vuestic-simple-select__dropdown-toggle">
         <div>
-          <input
-            @focus="showDropdown()"
-            :class="{'has-value': !!value}"
-            v-model="displayValue"
-            :name="name"
-            :options="options"
-          >
+          <label>
+            <input
+              @focus="showDropdown()"
+              :class="{'has-value': !!value}"
+              v-model="displayValue"
+              :name="name"
+              :options="options"
+            >
+          </label>
           <label class="control-label">{{label}}</label><i class="bar"/>
           <small v-show="hasErrors()" class="help text-danger">
             {{ showRequiredError() }}
@@ -55,7 +57,7 @@
 </template>
 
 <script>
-import Dropdown from 'vuestic-directives/Dropdown'
+import Dropdown  from '../../vuestic-directives/Dropdown.js'
 import Scrollbar from '../vuestic-scrollbar/VuesticScrollbar.vue'
 
 export default {
@@ -203,6 +205,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../../../vuestic-theme/vuestic-sass/resources/resources";
 .vuestic-simple-select {
 
   &__unselect {

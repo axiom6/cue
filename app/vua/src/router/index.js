@@ -43,8 +43,8 @@ import Extra              from '../components/extra/Extra.vue';
 import GoogleMapsPage     from '../components/maps/google-maps/GoogleMapsPage.vue';
 import YandexMapsPage      from '../components/maps/yandex-maps/YandexMapsPage.vue';
 import LeafletMapsPage     from '../components/maps/leaflet-maps/LeafletMapsPage.vue';
-import BubbleMapsPage      from '../components/maps/bubble-maps/BubbleMapsPage.vue';
-import LineMapsPage        from '../components/maps/line-maps/LineMapsPage.vue';
+//port BubbleMapsPage      from '../components/maps/bubble-maps/BubbleMapsPage.vue';  // Still has NodeJS dependencies
+//port LineMapsPage        from '../components/maps/line-maps/LineMapsPage.vue';      // Still has NodeJS dependencies
 import PagesPage404       from '../components/pages/404-pages/404PagesPage.vue';
 
 
@@ -341,8 +341,8 @@ export default new Router({
               meta: {
                 wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Maps',
               },
-            },
-            {
+            }
+            /*{
               name: 'bubble-maps',
               path: 'bubble-maps',
               component: BubbleMapsPage, // lazyLoading('maps/bubble-maps/BubbleMapsPage'),
@@ -357,7 +357,7 @@ export default new Router({
               meta: {
                 wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Maps',
               },
-            },
+            },*/
           ],
         },
         {

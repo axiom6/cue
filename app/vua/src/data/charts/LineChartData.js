@@ -1,5 +1,5 @@
-import utils from 'services/utils'
-import store  from '../../../src/store/index'
+import utils  from '../../services/utils.js'
+import store  from '../../../src/store/index.js'
 
 let palette = store.getters.palette
 

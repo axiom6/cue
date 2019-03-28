@@ -16,14 +16,14 @@
           :onEachSide="onEachSide"
           :sortFunctions="sortFunctions"
           :dataModeFilterableFields="dataModeFilterableFields"
-        />
+        ></vuestic-data-table>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
+  import Vue    from '../../../../pub/js/lib/vue.esm.browser.js'
 import BadgeColumn from '../../tables/BadgeColumn.vue'
 import TableData from './TableData'
 import DonutChartData from './DonutChartData'
