@@ -1,6 +1,7 @@
-import store from '../../../store/index'
 
-let palette = store.getters.palette
+import Store from '../../../store/Store.js'
+
+let palette = Store.getters.palette;
 
 export const defaultConfig = {
   legend: {

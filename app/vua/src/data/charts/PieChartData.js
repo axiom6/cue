@@ -1,7 +1,7 @@
 
-import store  from '../../../src/store/index'
+import Store  from '../../../src/store/Store.js'
 
-let palette = store.getters.palette
+let palette = Store.getters.palette
 
 export default {
   labels: ['Africa', 'Asia', 'Europe'],

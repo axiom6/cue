@@ -455,10 +455,6 @@ export default {
     this.$nextTick(() => {
       this.$validator.validateAll().then()
     })
-  },
-  errors: {
-    has:   (name) => { if( name === false ) return true;  },
-    first: (name) => { if( name === false ) return false; }
   }
 }
 </script>

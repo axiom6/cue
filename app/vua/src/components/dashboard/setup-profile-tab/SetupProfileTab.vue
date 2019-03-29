@@ -134,10 +134,6 @@ export default {
     validateFormField (fieldName) {
       this.$validator.validate(fieldName, this[fieldName]).then()
     },
-  },
-  errors: {
-    has:   (name) => { if( name === false ) return true;  },
-    first: (name) => { if( name === false ) return false; }
   }
 }
 </script>

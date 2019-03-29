@@ -1,6 +1,6 @@
-import store from '../../store/index'
+import Store from '../../store/Store.js'
 
-let palette = store.getters.palette
+let palette = Store.getters.palette;
 
 export default {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -16,6 +16,6 @@ export default {
       backgroundColor: palette.info,
       borderColor: palette.transparent,
       data: [50, 10, 22, 39, 15, 20, 85, 32, 60, 50, 20, 30],
-    },
-  ],
+    }
+  ]
 }

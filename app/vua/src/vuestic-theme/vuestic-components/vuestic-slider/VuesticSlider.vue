@@ -12,7 +12,7 @@
 
 <script>
 import Slider from '../../../vue-lib/VueSliderComponent.vue'
-import store  from '../../../store/index.js'
+import Store  from '../../../store/Store.js'
 
 export default {
   name: 'vuestic-slider',
@@ -44,15 +44,15 @@ export default {
         height: 2,
         realTime: true,
         sliderStyle: {
-          'background-color': store.getters.palette.primary,
-          'box-shadow': 'none',
+          'background-color': Store.getters.palette.primary,
+          'box-shadow': 'none'
         },
         processStyle: {
-          'background-color': store.getters.palette.primary,
+          'background-color': Store.getters.palette.primary
         },
         tooltipStyle: {
-          'background-color': store.getters.palette.primary,
-          'border-color': store.getters.palette.primary,
+          'background-color': Store.getters.palette.primary,
+          'border-color':     Store.getters.palette.primary
         },
       },
     }
