@@ -1,6 +1,6 @@
 <template>
   <div class="vuestic-feed">
-    <div v-if="posts.length == 0" class="empty">Your feed is empty.</div>
+    <div v-if="posts.length === 0" class="empty">Your feed is empty.</div>
     <div
       class="post"
       v-for="(post, index) in posts"
@@ -45,6 +45,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../../../vuestic-theme/vuestic-sass/resources/resources";
 .vuestic-feed {
   padding-top: .5rem;
   padding-bottom: .5rem;

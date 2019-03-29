@@ -16,9 +16,13 @@
   </div>
 </template>
 
-<script>
+<script type="module">
+  import VuesticWidget          from '../../vuestic-theme/vuestic-components/vuestic-widget/VuesticWidget.vue'
+  import VuesticFeed            from '../../vuestic-theme/vuestic-components/vuestic-feed/VuesticFeed.vue'
+  import VuesticSocialNews      from '../../vuestic-theme/vuestic-components/vuestic-social-news/VuesticSocialNews.vue'
 export default {
   name: 'dashboard-bottom-widgets',
+  components: { VuesticWidget,  VuesticFeed, VuesticSocialNews },
 
   data () {
     return {

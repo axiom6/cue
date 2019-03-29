@@ -57,6 +57,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../../vuestic-sass/resources/resources";
 .vuestic-tabs {
   background-color: white;
   .simple-select {

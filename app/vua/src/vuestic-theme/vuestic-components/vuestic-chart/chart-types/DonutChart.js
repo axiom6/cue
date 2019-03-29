@@ -1,4 +1,4 @@
-import { Doughnut } from 'vue-chartjs'
+import { Doughnut } from '../../../../vue-lib/VueCharts/VueCharts.js'
 import { chartMixin } from './chartMixin'
 
 export default {

@@ -27,9 +27,7 @@
               class="fa fa-exclamation-triangle error-icon icon-right input-icon"></i>
             <i class="fa fa-check valid-icon icon-right input-icon"></i>
             <label class="control-label">Name</label><i class="bar"></i>
-            <small v-show="errors['has']('name')" class="help text-danger">{{
-              errors.first('name') }}
-            </small>
+            <small v-show="errors['has']('name')" class="help text-danger">{{errors.first('name') }}</small>
           </div>
         </div>
       </div>
@@ -80,9 +78,13 @@
 
 <script>
 import CountriesList from '../../../data/CountriesList'
+// wizard simple-select
+import VuesticWizard       from '../../../vuestic-theme/vuestic-components/vuestic-wizard/VuesticWizard.vue'
+import VuesticSimpleSelect from '../../../vuestic-theme/vuestic-components/vuestic-simple-select/VuesticSimpleSelect.vue'
 
 export default {
   name: 'setup-profile-tab',
+  components:{ VuesticWizard, VuesticSimpleSelect },
   props: {
     wizardType: {
       default: 'rich',
@@ -133,6 +135,10 @@ export default {
       this.$validator.validate(fieldName, this[fieldName]).then()
     },
   },
+  errors: {
+    has:   (name) => { if( name === false ) return true;  },
+    first: (name) => { if( name === false ) return false; }
+  }
 }
 </script>
 

@@ -22,18 +22,21 @@
   </div>
 </template>
 
-<script>
-  import Vue    from '../../../../pub/js/lib/vue.esm.browser.js'
+<script type="module">
+
+import Vue    from '../../../../pub/js/lib/vue.esm.browser.js'
 import BadgeColumn from '../../tables/BadgeColumn.vue'
 import TableData from './TableData'
 import DonutChartData from './DonutChartData'
 import FieldsDef from './fields-definition'
+import VuesticDataTable from '../../../vuestic-theme/vuestic-components/vuestic-datatable/VuesticDataTable.vue'
+import VuesticChart     from '../../../vuestic-theme/vuestic-components/vuestic-chart/VuesticChart.vue'
 
 Vue.component('badge-column', BadgeColumn)
 
 export default {
   name: 'data-visualisation-tab',
-
+  components:{ VuesticDataTable, VuesticChart },
   data () {
     return {
       donutChartData: DonutChartData,

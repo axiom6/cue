@@ -1,4 +1,4 @@
-import { Bubble } from 'vue-chartjs'
+import { Bubble } from '../../../../vue-lib/VueCharts/VueCharts.js'
 import { chartMixin } from './chartMixin'
 
 export default {

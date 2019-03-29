@@ -18,12 +18,14 @@
               <div class="form-group with-icon-right"
                    :class="{'has-error': errors.has('hsName'), 'valid': isFormFieldValid('hsName')}">
                 <div class="input-group">
-                  <input
-                    name="hsName"
-                    data-vv-as="Name"
-                    v-model="hsName"
-                    v-validate="'required'"
-                    required title=""/>
+                  <label>
+                    <input
+                      name="hsName"
+                      data-vv-as="Name"
+                      v-model="hsName"
+                      v-validate="'required'"
+                      required title=""/>
+                  </label>
                   <i
                     class="fa fa-exclamation-triangle error-icon icon-right input-icon"></i>
                   <i class="fa fa-check valid-icon icon-right input-icon"></i>
@@ -99,12 +101,14 @@
               <div class="form-group with-icon-right"
                    :class="{'has-error': errors.has('hrName'), 'valid': isFormFieldValid('hrName')}">
                 <div class="input-group">
-                  <input
-                    name="hrName"
-                    data-vv-as="Name"
-                    v-model="hrName"
-                    v-validate="'required'"
-                    required title=""/>
+                  <label>
+                    <input
+                      name="hrName"
+                      data-vv-as="Name"
+                      v-model="hrName"
+                      v-validate="'required'"
+                      required title=""/>
+                  </label>
                   <i
                     class="fa fa-exclamation-triangle error-icon icon-right input-icon"></i>
                   <i class="fa fa-check valid-icon icon-right input-icon"></i>
@@ -180,12 +184,14 @@
               <div class="form-group with-icon-right"
                    :class="{'has-error': errors.has('vrName'), 'valid': isFormFieldValid('vrName')}">
                 <div class="input-group">
-                  <input
-                    name="vrName"
-                    data-vv-as="Name"
-                    v-model="vrName"
-                    v-validate="'required'"
-                    required title=""/>
+                  <label>
+                    <input
+                      name="vrName"
+                      data-vv-as="Name"
+                      v-model="vrName"
+                      v-validate="'required'"
+                      required title=""/>
+                  </label>
                   <i
                     class="fa fa-exclamation-triangle error-icon icon-right input-icon"></i>
                   <i class="fa fa-check valid-icon icon-right input-icon"></i>
@@ -262,12 +268,14 @@
               <div class="form-group with-icon-right"
                    :class="{'has-error': errors.has('vsName'), 'valid': isFormFieldValid('vsName')}">
                 <div class="input-group">
-                  <input
-                    name="vsName"
-                    data-vv-as="Name"
-                    v-model="vsName"
-                    v-validate="'required'"
-                    required title=""/>
+                  <label>
+                    <input
+                      name="vsName"
+                      data-vv-as="Name"
+                      v-model="vsName"
+                      v-validate="'required'"
+                      required title=""/>
+                  </label>
                   <i
                     class="fa fa-exclamation-triangle error-icon icon-right input-icon"></i>
                   <i class="fa fa-check valid-icon icon-right input-icon"></i>
@@ -349,10 +357,10 @@ export default {
           label: this.$t('forms.wizard.stepTwo'),
           slot: 'page2',
           onNext: () => {
-            this.$refs.hsCountrySelect.validate()
+            this.$refs['hsCountrySelect'].validate()
           },
           isValid: () => {
-            return this.$refs.hsCountrySelect.isValid()
+            return this.$refs['hsCountrySelect'].isValid()
           },
         },
         {
@@ -377,10 +385,10 @@ export default {
           label: this.$t('forms.wizard.stepTwo'),
           slot: 'page2',
           onNext: () => {
-            this.$refs.hrCountrySelect.validate()
+            this.$refs['hsCountrySelect'].validate()
           },
           isValid: () => {
-            return this.$refs.hrCountrySelect.isValid()
+            return this.$refs['hrCountrySelect'].isValid()
           },
         },
         {
@@ -405,10 +413,10 @@ export default {
           label: this.$t('forms.wizard.stepTwo'),
           slot: 'page2',
           onNext: () => {
-            this.$refs.vrCountrySelect.validate()
+            this.$refs['vrCountrySelect'].validate()
           },
           isValid: () => {
-            return this.$refs.vrCountrySelect.isValid()
+            return this.$refs['vrCountrySelect'].isValid()
           },
         },
         {
@@ -433,10 +441,10 @@ export default {
           label: this.$t('forms.wizard.stepTwo'),
           slot: 'page2',
           onNext: () => {
-            this.$refs.vsCountrySelect.validate()
+            this.$refs['vsCountrySelect'].validate()
           },
           isValid: () => {
-            return this.$refs.vsCountrySelect.isValid()
+            return this.$refs['hsCountrySelect'].isValid()
           },
         },
         {
@@ -464,15 +472,19 @@ export default {
   methods: {
     isFormFieldValid (field) {
       let isValid = false
-      if (this.formFields[field]) {
-        isValid = this.formFields[field].validated && this.formFields[field].valid
+      if (this['formFields'][field]) {
+        isValid = this['formFields'][field].validated && this['formFields'][field].valid
       }
       return isValid
     },
     validateFormField (fieldName) {
-      this.$validator.validate(fieldName, this[fieldName])
+      this.$validator.validate(fieldName, this[fieldName]).then()
     },
   },
+  errors: {
+    has:   (name) => { if( name === false ) return true;  },
+    first: (name) => { if( name === false ) return false; }
+  }
 }
 </script>
 

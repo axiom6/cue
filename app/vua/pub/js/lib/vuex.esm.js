@@ -7,14 +7,14 @@
 const process = { env:{ NODE_ENV:'production' } };
 
 function applyMixin (Vue) {
-  var version = Number(Vue.version.split('.')[0]);
+  let version = Number(Vue.version.split('.')[0]);
 
   if (version >= 2) {
     Vue.mixin({ beforeCreate: vuexInit });
   } else {
     // override init and inject vuex init procedure
     // for 1.x backwards compatibility.
-    var _init = Vue.prototype._init;
+    let _init = Vue.prototype._init;
     Vue.prototype._init = function (options) {
       if ( options === void 0 ) options = {};
 
@@ -30,7 +30,7 @@ function applyMixin (Vue) {
    */
 
   function vuexInit () {
-    var options = this.$options;
+    let options = this.$options;
     // store injection
     if (options.store) {
       this.$store = typeof options.store === 'function'
@@ -42,9 +42,9 @@ function applyMixin (Vue) {
   }
 }
 
-var devtoolHook =
+let devtoolHook =
   typeof window !== 'undefined' &&
-  window.__VUE_DEVTOOLS_GLOBAL_HOOK__;
+  window['__VUE_DEVTOOLS_GLOBAL_HOOK__'];
 
 function devtoolPlugin (store) {
   if (!devtoolHook) { return }
@@ -91,19 +91,19 @@ function assert (condition, msg) {
 }
 
 // Base data struct for store's module, package with some attribute and method
-var Module = function Module (rawModule, runtime) {
+let Module = function Module (rawModule, runtime) {
   this.runtime = runtime;
   // Store some children item
   this._children = Object.create(null);
   // Store the origin module object which passed by programmer
   this._rawModule = rawModule;
-  var rawState = rawModule.state;
+  let rawState = rawModule.state;
 
   // Store the origin module's state
   this.state = (typeof rawState === 'function' ? rawState() : rawState) || {};
 };
 
-var prototypeAccessors = { namespaced: { configurable: true } };
+let prototypeAccessors = { namespaced: { configurable: true } };
 
 prototypeAccessors.namespaced.get = function () {
   return !!this._rawModule.namespaced
@@ -158,7 +158,7 @@ Module.prototype.forEachMutation = function forEachMutation (fn) {
 
 Object.defineProperties( Module.prototype, prototypeAccessors );
 
-var ModuleCollection = function ModuleCollection (rawRootModule) {
+let ModuleCollection = function ModuleCollection (rawRootModule) {
   // register root module (Vuex.Store options)
   this.register([], rawRootModule, false);
 };
@@ -170,7 +170,7 @@ ModuleCollection.prototype.get = function get (path) {
 };
 
 ModuleCollection.prototype.getNamespace = function getNamespace (path) {
-  var module = this.root;
+  let module = this.root;
   return path.reduce(function (namespace, key) {
     module = module.getChild(key);
     return namespace + (module.namespaced ? key + '/' : '')
@@ -182,18 +182,18 @@ ModuleCollection.prototype.update = function update$1 (rawRootModule) {
 };
 
 ModuleCollection.prototype.register = function register (path, rawModule, runtime) {
-    var this$1 = this;
+    let this$1 = this;
     if ( runtime === void 0 ) runtime = true;
 
   if (process.env.NODE_ENV !== 'production') {
     assertRawModule(path, rawModule);
   }
 
-  var newModule = new Module(rawModule, runtime);
+  let newModule = new Module(rawModule, runtime);
   if (path.length === 0) {
     this.root = newModule;
   } else {
-    var parent = this.get(path.slice(0, -1));
+    let parent = this.get(path.slice(0, -1));
     parent.addChild(path[path.length - 1], newModule);
   }
 
@@ -206,8 +206,8 @@ ModuleCollection.prototype.register = function register (path, rawModule, runtim
 };
 
 ModuleCollection.prototype.unregister = function unregister (path) {
-  var parent = this.get(path.slice(0, -1));
-  var key = path[path.length - 1];
+  let parent = this.get(path.slice(0, -1));
+  let key = path[path.length - 1];
   if (!parent.getChild(key).runtime) { return }
 
   parent.removeChild(key);
@@ -223,7 +223,8 @@ function update (path, targetModule, newModule) {
 
   // update nested modules
   if (newModule.modules) {
-    for (var key in newModule.modules) {
+    for (let key in newModule.modules) {
+      if( !newModule.modules.hasOwnProperty(key) ) { continue; }
       if (!targetModule.getChild(key)) {
         if (process.env.NODE_ENV !== 'production') {
           console.warn(
@@ -242,18 +243,18 @@ function update (path, targetModule, newModule) {
   }
 }
 
-var functionAssert = {
+let functionAssert = {
   assert: function (value) { return typeof value === 'function'; },
   expected: 'function'
 };
 
-var objectAssert = {
+let objectAssert = {
   assert: function (value) { return typeof value === 'function' ||
     (typeof value === 'object' && typeof value.handler === 'function'); },
   expected: 'function or object with "handler" function'
 };
 
-var assertTypes = {
+let assertTypes = {
   getters: functionAssert,
   mutations: functionAssert,
   actions: objectAssert
@@ -263,7 +264,7 @@ function assertRawModule (path, rawModule) {
   Object.keys(assertTypes).forEach(function (key) {
     if (!rawModule[key]) { return }
 
-    var assertOptions = assertTypes[key];
+    let assertOptions = assertTypes[key];
 
     forEachValue(rawModule[key], function (value, type) {
       assert(
@@ -275,7 +276,7 @@ function assertRawModule (path, rawModule) {
 }
 
 function makeAssertionMessage (path, key, type, value, expected) {
-  var buf = key + " should be " + expected + " but \"" + key + "." + type + "\"";
+  let buf = key + " should be " + expected + " but \"" + key + "." + type + "\"";
   if (path.length > 0) {
     buf += " in module \"" + (path.join('.')) + "\"";
   }
@@ -283,10 +284,10 @@ function makeAssertionMessage (path, key, type, value, expected) {
   return buf
 }
 
-var Vue; // bind on install
+let Vue; // bind on install
 
-var Store = function Store (options) {
-  var this$1 = this;
+let Store = function Store (options) {
+  let this$1 = this;
   if ( options === void 0 ) options = {};
 
   // Auto install if it is not done yet and `window` has `Vue`.
@@ -302,8 +303,8 @@ var Store = function Store (options) {
     assert(this instanceof Store, "store must be called with the new operator.");
   }
 
-  var plugins = options.plugins; if ( plugins === void 0 ) plugins = [];
-  var strict = options.strict; if ( strict === void 0 ) strict = false;
+  let plugins = options.plugins; if ( plugins === void 0 ) plugins = [];
+  let strict = options.strict; if ( strict === void 0 ) strict = false;
 
   // store internal state
   this._committing = false;
@@ -317,10 +318,10 @@ var Store = function Store (options) {
   this._watcherVM = new Vue();
 
   // bind commit and dispatch to self
-  var store = this;
-  var ref = this;
-  var dispatch = ref.dispatch;
-  var commit = ref.commit;
+  let store = this;
+  let ref = this;
+  let dispatch = ref.dispatch;
+  let commit = ref.commit;
   this.dispatch = function boundDispatch (type, payload) {
     return dispatch.call(store, type, payload)
   };
@@ -331,7 +332,7 @@ var Store = function Store (options) {
   // strict mode
   this.strict = strict;
 
-  var state = this._modules.root.state;
+  let state = this._modules.root.state;
 
   // init root module.
   // this also recursively registers all sub-modules
@@ -345,35 +346,35 @@ var Store = function Store (options) {
   // apply plugins
   plugins.forEach(function (plugin) { return plugin(this$1); });
 
-  var useDevtools = options.devtools !== undefined ? options.devtools : Vue.config.devtools;
+  let useDevtools = options.devtools !== undefined ? options.devtools : Vue.config.devtools;
   if (useDevtools) {
     devtoolPlugin(this);
   }
 };
 
-var prototypeAccessors$1 = { state: { configurable: true } };
+let prototypeAccessors$1 = { state: { configurable: true } };
 
 prototypeAccessors$1.state.get = function () {
-  return this._vm._data.$$state
+  return this._vm['_data'].$$state
 };
 
-prototypeAccessors$1.state.set = function (v) {
+prototypeAccessors$1.state.set = function () {
   if (process.env.NODE_ENV !== 'production') {
     assert(false, "use store.replaceState() to explicit replace store state.");
   }
 };
 
 Store.prototype.commit = function commit (_type, _payload, _options) {
-    var this$1 = this;
+    let this$1 = this;
 
   // check object-style commit
-  var ref = unifyObjectStyle(_type, _payload, _options);
-    var type = ref.type;
-    var payload = ref.payload;
-    var options = ref.options;
+  let ref = unifyObjectStyle(_type, _payload, _options);
+    let type = ref.type;
+    let payload = ref.payload;
+    let options = ref.options;
 
-  var mutation = { type: type, payload: payload };
-  var entry = this._mutations[type];
+  let mutation = { type: type, payload: payload };
+  let entry = this._mutations[type];
   if (!entry) {
     if (process.env.NODE_ENV !== 'production') {
       console.error(("[vuex] unknown mutation type: " + type));
@@ -399,15 +400,15 @@ Store.prototype.commit = function commit (_type, _payload, _options) {
 };
 
 Store.prototype.dispatch = function dispatch (_type, _payload) {
-    var this$1 = this;
+    let this$1 = this;
 
   // check object-style dispatch
-  var ref = unifyObjectStyle(_type, _payload);
-    var type = ref.type;
-    var payload = ref.payload;
+  let ref = unifyObjectStyle(_type, _payload);
+    let type = ref.type;
+    let payload = ref.payload;
 
-  var action = { type: type, payload: payload };
-  var entry = this._actions[type];
+  let action = { type: type, payload: payload };
+  let entry = this._actions[type];
   if (!entry) {
     if (process.env.NODE_ENV !== 'production') {
       console.error(("[vuex] unknown action type: " + type));
@@ -426,7 +427,7 @@ Store.prototype.dispatch = function dispatch (_type, _payload) {
     }
   }
 
-  var result = entry.length > 1
+  let result = entry.length > 1
     ? Promise.all(entry.map(function (handler) { return handler(payload); }))
     : entry[0](payload);
 
@@ -450,12 +451,12 @@ Store.prototype.subscribe = function subscribe (fn) {
 };
 
 Store.prototype.subscribeAction = function subscribeAction (fn) {
-  var subs = typeof fn === 'function' ? { before: fn } : fn;
+  let subs = typeof fn === 'function' ? { before: fn } : fn;
   return genericSubscribe(subs, this._actionSubscribers)
 };
 
 Store.prototype.watch = function watch (getter, cb, options) {
-    var this$1 = this;
+    let this$1 = this;
 
   if (process.env.NODE_ENV !== 'production') {
     assert(typeof getter === 'function', "store.watch only accepts a function.");
@@ -464,10 +465,10 @@ Store.prototype.watch = function watch (getter, cb, options) {
 };
 
 Store.prototype.replaceState = function replaceState (state) {
-    var this$1 = this;
+    let this$1 = this;
 
   this._withCommit(function () {
-    this$1._vm._data.$$state = state;
+    this$1._vm['_data'].$$state = state;
   });
 };
 
@@ -488,7 +489,7 @@ Store.prototype.registerModule = function registerModule (path, rawModule, optio
 };
 
 Store.prototype.unregisterModule = function unregisterModule (path) {
-    var this$1 = this;
+    let this$1 = this;
 
   if (typeof path === 'string') { path = [path]; }
 
@@ -498,7 +499,7 @@ Store.prototype.unregisterModule = function unregisterModule (path) {
 
   this._modules.unregister(path);
   this._withCommit(function () {
-    var parentState = getNestedState(this$1.state, path.slice(0, -1));
+    let parentState = getNestedState(this$1.state, path.slice(0, -1));
     Vue.delete(parentState, path[path.length - 1]);
   });
   resetStore(this);
@@ -510,7 +511,7 @@ Store.prototype.hotUpdate = function hotUpdate (newOptions) {
 };
 
 Store.prototype._withCommit = function _withCommit (fn) {
-  var committing = this._committing;
+  let committing = this._committing;
   this._committing = true;
   fn();
   this._committing = committing;
@@ -523,7 +524,7 @@ function genericSubscribe (fn, subs) {
     subs.push(fn);
   }
   return function () {
-    var i = subs.indexOf(fn);
+    let i = subs.indexOf(fn);
     if (i > -1) {
       subs.splice(i, 1);
     }
@@ -535,7 +536,7 @@ function resetStore (store, hot) {
   store._mutations = Object.create(null);
   store._wrappedGetters = Object.create(null);
   store._modulesNamespaceMap = Object.create(null);
-  var state = store.state;
+  let state = store.state;
   // init all modules
   installModule(store, state, [], store._modules.root, true);
   // reset vm
@@ -543,12 +544,12 @@ function resetStore (store, hot) {
 }
 
 function resetStoreVM (store, state, hot) {
-  var oldVm = store._vm;
+  let oldVm = store._vm;
 
   // bind store public getters
   store.getters = {};
-  var wrappedGetters = store._wrappedGetters;
-  var computed = {};
+  let wrappedGetters = store._wrappedGetters;
+  let computed = {};
   forEachValue(wrappedGetters, function (fn, key) {
     // use computed to leverage its lazy-caching mechanism
     computed[key] = function () { return fn(store); };
@@ -561,7 +562,7 @@ function resetStoreVM (store, state, hot) {
   // use a Vue instance to store the state tree
   // suppress warnings just in case the user has added
   // some funky global mixins
-  var silent = Vue.config.silent;
+  let silent = Vue.config.silent;
   Vue.config.silent = true;
   store._vm = new Vue({
     data: {
@@ -589,8 +590,8 @@ function resetStoreVM (store, state, hot) {
 }
 
 function installModule (store, rootState, path, module, hot) {
-  var isRoot = !path.length;
-  var namespace = store._modules.getNamespace(path);
+  let isRoot = !path.length;
+  let namespace = store._modules.getNamespace(path);
 
   // register in namespace map
   if (module.namespaced) {
@@ -599,28 +600,28 @@ function installModule (store, rootState, path, module, hot) {
 
   // set state
   if (!isRoot && !hot) {
-    var parentState = getNestedState(rootState, path.slice(0, -1));
-    var moduleName = path[path.length - 1];
+    let parentState = getNestedState(rootState, path.slice(0, -1));
+    let moduleName = path[path.length - 1];
     store._withCommit(function () {
       Vue.set(parentState, moduleName, module.state);
     });
   }
 
-  var local = module.context = makeLocalContext(store, namespace, path);
+  let local = module.context = makeLocalContext(store, namespace, path);
 
   module.forEachMutation(function (mutation, key) {
-    var namespacedType = namespace + key;
+    let namespacedType = namespace + key;
     registerMutation(store, namespacedType, mutation, local);
   });
 
   module.forEachAction(function (action, key) {
-    var type = action.root ? key : namespace + key;
-    var handler = action.handler || action;
+    let type = action.root ? key : namespace + key;
+    let handler = action.handler || action;
     registerAction(store, type, handler, local);
   });
 
   module.forEachGetter(function (getter, key) {
-    var namespacedType = namespace + key;
+    let namespacedType = namespace + key;
     registerGetter(store, namespacedType, getter, local);
   });
 
@@ -634,14 +635,14 @@ function installModule (store, rootState, path, module, hot) {
  * if there is no namespace, just use root ones
  */
 function makeLocalContext (store, namespace, path) {
-  var noNamespace = namespace === '';
+  let noNamespace = namespace === '';
 
-  var local = {
+  let local = {
     dispatch: noNamespace ? store.dispatch : function (_type, _payload, _options) {
-      var args = unifyObjectStyle(_type, _payload, _options);
-      var payload = args.payload;
-      var options = args.options;
-      var type = args.type;
+      let args = unifyObjectStyle(_type, _payload, _options);
+      let payload = args.payload;
+      let options = args.options;
+      let type = args.type;
 
       if (!options || !options.root) {
         type = namespace + type;
@@ -655,10 +656,10 @@ function makeLocalContext (store, namespace, path) {
     },
 
     commit: noNamespace ? store.commit : function (_type, _payload, _options) {
-      var args = unifyObjectStyle(_type, _payload, _options);
-      var payload = args.payload;
-      var options = args.options;
-      var type = args.type;
+      let args = unifyObjectStyle(_type, _payload, _options);
+      let payload = args.payload;
+      let options = args.options;
+      let type = args.type;
 
       if (!options || !options.root) {
         type = namespace + type;
@@ -689,15 +690,15 @@ function makeLocalContext (store, namespace, path) {
 }
 
 function makeLocalGetters (store, namespace) {
-  var gettersProxy = {};
+  let gettersProxy = {};
 
-  var splitPos = namespace.length;
+  let splitPos = namespace.length;
   Object.keys(store.getters).forEach(function (type) {
     // skip if the target getter is not match this namespace
     if (type.slice(0, splitPos) !== namespace) { return }
 
     // extract local getter type
-    var localType = type.slice(splitPos);
+    let localType = type.slice(splitPos);
 
     // Add a port to the getters proxy.
     // Define as getter property because
@@ -712,16 +713,16 @@ function makeLocalGetters (store, namespace) {
 }
 
 function registerMutation (store, type, handler, local) {
-  var entry = store._mutations[type] || (store._mutations[type] = []);
+  let entry = store._mutations[type] || (store._mutations[type] = []);
   entry.push(function wrappedMutationHandler (payload) {
     handler.call(store, local.state, payload);
   });
 }
 
 function registerAction (store, type, handler, local) {
-  var entry = store._actions[type] || (store._actions[type] = []);
+  let entry = store._actions[type] || (store._actions[type] = []);
   entry.push(function wrappedActionHandler (payload, cb) {
-    var res = handler.call(store, {
+    let res = handler.call(store, {
       dispatch: local.dispatch,
       commit: local.commit,
       getters: local.getters,
@@ -761,7 +762,7 @@ function registerGetter (store, type, rawGetter, local) {
 }
 
 function enableStrictMode (store) {
-  store._vm.$watch(function () { return this._data.$$state }, function () {
+  store._vm['$watch'](function () { return this._data.$$state }, function () {
     if (process.env.NODE_ENV !== 'production') {
       assert(store._committing, "do not mutate vuex store state outside mutation handlers.");
     }
@@ -807,17 +808,17 @@ function install (_Vue) {
  * @param {Object|Array} states # Object's item can be a function which accept state and getters for param, you can do something for state and getters in it.
  * @param {Object}
  */
-var mapState = normalizeNamespace(function (namespace, states) {
-  var res = {};
+let mapState = normalizeNamespace(function (namespace, states) {
+  let res = {};
   normalizeMap(states).forEach(function (ref) {
-    var key = ref.key;
-    var val = ref.val;
+    let key = ref.key;
+    let val = ref.val;
 
     res[key] = function mappedState () {
-      var state = this.$store.state;
-      var getters = this.$store.getters;
+      let state = this.$store.state;
+      let getters = this.$store.getters;
       if (namespace) {
-        var module = getModuleByNamespace(this.$store, 'mapState', namespace);
+        let module = getModuleByNamespace(this.$store, 'mapState', namespace);
         if (!module) {
           return
         }
@@ -840,20 +841,20 @@ var mapState = normalizeNamespace(function (namespace, states) {
  * @param {Object|Array} mutations # Object's item can be a function which accept `commit` function as the first param, it can accept anthor params. You can commit mutation and do any other things in this function. specially, You need to pass anthor params from the mapped function.
  * @return {Object}
  */
-var mapMutations = normalizeNamespace(function (namespace, mutations) {
-  var res = {};
+let mapMutations = normalizeNamespace(function (namespace, mutations) {
+  let res = {};
   normalizeMap(mutations).forEach(function (ref) {
-    var key = ref.key;
-    var val = ref.val;
+    let key = ref.key;
+    let val = ref.val;
 
     res[key] = function mappedMutation () {
-      var args = [], len = arguments.length;
+      let args = [], len = arguments.length;
       while ( len-- ) args[ len ] = arguments[ len ];
 
       // Get the commit method from store
-      var commit = this.$store.commit;
+      let commit = this.$store.commit;
       if (namespace) {
-        var module = getModuleByNamespace(this.$store, 'mapMutations', namespace);
+        let module = getModuleByNamespace(this.$store, 'mapMutations', namespace);
         if (!module) {
           return
         }
@@ -873,11 +874,11 @@ var mapMutations = normalizeNamespace(function (namespace, mutations) {
  * @param {Object|Array} getters
  * @return {Object}
  */
-var mapGetters = normalizeNamespace(function (namespace, getters) {
-  var res = {};
+let mapGetters = normalizeNamespace(function (namespace, getters) {
+  let res = {};
   normalizeMap(getters).forEach(function (ref) {
-    var key = ref.key;
-    var val = ref.val;
+    let key = ref.key;
+    let val = ref.val;
 
     // The namespace has been mutated by normalizeNamespace
     val = namespace + val;
@@ -903,20 +904,20 @@ var mapGetters = normalizeNamespace(function (namespace, getters) {
  * @param {Object|Array} actions # Object's item can be a function which accept `dispatch` function as the first param, it can accept anthor params. You can dispatch action and do any other things in this function. specially, You need to pass anthor params from the mapped function.
  * @return {Object}
  */
-var mapActions = normalizeNamespace(function (namespace, actions) {
-  var res = {};
+let mapActions = normalizeNamespace(function (namespace, actions) {
+  let res = {};
   normalizeMap(actions).forEach(function (ref) {
-    var key = ref.key;
-    var val = ref.val;
+    let key = ref.key;
+    let val = ref.val;
 
     res[key] = function mappedAction () {
-      var args = [], len = arguments.length;
+      let args = [], len = arguments.length;
       while ( len-- ) args[ len ] = arguments[ len ];
 
       // get dispatch function from store
-      var dispatch = this.$store.dispatch;
+      let dispatch = this.$store.dispatch;
       if (namespace) {
-        var module = getModuleByNamespace(this.$store, 'mapActions', namespace);
+        let module = getModuleByNamespace(this.$store, 'mapActions', namespace);
         if (!module) {
           return
         }
@@ -935,7 +936,7 @@ var mapActions = normalizeNamespace(function (namespace, actions) {
  * @param {String} namespace
  * @return {Object}
  */
-var createNamespacedHelpers = function (namespace) { return ({
+let createNamespacedHelpers = function (namespace) { return ({
   mapState: mapState.bind(null, namespace),
   mapGetters: mapGetters.bind(null, namespace),
   mapMutations: mapMutations.bind(null, namespace),
@@ -980,14 +981,14 @@ function normalizeNamespace (fn) {
  * @return {Object}
  */
 function getModuleByNamespace (store, helper, namespace) {
-  var module = store._modulesNamespaceMap[namespace];
+  let module = store._modulesNamespaceMap[namespace];
   if (process.env.NODE_ENV !== 'production' && !module) {
     console.error(("[vuex] module namespace not found in " + helper + "(): " + namespace));
   }
   return module
 }
 
-var index_esm = {
+let index_esm = {
   Store: Store,
   install: install,
   version: '3.1.0',

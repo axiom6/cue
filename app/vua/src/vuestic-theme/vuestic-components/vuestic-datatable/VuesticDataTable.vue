@@ -18,18 +18,18 @@
           :defaultPerPage="defaultPerPageComputed"
           @items-per-page="onItemsPerPage"
           v-show="perPageSelectorShown"
-        />
+        ></items-per-page>
       </div>
     </div>
     <div v-show="loading" class="data-table-loading">
-      <slot name="loading">
+      <!--slot name="loading">
         <spring-spinner
           slot="loading"
           :animation-duration="2500"
           :size="70"
           color="#4ae387"
         />
-      </slot>
+      </slot-->
     </div>
     <vuetable
       ref="vuetable"
@@ -62,20 +62,19 @@
 </template>
 
 <script>
-import Vuetable from 'vuetable-2/src/components/Vuetable.vue'
-import VuetablePagination from 'vuetable-2/src/components/VuetablePagination.vue'
+import Vuetable           from '../../../vue-lib/VueTable/Vuetable.vue'
+import VuetablePagination from '../../../vue-lib/VueTable/VuetablePagination.vue'
 import FilterBar from './datatable-components/FilterBar.vue'
 import ItemsPerPage from './datatable-components/ItemsPerPage.vue'
 import DefaultPerPageDefinition from './data/items-per-page-definition'
 import QueryParams from './data/query-params'
-import Vue from 'vue'
+import Vue from '../../../../pub/js/lib/vue.esm.browser.js'
 import DataTableStyles from '../vuestic-datatable/data/data-table-styles'
-import SpringSpinner from 'epic-spinners/src/components/lib/SpringSpinner'
+//port SpringSpinner from 'epic-spinners/src/components/lib/SpringSpinner'
 
 export default {
   name: 'vuestic-data-table',
   components: {
-    SpringSpinner,
     FilterBar,
     Vuetable,
     VuetablePagination,
@@ -250,7 +249,7 @@ export default {
   },
 
   mounted () {
-    this.$emit('initialized', this.$refs.vuetable)
+    this.$emit('initialized', this.$refs['vuetable'])
   },
 
   methods: {
@@ -308,6 +307,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../../vuestic-sass/resources/resources";
 .vuestic-data-table {
   min-height: 24rem;
 

@@ -1,5 +1,5 @@
 
-import store from '../../pub/js/lib/vuex.esm.js'
+import { Store } from '../../pub/js/lib/vuex.esm.js'
 
 export default {
   inserted (el) {
@@ -11,14 +11,14 @@ export default {
     let sidebar = el.querySelector('.vuestic-sidebar')
 
     el.addEventListener('transitionend', function () {
-      store.dispatch('isToggleWithoutAnimation', false)
+      Store.dispatch('isToggleWithoutAnimation', false)
     })
 
     window.addEventListener('resize', function () {
       if (checkIsDesktop() && !prevMatchlg) {
         sidebar.classList.remove('sidebar-hidden')
       } else if (!checkIsDesktop() && prevMatchlg) {
-        store.dispatch('isToggleWithoutAnimation', true)
+        Store.dispatch('isToggleWithoutAnimation', true)
         sidebar.classList.add('sidebar-hidden')
       }
       prevMatchlg = checkIsDesktop()

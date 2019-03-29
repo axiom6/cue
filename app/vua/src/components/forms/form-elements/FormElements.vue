@@ -94,7 +94,7 @@
                   </div>
                   <div class="form-group">
                     <div class="input-group">
-                      <input id="inputWithDescription" required title=""/>
+                      <label for="inputWithDescription"></label><input id="inputWithDescription" required title=""/>
                       <label class="control-label" for="simple-input">{{'forms.inputs.textInputWithDescription'
                         | translate}}</label><i
                       class="bar"></i>
@@ -156,8 +156,8 @@
                       <vuestic-date-picker
                         id="date-picker-basic"
                         v-model="datepicker.simple"
-                      />
-                      <label class="control-label" for="date-picker-basic">
+                      ></vuestic-date-picker> <!--for="date-picker-basic"-->
+                      <label class="control-label" >
                         {{ $t('forms.dateTimePicker.basic') }}
                       </label>
                       <i class="bar"></i>
@@ -169,8 +169,8 @@
                         id="date-picker-time"
                         :config="{enableTime: true}"
                         v-model="datepicker.time"
-                      />
-                      <label class="control-label" for="date-picker-time">
+                      ></vuestic-date-picker><!--for="date-picker-time">-->
+                      <label class="control-label">
                         {{ $t('forms.dateTimePicker.time') }}
                       </label>
                       <i class="bar"></i>
@@ -182,8 +182,8 @@
                         id="date-picker-custom-first-day"
                         :config="{locale: {firstDayOfWeek: 1}}"
                         v-model="datepicker.customFirstDay"
-                      />
-                      <label class="control-label" for="date-picker-custom-first-day">
+                      ></vuestic-date-picker> <!--for="date-picker-custom-first-day"-->
+                      <label class="control-label" >
                         {{ $t('forms.dateTimePicker.customFirstDay') }}
                       </label>
                       <i class="bar"></i>
@@ -199,8 +199,8 @@
                         id="date-picker-disabled"
                         :config="{disable: datePickerDisabled}"
                         v-model="datepicker.disabled"
-                      />
-                      <label class="control-label" for="date-picker-disabled">
+                      ></vuestic-date-picker> <!--for="date-picker-disabled"-->
+                      <label class="control-label" >
                         {{ $t('forms.dateTimePicker.disabled') }}
                       </label>
                       <i class="bar"></i>
@@ -212,8 +212,8 @@
                         id="date-picker-multiple"
                         :config="{mode: 'multiple'}"
                         v-model="datepicker.multiple"
-                      />
-                      <label class="control-label" for="date-picker-multiple">
+                      ></vuestic-date-picker><!--for="date-picker-multiple"-->
+                      <label class="control-label" >
                         {{ $t('forms.dateTimePicker.multiple') }}
                       </label>
                       <i class="bar"></i>
@@ -225,8 +225,8 @@
                         id="date-picker-custom-date-format"
                         :config="{altInput: true, altFormat: 'F j, Y'}"
                         v-model="datepicker.customDate"
-                      />
-                      <label class="control-label" for="date-picker-custom-date-format">
+                      ></vuestic-date-picker>       <!--for="date-picker-custom-date-format"-->
+                      <label class="control-label" >
                         {{ $t('forms.dateTimePicker.customDateFormat') }}
                       </label>
                       <i class="bar"></i>
@@ -242,8 +242,8 @@
                         id="date-picker-range"
                         :config="{mode: 'range', inline: true}"
                         v-model="datepicker.range"
-                      />
-                      <label class="control-label" for="date-picker-range">
+                      ></vuestic-date-picker> <!--for="date-picker-range"-->
+                      <label class="control-label" >
                         {{ $t('forms.dateTimePicker.range') }}
                       </label>
                     </div>
@@ -268,12 +268,12 @@
                     v-model="simpleSelectModel"
                     option-key="description"
                     v-bind:options="simpleOptions"
-                  />
+                  ></vuestic-simple-select>
                   <vuestic-simple-select
                     :label="'forms.selects.country' | translate"
                     v-model="chosenCountry"
                     v-bind:options="countriesList"
-                  />
+                  ></vuestic-simple-select>
                 </fieldset>
               </div>
               <div class="flex md4">
@@ -283,12 +283,12 @@
                     v-model="multiSelectModel"
                     option-key="description"
                     v-bind:options="simpleOptions"
-                  />
+                  ></vuestic-multi-select>
                   <vuestic-multi-select
                     :label="'forms.selects.countryMulti' | translate"
                     v-model="multiSelectCountriesModel"
                     v-bind:options="countriesList"
-                  />
+                  ></vuestic-multi-select>
                 </fieldset>
               </div>
             </div>
@@ -307,32 +307,32 @@
                   <vuestic-checkbox
                     :label="$t('forms.controls.unselected')"
                     v-model="checkbox.unselected"
-                  />
+                  ></vuestic-checkbox>
                   <vuestic-checkbox
                     :label="$t('forms.controls.selected')"
                     v-model="checkbox.selected"
-                  />
+                  ></vuestic-checkbox>
                   <vuestic-checkbox
                     :label="$t('forms.controls.readonly')"
                     v-model="checkbox.readonly"
                     :readonly="true"
-                  />
+                  ></vuestic-checkbox>
                   <vuestic-checkbox
                     :label="$t('forms.controls.disabled')"
                     :disabled="true"
                     v-model="checkbox.disabled"
-                  />
+                  ></vuestic-checkbox>
                   <vuestic-checkbox
                     :label="$t('forms.controls.error')"
                     error
                     v-model="checkbox.error"
-                  />
+                  ></vuestic-checkbox>
                   <vuestic-checkbox
                     :label="$t('forms.controls.errorMessage')"
                     :error-messages="errorMessages"
                     :errorCount="2"
                     v-model="checkbox.errorMessages"
-                  />
+                  ></vuestic-checkbox>
                 </fieldset>
               </div>
               <div class="flex md3">
@@ -341,12 +341,12 @@
                     option="option1"
                     v-model="radioSelectedOption"
                     label="Radio"
-                  />
+                  ></vuestic-radio-button>
                   <vuestic-radio-button
                     option="option2"
                     v-model="radioSelectedOption"
                     label="Radio"
-                  />
+                  ></vuestic-radio-button>
                 </fieldset>
                 <fieldset>
                   <vuestic-radio-button
@@ -354,13 +354,13 @@
                     disabled
                     v-model="radioSelectedDisableOption"
                     label="Disabled Radio"
-                  />
+                  ></vuestic-radio-button>
                   <vuestic-radio-button
                     option="option2"
                     disabled
                     v-model="radioSelectedDisableOption"
                     label="Disabled Radio"
-                  />
+                  ></vuestic-radio-button>
                 </fieldset>
               </div>
               <div class="flex md3">
@@ -387,7 +387,7 @@ export default {
   name: 'form-elements',
   computed: {
     datePickerDisabled: () => [date => !(date.getDate() % 5)],
-    isSuccessfulEmailValid () {
+    isSuccessfulEmailValid() {
       let isValid = false
       if (this.formFields.successfulEmail) {
         isValid = this.formFields.successfulEmail.validated && this.formFields.successfulEmail.valid
@@ -395,7 +395,7 @@ export default {
       return isValid
     },
   },
-  data () {
+  data() {
     return {
       isMale: true,
       countriesList: CountriesList,
@@ -440,17 +440,25 @@ export default {
         customFirstDay: '2018-05-09',
         customDate: '2018-05-09',
       },
+      formFields: {
+        successfulEmail: {validated: false, valid: true},
+        wrongEmail: {}
+      }
     }
   },
   methods: {
-    clear (field) {
+    clear(field) {
       this[field] = ''
-    },
+    }
   },
-  created () {
+  created() {
     this.$nextTick(() => {
-      this.$validator.validateAll()
+      this.$validator.validateAll().then()
     })
   },
+  errors: {
+    has:   (name) => { if( name === false ) return true;  },
+    first: (name) => { if( name === false ) return false; }
+  }
 }
 </script>

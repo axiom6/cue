@@ -54,6 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import "../../../../vuestic-theme/vuestic-sass/resources/resources";
 $wizard-steps-height: 100%;
 $wizard-steps-width: 100%;
 $wizard-steps-p-v: 2.5rem;

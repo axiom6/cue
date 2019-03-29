@@ -12,7 +12,7 @@
         v-for="(pieceOfNews, index) in news"
         :key="index"
         :style="`background: url(${pieceOfNews.photoURL})`"
-      />
+      ></div>
     </div>
   </div>
 </template>
@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../../../vuestic-theme/vuestic-sass/resources/resources";
 .vuestic-social-news {
   &__text-with-button {
     padding-bottom: 1.5rem;

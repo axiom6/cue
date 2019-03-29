@@ -32,9 +32,12 @@ import DashboardInfoWidgets from './DashboardInfoWidgets.vue'
 import UsersMembersTab from './users-and-members-tab/UsersMembersTab.vue'
 import SetupProfileTab from './setup-profile-tab/SetupProfileTab.vue'
 import FeaturesTab from './features-tab/FeaturesTab.vue'
-import DataVisualisationTab
-  from './data-visualisation-tab/DataVisualisation.vue'
+import DataVisualisationTab   from './data-visualisation-tab/DataVisualisation.vue'
 import DashboardBottomWidgets from './DashboardBottomWidgets.vue'
+import VuesticWidget          from '../../vuestic-theme/vuestic-components/vuestic-widget/VuesticWidget.vue'
+import VuesticTabs             from '../../vuestic-theme/vuestic-components/vuestic-tabs/VuesticTabs.vue'
+
+// vuestic-widget  vuestic-tabs
 
 export default {
   name: 'dashboard',
@@ -45,6 +48,8 @@ export default {
     SetupProfileTab,
     FeaturesTab,
     DashboardBottomWidgets,
+    VuesticWidget,
+    VuesticTabs
   },
 
   methods: {
