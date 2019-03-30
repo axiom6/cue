@@ -1,5 +1,5 @@
 
-import { Store } from '../../pub/js/lib/vuex.esm.js'
+import { Store } from '../../src/store/Store.js'
 
 export default {
   inserted (el) {

@@ -5,13 +5,13 @@
       <div class="progress-bar vertical-bar__progress-bar"
            :class="verticalBarAnimation"
            :style="verticalBarStyle">
-        <span v-if="size == 'thick'">
+        <span v-if="size === 'thick'">
           <span v-if="!text">{{value + '%'}}</span>
           <span v-else>{{text}}</span>
         </span>
       </div>
     </div>
-    <div class="vertical-bar__value" v-if="size != 'thick'">
+    <div class="vertical-bar__value" v-if="size !== 'thick'">
       <span v-if="!text">{{value + '%'}}</span>
       <span v-else>{{text}}</span>
     </div>
@@ -77,6 +77,7 @@ export default {
 
 <style lang="scss">
 .vertical-bar {
+  @import "../../../vuestic-sass/resources/resources";
   font-size: $progress-bar-value-font-size;
   font-weight: $font-weight-bold;
 

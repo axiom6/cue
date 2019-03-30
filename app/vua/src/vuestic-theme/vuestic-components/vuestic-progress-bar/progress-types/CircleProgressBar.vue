@@ -123,6 +123,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../../../vuestic-sass/resources/resources";
 .circle-bar {
   $step: 1;
   $loops: 100 / $step;

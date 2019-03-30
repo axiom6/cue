@@ -1,4 +1,4 @@
-import Store from '../../store/Store.js'
+import { Store } from '../../store/Store.js'
 import utils from '../../services/utils'
 
 let palette = Store.getters.palette;

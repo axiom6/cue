@@ -10,7 +10,7 @@
         :class="horizontalBarAnimation"
         :style="horizontalBarStyle"
       >
-        <span v-if="size === 'thick'" :class="{hidden: value == 0}"
+        <span v-if="size === 'thick'" :class="{hidden: value === 0}"
               class="horizontal-bar__value">
           <span v-if="!text">{{value + '%'}}</span>
           <span v-else>{{text}}</span>
@@ -78,6 +78,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../../../vuestic-sass/resources/resources";
 .horizontal-bar {
   display: inline-block;
   width: 100%;

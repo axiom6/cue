@@ -13,6 +13,7 @@
   height: 21px;
   width: 26px;
   background: url('assets/icons/nav-messages.png') no-repeat center center;
+
 }
 
 .i-menu-expanded {
@@ -34,7 +35,7 @@
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: 'Glyphicons Halflings';
+  font-family: 'Glyphicons Halflings', sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1;

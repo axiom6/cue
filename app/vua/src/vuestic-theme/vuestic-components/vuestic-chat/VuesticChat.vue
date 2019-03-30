@@ -15,8 +15,10 @@
       <fieldset>
         <div class="form-group form-group-w-btn">
           <div class="input-group">
-            <input @keypress="keyHandler($event)" v-model="inputMessage"
-                   required title=""/>
+            <label>
+              <input @keypress="keyHandler($event)" v-model="inputMessage"
+                     required title=""/>
+            </label>
             <label class="control-label">Your message</label><i class="bar"></i>
           </div>
           <div class="btn btn-sm btn-primary" @click="sendMessage()">Send</div>
@@ -27,7 +29,7 @@
 </template>
 
 <script>
-import StickyScroll from 'vuestic-directives/StickyScroll'
+import StickyScroll from '../../vuestic-directives/StickyScroll.js'
 
 export default {
   name: 'vuestic-chat',
@@ -75,6 +77,9 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+
+@import "../../vuestic-sass/resources/resources";
+
 $chat-body-min-height: 18.75rem;
 $chat-body-mb: 1.5rem;
 $chat-message-mb: 0.625rem;

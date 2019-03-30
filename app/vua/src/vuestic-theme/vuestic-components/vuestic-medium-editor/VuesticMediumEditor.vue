@@ -60,12 +60,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "~medium-editor/src/sass/medium-editor";
+<style>
 
-.vuestic-medium-editor {
-  &:focus {
-    outline: none;
-  }
-}
+@import "medium-editor.css";
+
+.vuestic-medium-editor       { }
+.vuestic-medium-editor:focus { outline: none; }
+
 </style>

@@ -24,8 +24,10 @@
   </vuestic-dropdown>
 </template>
 
-<script>
+<script type="module">
+  import VuesticDropdown from "../../vuestic-dropdown/VuesticDropdown.vue"
 export default {
+    components:{ VuesticDropdown },
   props: {
     label: {
       type: String,

@@ -38,7 +38,7 @@
             </div>
             <div class="chart-container">
               <vuestic-progress-bar type="circle" :value="70" theme="White"
-                                    backgroundTheme="Danger"/>
+                                    backgroundTheme="Danger"></vuestic-progress-bar>
             </div>
           </div>
         </div>
@@ -61,9 +61,12 @@
   </div>
 </template>
 
-<script>
+<script type="module">
+  import VuesticWidget      from '../../vuestic-theme/vuestic-components/vuestic-widget/VuesticWidget.vue'
+  import VuesticProgressBar from '../../vuestic-theme/vuestic-components/vuestic-progress-bar/VuesticProgressBar.vue'
 export default {
   name: 'dashboard-info-widgets',
+  components:{ VuesticWidget, VuesticProgressBar }
 }
 </script>
 

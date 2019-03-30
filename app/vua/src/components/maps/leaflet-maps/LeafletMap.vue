@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~leaflet/dist/leaflet.css";
+@import "leaflet.css";
 
 .leaflet-map {
   height: 100%;

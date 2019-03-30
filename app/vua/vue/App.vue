@@ -6,43 +6,32 @@
 
 <script type="module">
   
-//import '../../../node_modules/es6-promise/auto' // Polyfills
-//import '../../../node_modules/babel-polyfill/dist/polyfill'
+  import Vue                  from '../pub/js/lib/vue.esm.browser.js'
+  Vue.config.productionTip  = false;
+  import Vuex                 from '../pub/js/lib/vuex.esm.js'
+  import VeeValidate          from '../src/vue-lib/vee-validate/vee-validate.esm.js'
+  Vue.use( Vuex );
+  Vue.use( VeeValidate, { fieldsBagName: 'formFields' } );
+  import I18nInit             from '../src/i18n/I18nInit.js'
+  import { Store }            from '../src/store/Store.js'
+  import router               from '../src/router/index'
   
-  
-  import Vue         from '../pub/js/lib/vue.esm.browser.js'
-  import VeeValidate from '../src/vue-lib/vee-validate/vee-validate.esm.js'
-  import Store       from '../src/store/Store.js'
-  import router      from '../src/router/index'
-  import InitI18n    from '../src/i18n/InitI18n.js'
-  InitI18n( Vue );
-
-  Vue.use( VeeValidate, Store,Vuex, Store );
-  Vue.config.productionTip = false;
+  if( I18nInit === false ) {}
   
   let App = {
     
-    noop: (to, from, next) => {
-      if (to === false && from === false && next === false)
-        console.log('App.noop()') },
-
     startup: () => {
 
-      router.beforeEach((to, from, next) => {
-        App.noop(to, from, next)
-        Store['commit']('setLoading', true)
-        next()
-      })
+      router.beforeEach( ( to, from, next ) => {  // (to, from, next) are the original args
+        if( to === false && from === false ) {}
+        Store.commit('setLoading', true);
+        next(); } )
 
-      router.afterEach((to, from) => {
-        App.noop(to, from, null)
-        Store['commit']('setLoading', false)
-      })
+      router.afterEach(  () => {   // (to, from) are the original args
+        Store.commit('setLoading', false); })
 
-      new Vue({el: '#app', template: '<App/>', router: router, store: store, render: h => h(App)});
-
+      new Vue({ el:'#app', template:'<App/>', router:router, store:Store, render: h => h(App) });
     }
-    
   };
   
   export default App
@@ -57,3 +46,6 @@
     #app { height: 100%; } }
   
 </style>
+
+//import '../../../node_modules/es6-promise/auto' // Polyfills
+//import '../../../node_modules/babel-polyfill/dist/polyfill'

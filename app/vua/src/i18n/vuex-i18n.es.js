@@ -824,9 +824,4 @@ function isArray$1(obj) {
 
 // import the vuex module for localization
 
-var index = {
-  store: i18nVuexModule,
-  plugin: VuexI18nPlugin
-};
-
-export default index;
+export default VuexI18nPlugin;

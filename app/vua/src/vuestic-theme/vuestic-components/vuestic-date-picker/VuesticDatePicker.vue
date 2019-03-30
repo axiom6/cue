@@ -5,7 +5,7 @@
     v-model="valueProxy"
     v-on="$listeners"
     :config="fullConfig"
-  />
+  ></vue-flatpickr-component>
 </template>
 
 <script>
@@ -50,6 +50,8 @@ export default {
 </script>
 
 <style lang="scss">
+
+@import "../../vuestic-sass/resources/resources";
 @import "~flatpickr/dist/flatpickr.css";
 
 $datepickerActive: $vue-green;

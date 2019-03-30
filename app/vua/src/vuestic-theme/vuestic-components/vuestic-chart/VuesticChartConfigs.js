@@ -1,5 +1,5 @@
 
-import Store from '../../../store/Store.js'
+import { Store } from '../../../store/Store.js'
 
 let palette = Store.getters.palette;
 

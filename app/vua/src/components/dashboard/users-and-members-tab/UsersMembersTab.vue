@@ -17,9 +17,11 @@
 </template>
 
 <script>
+  import VuesticProfileCard from '../../../vuestic-theme/vuestic-components/vuestic-widget/VuesticWidget.vue'
+  import VuesticChat        from '../../../vuestic-theme/vuestic-components/vuestic-chat/VuesticChat.vue'
 export default {
   name: 'users-members-tab',
-
+  components:{ VuesticProfileCard, VuesticChat },
   data () {
     return {
       chatMessages: [

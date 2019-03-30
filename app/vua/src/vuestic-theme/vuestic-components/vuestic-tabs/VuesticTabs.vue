@@ -19,7 +19,7 @@
     <vuestic-simple-select
       class="simple-select"
       v-show="false"
-      v-bind:options="names" v-model="currentActive"></vuestic-simple-select>
+      v-bind:options="names" v-model="currentActive" value=""></vuestic-simple-select>
     <div class="tab-content">
       <div
         class="tab-pane"
@@ -35,8 +35,10 @@
 
 <script>
 // d-none and d-lg-flex were deleted, bug will be fixed in the nearest update
+import VuesticSimpleSelect from '../vuestic-simple-select/VuesticSimpleSelect.vue'
 export default {
   name: 'vuestic-tabs',
+  components: { VuesticSimpleSelect },
   props: ['names'],
   computed: {
     underscoreClass () {
