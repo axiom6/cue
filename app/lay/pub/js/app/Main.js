@@ -1,4 +1,4 @@
-var Main;
+let Main;
 
 import Util from '../util/Util.js';
 
@@ -14,7 +14,7 @@ Main = (function() {
     }
 
     static init(data) {
-      var infoSpec, subjects;
+      let infoSpec, subjects;
       Main.Spec = data;
       subjects = ["Ready", "Select", "Choice", "Test"];
       subjects = subjects.concat(Main.NavbSubjects);
@@ -27,7 +27,7 @@ Main = (function() {
       Main.onReady();
     }
 
-  };
+  }
 
   Data.local = "http://localhost:63342/cue/app/lay/pub/";
 
@@ -45,7 +45,7 @@ Main = (function() {
         Main['stream'].publish(subject, object);
       }
     }
-  };
+  }
 
   Main.NavbSubjects = ["Search", "Contact", "Settings", "SignOn"];
 

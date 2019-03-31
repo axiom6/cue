@@ -1,8 +1,8 @@
 
 import Vue          from '../../pub/js/lib/vue.esm.browser.js'
 import Vuex         from '../../pub/js/lib/vuex.esm.js'
-import app          from './modules/app'
-import * as getters from './getters'
+import app          from './app.js'
+import * as getters from './getters.js'
 
 Vue.config.productionTip = false;
 Vuex.process  = { env:{ NODE_ENV:'production' } };
