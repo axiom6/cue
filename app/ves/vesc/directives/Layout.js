@@ -1,6 +1,7 @@
 export default {
 
   bind: function (el, binding) {
+    if( binding === false ){}
     let navbar = el.querySelector('.vuestic-navbar')
     let sidebar = el.querySelector('.vuestic-sidebar')
 

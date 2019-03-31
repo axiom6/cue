@@ -5,7 +5,7 @@ Object.defineProperty(listenOpts, 'passive', {
     let passive
 
     try {
-      var opts = Object.defineProperty({}, 'passive', {
+      let opts = Object.defineProperty({}, 'passive', {
         get () {
           passive = { passive: true }
         },
@@ -25,21 +25,10 @@ Object.defineProperty(listenOpts, 'passive', {
   },
 })
 
-export function leftClick (e) {
-  return e.button === 0
-}
-
-export function middleClick (e) {
-  return e.button === 1
-}
-
-export function rightClick (e) {
-  return e.button === 2
-}
-
-export function getEventKey (e) {
-  return e.which || e.keyCode
-}
+//export function leftClick   (e) {return e.button === 0}
+//export function middleClick (e) {return e.button === 1}
+//export function rightClick  (e) {return e.button === 2}
+//export function getEventKey (e) {return e.which || e.keyCode}
 
 export function position (e) {
   let posx, posy
@@ -73,8 +62,8 @@ export function targetElement (e) {
 
   if (e.target) {
     target = e.target
-  } else if (e.srcElement) {
-    target = e.srcElement
+  } else if (e['srcElement']) {
+    target = e['srcElement']
   }
 
   // defeat Safari bug
@@ -85,7 +74,7 @@ export function targetElement (e) {
   return target
 }
 
-export function getEventPath (e) {
+/*export function getEventPath (e) {
   if (e.path) {
     return e.path
   }
@@ -107,12 +96,12 @@ export function getEventPath (e) {
 
     el = el.parentElement
   }
-}
+}*/
 
 // Reasonable defaults
-const LINE_HEIGHT = 40
-const PAGE_HEIGHT = 800
-
+//const LINE_HEIGHT = 40
+//const PAGE_HEIGHT = 800
+/*
 export function getMouseWheelDistance (e) {
   let x = e.deltaX
   let y = e.deltaY
@@ -134,16 +123,16 @@ export function stopAndPrevent (e) {
   e.preventDefault()
   e.stopPropagation()
 }
-
+*/
 export default {
   listenOpts,
-  leftClick,
-  middleClick,
-  rightClick,
-  getEventKey,
+  //leftClick,
+  //middleClick,
+  //rightClick,
+  //getEventKey,
   position,
-  targetElement,
-  getEventPath,
-  getMouseWheelDistance,
-  stopAndPrevent,
+  targetElement
+  //getEventPath,
+  //getMouseWheelDistance,
+  //stopAndPrevent,
 }

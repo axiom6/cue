@@ -43,9 +43,9 @@ function renderCheckboard (c1, c2, size) {
   if (typeof document === 'undefined') {
     return null
   }
-  var canvas = document.createElement('canvas')
+  let canvas = document.createElement('canvas')
   canvas.width = canvas.height = size * 2
-  var ctx = canvas.getContext('2d')
+  let ctx = canvas.getContext('2d')
   // If no context can be found, return early.
   if (!ctx) {
     return null
@@ -68,12 +68,12 @@ function renderCheckboard (c1, c2, size) {
  */
 
 function getCheckboard (c1, c2, size) {
-  var key = c1 + ',' + c2 + ',' + size
+  let key = c1 + ',' + c2 + ',' + size
 
   if (_checkboardCache[key]) {
     return _checkboardCache[key]
   } else {
-    var checkboard = renderCheckboard(c1, c2, size)
+    let checkboard = renderCheckboard(c1, c2, size)
     _checkboardCache[key] = checkboard
     return checkboard
   }
@@ -84,10 +84,10 @@ function getCheckboard (c1, c2, size) {
 <style>
 .vc-checkerboard {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-size: contain;
 }
 </style>

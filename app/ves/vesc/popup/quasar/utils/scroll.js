@@ -4,9 +4,9 @@ export function getScrollTarget (el) {
   return el.closest('.scroll,.scroll-y,.overflow-auto') || window
 }
 
-export function getScrollHeight (el) {
-  return (el === window ? document.body : el).scrollHeight
-}
+//export function getScrollHeight (el) {
+//  return (el === window ? document.body : el).scrollHeight
+//}
 
 export function getScrollPosition (scrollTarget) {
   if (scrollTarget === window) {
@@ -14,13 +14,13 @@ export function getScrollPosition (scrollTarget) {
   }
   return scrollTarget.scrollTop
 }
-
+ /*
 export function getHorizontalScrollPosition (scrollTarget) {
   if (scrollTarget === window) {
     return window.pageXOffset || window.scrollX || document.body.scrollLeft || 0
   }
   return scrollTarget.scrollLeft
-}
+} */
 
 export function animScrollTo (el, to, duration) {
   if (duration <= 0) {
@@ -45,14 +45,14 @@ function setScroll (scrollTarget, offset) {
   }
   scrollTarget.scrollTop = offset
 }
-
+/*
 export function setScrollPosition (scrollTarget, offset, duration) {
   if (duration) {
     animScrollTo(scrollTarget, offset, duration)
     return
   }
   setScroll(scrollTarget, offset)
-}
+} */
 
 let size
 
@@ -95,7 +95,7 @@ export function getScrollbarWidth () {
 
   return size
 }
-
+ /*
 export function hasScrollbar (el, onY = true) {
   if (!el || el.nodeType !== Node.ELEMENT_NODE) {
     return false
@@ -116,14 +116,14 @@ export function hasScrollbar (el, onY = true) {
         ['auto', 'scroll'].includes(window.getComputedStyle(el)['overflow-x'])
       )
     )
-}
+} */
 
 export default {
   getScrollTarget,
-  getScrollHeight,
+  //getScrollHeight,
   getScrollPosition,
-  animScrollTo,
-  setScrollPosition,
+  //animScrollTo,
+  //setScrollPosition,
   getScrollbarWidth,
-  hasScrollbar,
+  //hasScrollbar,
 }

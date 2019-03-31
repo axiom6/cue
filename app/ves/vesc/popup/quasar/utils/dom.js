@@ -45,15 +45,15 @@ export function ready (fn) {
   document.addEventListener('DOMContentLoaded', fn, false)
 }
 
-const prefix = ['-webkit-', '-moz-', '-ms-', '-o-']
-
+//const prefix = ['-webkit-', '-moz-', '-ms-', '-o-']
+/*
 export function cssTransform (val) {
   let o = { transform: val }
   prefix.forEach(p => {
     o[p + 'transform'] = val
   })
   return o
-}
+} */
 
 export default {
   offset,
@@ -61,6 +61,6 @@ export default {
   height,
   width,
   css,
-  ready,
-  cssTransform,
+  ready
+  //cssTransform,
 }

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import VueColor from '../../../vue-lib/VueColor/VueColor.js'
+import VueColor from '../../libs/VueColor/VueColor.js'
 
 export default {
   name: 'vuestic-slider-color-picker',

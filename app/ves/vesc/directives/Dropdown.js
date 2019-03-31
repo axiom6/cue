@@ -18,7 +18,7 @@ export default {
     const dropdownIon = el.querySelector('.ion')
 
     // These are directive modifiers. Which we can exploit to modify dropdown behaviour.
-    const closeOnMenuClick = binding.modifiers.closeOnMenuClick
+    const closeOnMenuClick = binding.modifiers['closeOnMenuClick']
 
     const value = binding.value || {}
     const isBlocked = value.isBlocked || false

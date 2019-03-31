@@ -1,20 +1,20 @@
 <template>
-  <vue-flatpickr-component
+  <vue-flatpickr
     class="vuestic-date-picker"
     :class="{'has-value': valueProxy && valueProxy.length}"
     v-model="valueProxy"
     v-on="$listeners"
     :config="fullConfig"
-  ></vue-flatpickr-component>
+  ></vue-flatpickr>
 </template>
 
 <script>
-import VueFlatpickrComponent from 'vue-flatpickr-component'
+import VueFlatpickr from './vue-flatpickr.js'
 
 export default {
   name: 'vuestic-date-picker',
   components: {
-    VueFlatpickrComponent,
+    VueFlatpickr,
   },
   props: {
     value: {
@@ -51,8 +51,8 @@ export default {
 
 <style lang="scss">
 
-@import "../../vuestic-sass/resources/resources";
-@import "~flatpickr/dist/flatpickr.css";
+@import "../../sass/resources/resources";
+@import "./flatpickr.css";
 
 $datepickerActive: $vue-green;
 $datepickerBackground: #333333;

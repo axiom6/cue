@@ -5,10 +5,11 @@
   >
     <div
       class="vuestic-checkbox__square"
-      @click="toggleSelection(), focused = false"
+      @click="toggleSelection() focused = false"
       @mousedown="focused = true"
       :class="{'active': value}"
     >
+      <label>
       <input
         :id="id"
         readonly
@@ -18,7 +19,7 @@
         class="vuestic-checkbox__input"
         @keypress="toggleSelection()"
         :disabled="disabled"
-      />
+      /></label>
       <i class="ion ion-md-checkmark vuestic-checkbox__icon-selected" aria-hidden="true"/>
     </div>
     <div
@@ -138,6 +139,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../../sass/resources/resources";
 .vuestic-checkbox {
   margin-bottom: $checkbox-between-items-margin;
   display: flex;

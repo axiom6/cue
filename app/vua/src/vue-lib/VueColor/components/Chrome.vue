@@ -61,11 +61,12 @@
         <!-- btn -->
         <div class="vc-chrome-toggle-btn" role="button" aria-label="Change another color definition" @click="toggleViews">
           <div class="vc-chrome-toggle-icon">
-            <svg style="width:24px; height:24px" viewBox="0 0 24 24"
+            <svg style="width:24px; height:24px"
               @mouseover="showHighlight"
               @mouseenter="showHighlight"
               @mouseout="hideHighlight">
-              <path fill="#333" d="M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z" />
+              <path fill="#333"
+                d="M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z" ></path>
             </svg>
           </div>
           <div class="vc-chrome-toggle-icon-highlight" v-show="highlight"></div>
@@ -178,15 +179,15 @@ export default {
 </script>
 
 <style>
+  /*
 .vc-chrome {
   background: #fff;
   border-radius: 2px;
   box-shadow: 0 0 2px rgba(0,0,0,.3), 0 4px 8px rgba(0,0,0,.3);
   box-sizing: initial;
   width: 225px;
-  font-family: Menlo;
-  background-color: #fff;
-}
+  font-family: Menlo, sans-serif;
+}   */
 .vc-chrome-controls {
   display: flex;
 }
@@ -202,7 +203,7 @@ export default {
   overflow: hidden;
   z-index: 1;
 }
-.vc-chrome-color-wrap .vc-checkerboard {
+.vc-chrome-color-wrap  {
   width: 30px;
   height: 30px;
   border-radius: 15px;

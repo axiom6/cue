@@ -170,13 +170,14 @@ export default {
 </script>
 
 <style>
+
 .vc-photoshop {
   background: #DCDCDC;
   border-radius: 4px;
   box-shadow: 0 0 0 1px rgba(0,0,0,.25), 0 8px 16px rgba(0,0,0,.15);
   box-sizing: initial;
   width: 513px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
 }
 .vc-photoshop__disable-fields {
   width: 390px;
@@ -205,6 +206,7 @@ export default {
   border-bottom: 2px solid #F0F0F0;
   overflow: hidden;
 }
+
 .vc-ps-saturation-wrap .vc-saturation-circle {
   width: 12px;
   height: 12px;
@@ -301,6 +303,7 @@ export default {
   width: 80px;
   position: relative;
 }
+
 .vc-ps-fields .vc-input__input {
   margin-left: 40%;
   width: 40%;

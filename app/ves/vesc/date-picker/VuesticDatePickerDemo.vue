@@ -5,7 +5,7 @@
         <div class="input-group">
           <vuestic-date-picker
             id="simple-input"
-            v-model="simple"
+            v-model="simple" value=""
           />
           <label class="control-label" for="simple-input">Simple</label>
           <i class="bar"></i>
@@ -19,6 +19,7 @@
         <div class="input-group">
           <vuestic-date-picker
             id="simple-input-2"
+            value=""
             v-model="range"
             :config="{mode: 'range'}"
           />
@@ -34,6 +35,7 @@
         <div class="input-group">
           <vuestic-date-picker
             id="simple-input-4"
+            value=""
             v-model="dayTime"
             :config="{enableTime: true}"
             @on-change="doSomethingOnChange"
@@ -47,6 +49,7 @@
           <vuestic-date-picker
             id="simple-input-3"
             v-model="dayTime"
+            value=""
             :config="{enableTime: true}"
           />
           <label class="control-label" for="simple-input-3">Day time</label>
@@ -60,9 +63,11 @@
         <div class="input-group">
           <vuestic-date-picker
             id="simple-input-5"
+            value=""
             v-model="readableDayTime"
             :config="{
               altInput: true,
+              
               altFormat: 'F j, Y',
               dateFormat: 'Y-m-d',
             }"

@@ -10,7 +10,8 @@
         @click="handleSwClick(index, offset)">
         <div
           class="vc-slider-swatch-picker"
-          :class="{'vc-slider-swatch-picker--active': offset == activeOffset, 'vc-slider-swatch-picker--white': offset === '1'}"
+          :class="{'vc-slider-swatch-picker--active': offset === activeOffset, 'vc-slider-swatch-picker--white':
+          offset === '1'}"
           :style="{background: 'hsl(' + colors.hsl.h + ', 50%, ' + (offset * 100) + '%)'}"
         ></div>
       </div>
@@ -77,7 +78,7 @@ export default {
   height: 12px;
   position: relative;
 }
-.vc-slider-hue-warp .vc-hue-picker {
+.vc-slider-hue-warp {  //  .vc-hue-picker
   width: 14px;
   height: 14px;
   border-radius: 6px;
@@ -98,26 +99,29 @@ export default {
   margin-right: 1px;
 }
 .vc-slider-swatch:first-child .vc-slider-swatch-picker {
-  border-radius: 2px 0px 0px 2px;
+  border-radius: 2px 0 0 2px;
 }
 .vc-slider-swatch:last-child {
   margin-right: 0;
 }
 .vc-slider-swatch:last-child .vc-slider-swatch-picker {
-  border-radius: 0px 2px 2px 0px;
+  border-radius: 0 2px 2px 0;
 }
 .vc-slider-swatch-picker {
   cursor: pointer;
   height: 12px;
 }
+
 .vc-slider-swatch-picker--active {
   transform: scaleY(1.8);
-  border-radius: 3.6px/2px;
+  border-radius: 2px;
 }
 .vc-slider-swatch-picker--white {
   box-shadow: inset 0 0 0 1px #ddd;
 }
 .vc-slider-swatch-picker--active.vc-slider-swatch-picker--white {
-  box-shadow: inset 0 0 0 0.6px #ddd;
+  box-shadow: inset 0 0 0 1px #ddd;
 }
+
+
 </style>

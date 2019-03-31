@@ -110,7 +110,7 @@ export default {
       return hex.replace('#', '')
     },
     activeColor () {
-      var rgba = this.colors.rgba
+      let rgba = this.colors.rgba
       return 'rgba(' + [rgba.r, rgba.g, rgba.b, rgba.a].join(',') + ')'
     }
   },

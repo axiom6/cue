@@ -1,6 +1,6 @@
 <script>
 import VuesticPopup
-  from '../vuestic-popup/quasar/components/popup/VuesticPopup.vue'
+  from '../popup/quasar/components/popup/VuesticPopup.vue'
 
 const positionMap = {
   top: { anchor: 'top middle', self: 'bottom middle' },
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../vuestic-sass/resources/resources";
+  @import "../../sass/resources/resources";
 .vuestic-dropdown {
   background: $darkest-gray;
 }

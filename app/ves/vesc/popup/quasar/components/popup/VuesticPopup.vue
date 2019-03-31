@@ -227,7 +227,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../../../../vuestic-sass/resources/resources";
+@import "../../../../../sass/resources/resources";
 
 .q-popover {
   position: fixed;

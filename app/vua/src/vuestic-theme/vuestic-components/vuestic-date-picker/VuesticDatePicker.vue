@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import VueFlatpickrComponent from 'vue-flatpickr-component'
+import VueFlatpickrComponent from './vue-flatpickr.js'
 
 export default {
   name: 'vuestic-date-picker',

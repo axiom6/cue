@@ -5,7 +5,6 @@
         v-for="c in paletteUpperCase(palette)"
         role="option"
         :aria-label="'color:' + c"
-        :aria-selected="c === pick"
         class="vc-compact-color-item"
         :key="c"
         :class="{'vc-compact-color-item--white': c === '#FFFFFF' }"

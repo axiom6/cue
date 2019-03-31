@@ -69,19 +69,19 @@ export default {
     handleChange (e, skip) {
       !skip && e.preventDefault()
 
-      var container = this.$refs.container
-      var containerWidth = container.clientWidth
-      var containerHeight = container.clientHeight
+      let container = this.$refs.container
+      let containerWidth = container.clientWidth
+      let containerHeight = container.clientHeight
 
-      var xOffset = container.getBoundingClientRect().left + window.pageXOffset
-      var yOffset = container.getBoundingClientRect().top + window.pageYOffset
-      var pageX = e.pageX || (e.touches ? e.touches[0].pageX : 0)
-      var pageY = e.pageY || (e.touches ? e.touches[0].pageY : 0)
-      var left = pageX - xOffset
-      var top = pageY - yOffset
+      let xOffset = container.getBoundingClientRect().left + window.pageXOffset
+      let yOffset = container.getBoundingClientRect().top + window.pageYOffset
+      let pageX = e.pageX || (e.touches ? e.touches[0].pageX : 0)
+      let pageY = e.pageY || (e.touches ? e.touches[0].pageY : 0)
+      let left = pageX - xOffset
+      let top = pageY - yOffset
 
-      var h
-      var percent
+      let h
+      let percent
 
       if (this.direction === 'vertical') {
         if (top < 0) {
@@ -128,7 +128,7 @@ export default {
       window.addEventListener('mousemove', this.handleChange)
       window.addEventListener('mouseup', this.handleMouseUp)
     },
-    handleMouseUp (e) {
+    handleMouseUp () {
       this.unbindEventListeners()
     },
     unbindEventListeners () {
@@ -142,10 +142,10 @@ export default {
 <style>
 .vc-hue {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border-radius: 2px;
 }
 .vc-hue--horizontal {

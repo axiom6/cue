@@ -7,13 +7,12 @@ export default {
   __install () {
     this.__installed = true
     window.addEventListener('keyup', evt => {
+      if(evt === false ) {}
       if (handlers.length === 0) {
-        return
       }
 
-      if (evt.which === 27 || evt.keyCode === 27) {
-        handlers[handlers.length - 1]()
-      }
+      //if (evt.which === 27 || evt.keyCode === 27) {
+      //  handlers[handlers.length - 1]() }
     })
   },
 

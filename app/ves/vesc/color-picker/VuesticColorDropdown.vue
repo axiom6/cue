@@ -18,6 +18,8 @@ export default {
   data () {
     return {
       isOpen: false,
+      content: "" ,
+      toggleRef: ""
     }
   },
   methods: {

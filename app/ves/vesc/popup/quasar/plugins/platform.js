@@ -17,8 +17,8 @@ function getMatch (userAgent, platformMatch) {
     /(webkit)[\/]([\w.]+)/.exec(userAgent) ||
     /(opera)(?:.*version|)[\/]([\w.]+)/.exec(userAgent) ||
     /(msie) ([\w.]+)/.exec(userAgent) ||
-    userAgent.indexOf('trident') >= 0 && /(rv)(?::| )([\w.]+)/.exec(userAgent) ||
-    userAgent.indexOf('compatible') < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(userAgent) ||
+    //userAgent.indexOf('trident') >= 0 && /(rv)(?::| )([\w.]+)/.exec(userAgent) ||
+    //userAgent.indexOf('compatible') < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(userAgent) ||
     []
 
   return {
@@ -52,8 +52,8 @@ function getPlatform (userAgent) {
 
   const platformMatch = getPlatformMatch(userAgent)
   const matched = getMatch(userAgent, platformMatch)
-  const browser = {}
-
+  const browser = { ipad:false, ipod:false, iphone:false, 'windows phone':false, cros:false,
+    opr:false, linux:false, win:false, chrome:false, iemobile:false, rv:false }
   if (matched.browser) {
     browser[matched.browser] = true
     browser.version = matched.version
@@ -152,7 +152,7 @@ function getPlatform (userAgent) {
       browser.electron = true
     } else if (document.location.href.indexOf('chrome-extension://') === 0) {
       browser.chromeExt = true
-    } else if (window._cordovaNative || window.cordova) {
+    } else if (window.cordova) { // window._cordovaNative ||
       browser.cordova = true
     }
 
@@ -204,7 +204,7 @@ export default {
   },
   parseSSR (/* ssrContext */ ssr) {
     return ssr ? {
-      is: getPlatform(ssr.req.headers['user-agent']),
+      is: getPlatform(ssr['req']['headers']['user-agent']),
       has: this.has,
       within: this.within,
     } : {
@@ -216,7 +216,7 @@ export default {
   install ($q, queues, Vue) {
     if (isSSR) {
       queues.server.push((q, ctx) => {
-        q.platform = this.parseSSR(ctx.ssr)
+        q.platform = this.parseSSR(ctx['ssr'])
       })
       return
     }

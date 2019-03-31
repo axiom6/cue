@@ -85,22 +85,22 @@
       no focus
       <div class="anchor">
         true
-        <input type="text">
+        <label><input type="text"></label>
         <vuestic-popup
           v-model="noFocusTrue"
           :noFocus="true"
         >
-          <input type="text" placeholder="no focus">
+          <label><input type="text" placeholder="no focus"></label>
         </vuestic-popup>
       </div>
       <div class="anchor">
         false
-        <input type="text">
+        <label><input type="text"></label>
         <vuestic-popup
           v-model="noFocusFalse"
           :noFocus="false"
         >
-          <input type="text" placeholder="no focus">
+          <label><input type="text" placeholder="no focus"></label>
         </vuestic-popup>
       </div>
     </div>
@@ -112,7 +112,7 @@
           v-model="noRefocusTrue"
           :noRefocus="true"
         >
-          <input type="text" placeholder="no refocus">
+          <label><input type="text" placeholder="no refocus"></label>
         </vuestic-popup>
       </div>
       <div class="anchor">
@@ -121,7 +121,7 @@
           v-model="noRefocusFalse"
           :noRefocus="false"
         >
-          <input type="text" placeholder="no refocus">
+          <label><input type="text" placeholder="no refocus"></label>
         </vuestic-popup>
       </div>
     </div>

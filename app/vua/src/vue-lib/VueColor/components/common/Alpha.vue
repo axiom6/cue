@@ -32,22 +32,22 @@ export default {
       return this.value
     },
     gradientColor () {
-      var rgba = this.colors.rgba
-      var rgbStr = [rgba.r, rgba.g, rgba.b].join(',')
+      let rgba = this.colors.rgba
+      let rgbStr = [rgba.r, rgba.g, rgba.b].join(',')
       return 'linear-gradient(to right, rgba(' + rgbStr + ', 0) 0%, rgba(' + rgbStr + ', 1) 100%)'
     }
   },
   methods: {
     handleChange (e, skip) {
       !skip && e.preventDefault()
-      var container = this.$refs.container
-      var containerWidth = container.clientWidth
+      let container = this.$refs.container
+      let containerWidth = container.clientWidth
 
-      var xOffset = container.getBoundingClientRect().left + window.pageXOffset
-      var pageX = e.pageX || (e.touches ? e.touches[0].pageX : 0)
-      var left = pageX - xOffset
+      let xOffset = container.getBoundingClientRect().left + window.pageXOffset
+      let pageX = e.pageX || (e.touches ? e.touches[0].pageX : 0)
+      let left = pageX - xOffset
 
-      var a
+      let a
       if (left < 0) {
         a = 0
       } else if (left > containerWidth) {
@@ -86,25 +86,25 @@ export default {
 <style>
 .vc-alpha {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .vc-alpha-checkboard-wrap {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   overflow: hidden;
 }
 .vc-alpha-gradient {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .vc-alpha-container {
   cursor: pointer;

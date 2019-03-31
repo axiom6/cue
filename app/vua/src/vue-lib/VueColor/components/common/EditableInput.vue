@@ -1,13 +1,13 @@
 <template>
   <div class="vc-editable-input">
-    <input
+    <label><input
       :aria-labelledby="labelId"
       class="vc-input__input"
       v-model="val"
       @keydown="handleKeyDown"
       @input="update"
       ref="input"
-    >
+    ></label>
     <span :for="label" class="vc-input__label" :id="labelId">{{labelSpanText}}</span>
     <span class="vc-input__desc">{{desc}}</span>
   </div>

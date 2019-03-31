@@ -83,9 +83,9 @@ export function repositionIfNeeded (anchor, target, selfOrigin, anchorOrigin, ta
   return targetPosition
 }
 
-export function parseHorizTransformOrigin (pos) {
-  return pos === 'middle' ? 'center' : pos
-}
+//export function parseHorizTransformOrigin (pos) {
+//  return pos === 'middle' ? 'center' : pos
+//}
 
 export function setPosition ({ el, animate, anchorEl, anchorOrigin, selfOrigin, maxHeight, event, anchorClick, touchPosition, offset, touchOffset, cover }) {
   let anchor
@@ -173,10 +173,8 @@ export function offsetValidator (val) {
   if (val.length !== 2) {
     return false
   }
-  if (typeof val[0] !== 'number' || typeof val[1] !== 'number') {
-    return false
-  }
-  return true
+  return !(typeof val[0] !== 'number' || typeof val[1] !== 'number');
+
 }
 
 export function parsePosition (pos) {

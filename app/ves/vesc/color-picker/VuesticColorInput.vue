@@ -8,13 +8,14 @@
     />
     <div class="form-group">
       <div class="input-group">
+        <label>
         <input
           class="vuestic-color-input__input"
           :disabled="disabled"
           v-model="valueProxy"
           :class="{'vuestic-color-input__input__pointer': disabled}"
           placeholder="input color"
-        >
+        ></label>
         <i class="bar"
            :style="'width: ' + 9 + 'ch'"/>
       </div>

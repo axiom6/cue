@@ -24,8 +24,7 @@ export default {
 
       function animate (elapsedTime) {
         elapsedTime += increment
-        var position = easeInOut(elapsedTime, start, change, duration)
-        el.scrollTop = position
+        el.scrollTop = easeInOut(elapsedTime, start, change, duration)
 
         if (elapsedTime < duration) {
           setTimeout(function () {

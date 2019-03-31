@@ -8,6 +8,7 @@ export default {
   data () {
     return {
       showing: false,
+      options: { modelToggle: { history:false } }
     }
   },
   watch: {

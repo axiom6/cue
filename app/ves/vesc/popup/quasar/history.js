@@ -22,14 +22,14 @@ export default {
       }
     }
 
-    const exit = cfg.cordova === void 0 || cfg.cordova.backButtonExit !== false
+    const exit = cfg.cordova === void 0 || cfg.cordova['backButtonExit'] !== false
 
     document.addEventListener('deviceready', () => {
       document.addEventListener('backbutton', () => {
         if (this.__history.length) {
           this.__history.pop().handler()
         } else if (exit && window.location.hash === '#/') {
-          navigator.app.exitApp()
+          //navigator.app.exitApp()
         } else {
           window.history.back()
         }

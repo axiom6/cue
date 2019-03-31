@@ -62,21 +62,21 @@
 </template>
 
 <script>
-import Vuetable           from '../../../vue-lib/VueTable/Vuetable.vue'
-import VuetablePagination from '../../../vue-lib/VueTable/VuetablePagination.vue'
+import Vuetable           from '../../libs/VueTable/Vuetable.vue'
+import VuetablePagination from '../../libs/VueTable/VuetablePagination.vue'
 import FilterBar from './datatable-components/FilterBar.vue'
 import ItemsPerPage from './datatable-components/ItemsPerPage.vue'
 import DefaultPerPageDefinition from './data/items-per-page-definition'
-import QueryParams from './data/query-params'
-import Vue from '../../../../pub/js/lib/vue.esm.browser.js'
-import DataTableStyles from '../vuestic-datatable/data/data-table-styles'
+import QueryParams from './data/query-params.js'
+import Vue from '../../libs/vue/vue.esm.browser.js'
+import DataTableStyles from './data/data-table-styles.js'
 //port SpringSpinner from 'epic-spinners/src/components/lib/SpringSpinner'
 
 export default {
   name: 'vuestic-data-table',
   components: {
     FilterBar,
-    Vuetable,
+    'vuetable':Vuetable,
     VuetablePagination,
     ItemsPerPage,
   },
@@ -253,6 +253,9 @@ export default {
   },
 
   methods: {
+    refresh() {
+    
+    },
     onFilterSet (filterText) {
       this.filterText = filterText
       Vue.nextTick(() => this.$refs.vuetable.refresh())
@@ -307,7 +310,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../vuestic-sass/resources/resources";
+  @import "../../sass/resources/resources";
 .vuestic-data-table {
   min-height: 24rem;
 

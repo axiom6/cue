@@ -42,11 +42,7 @@ export default {
     },
     dotisSelected () {
       if (this.value !== '') {
-        if (this.palette.includes(this.value)) {
-          return false
-        } else {
-          return true
-        }
+        return !this.palette.includes(this.value);
       }
     },
   },
