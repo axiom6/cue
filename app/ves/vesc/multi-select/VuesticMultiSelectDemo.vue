@@ -19,8 +19,8 @@
 
 <script>
 
-import CountriesList from 'data/CountriesList'
-import VuesticMultiSelect from './VuesticMultiSelect'
+import CountriesList from '../../data/CountriesList.js'
+import VuesticMultiSelect from './VuesticMultiSelect.vue'
 
 export default {
   components: {

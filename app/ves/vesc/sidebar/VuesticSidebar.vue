@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import VuesticScrollbar from '../vuestic-scrollbar/VuesticScrollbar.vue'
+import VuesticScrollbar from '../scrollbar/VuesticScrollbar.vue'
 export default {
   name: 'vuestic-sidebar',
   components:{ VuesticScrollbar },
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../vuestic-sass/resources/resources";
+  @import "../../sass/resources/resources";
 .vuestic-sidebar {
   @include media-breakpoint-down(md) {
     top: $sidebar-mobile-top;

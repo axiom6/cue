@@ -5,22 +5,24 @@
         label="Select country"
         v-model="selectedCountry"
         :options="CountriesList"
-      />
+        value=""
+      ></vuestic-simple-select>
     </div>
     <div class="demo-container__item">
       <vuestic-simple-select
         label="Select country duplicate"
         v-model="selectedCountry"
         :options="CountriesList"
-      />
+        value=""
+      ></vuestic-simple-select>
     </div>
   </div>
 </template>
 
 <script>
 
-import CountriesList from 'data/CountriesList'
-import VuesticSimpleSelect from './VuesticSimpleSelect'
+import CountriesList from '../../data/CountriesList.js'
+import VuesticSimpleSelect from './VuesticSimpleSelect.vue'
 
 export default {
   components: {

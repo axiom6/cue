@@ -3,7 +3,7 @@
     style="left: 420px; top: 180px; width: 400px; background-color: white; position: absolute">
     <vuestic-tree-category label="Category with icon">
       <div slot="icon" class="icon">
-        <span aria-hidden="true" class="ion ion-md-nutrition"/>
+        <span aria-hidden="true" class="ion ion-md-nutrition"></span>
       </div>
       <vuestic-tree-node>
         One

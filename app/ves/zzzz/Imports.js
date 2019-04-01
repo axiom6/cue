@@ -28,6 +28,24 @@ import VuesticIconDemo from '../vesc/icon/VuesticIconDemo.vue'
 import VuesticIconVuesticDemo from '../vesc/icon/VuesticIconVuesticDemo.vue'
 import VuesticMediumEditor from '../vesc/medium-editor/VuesticMediumEditor.vue'
 import VuesticToasted from '../vesc/mixins/VuesticToasted.js'
+import VuesticModal from '../vesc/modal/VuesticModal.vue'
+import VuesticMultiSelectDemo from '../vesc/multi-select/VuesticMultiSelectDemo.vue'
+import VuesticProgressBarDemo from '../vesc/progress-bar/VuesticProgressBarDemo.vue'
+import CircleProgressBarDemo from '../vesc/progress-bar/progress-types/CircleProgressBarDemo.vue'
+import HorizontalProgressBarDemo from '../vesc/progress-bar/progress-types/HorizontalProgressBarDemo.vue'
+import VerticalProgressBarDemo from '../vesc/progress-bar/progress-types/VerticalProgressBarDemo.vue'
+import VuesticRadioButtonDemo from  '../vesc/radio-button/VuesticRadioButtonDemo.vue'
+import VuesticSimpleSelect413Demo from  '../vesc/simple-select/VuesticSimpleSelect413Demo.vue'
+import VuesticSimpleSelectDemo from  '../vesc/simple-select/VuesticSimpleSelectDemo.vue'
+import VuesticSliderDemo from  '../vesc/slider/VuesticSliderDemo.vue'
+import VuesticTagDemo from  '../vesc/tag/VuesticTagDemo.vue'
+import VuesticTimelineDemo from  '../vesc/timelines/VuesticTimelineDemo.vue'
+import VuesticTimelineItemDemo from  '../vesc/timelines/VuesticTimelineItemDemo.vue'
+import VuesticTimelineSeparatorDemo from  '../vesc/timelines/VuesticTimelineSeparatorDemo.vue'
+import SquareWithIconDemo from  '../vesc/tree-view/vuestic-div-checkbox/SquareWithIconDemo.vue'
+import VuesticTreeCategoryDemo from  '../vesc/tree-view/VuesticTreeCategoryDemo.vue'
+import VuesticTreeNodeDemo from  '../vesc/tree-view/VuesticTreeNodeDemo.vue'
+import VuesticTreeRootDemo from  '../vesc/tree-view/VuesticTreeRootDemo.vue'
 
 
 if( router === false && VuesticAlert===false && VuesticCardDemo===false && VuesticChartDemo===false ) {}
@@ -38,4 +56,9 @@ if( VuesticSliderColorPickerDemo===false && ItemsPerPageDemo===false) {}
 if( VuetablePaginationDropdown===false && VuetablePaginationInfo === false && VuesticDatePickerDemo ===false ) {}
 if( VuesticDropdownDemo===false && VuesticPopupDemo === false && installQuasarPlatform===false ) {}
 if( VuesticFileUpload===false && VuesticIconDemo===false&&VuesticIconVuesticDemo===false) {}
-if( VuesticMediumEditor===false &&VuesticToasted===false) {}
+if( VuesticMediumEditor===false &&VuesticToasted===false&&VuesticModal===false&&VuesticMultiSelectDemo===false) {}
+if( VuesticProgressBarDemo===false&&CircleProgressBarDemo===false&&HorizontalProgressBarDemo===false){}
+if( VerticalProgressBarDemo===false&&VuesticRadioButtonDemo===false&&VuesticSimpleSelect413Demo===false){}
+if( VuesticSimpleSelectDemo===false&&VuesticSliderDemo===false&&VuesticTagDemo===false){}
+if( VuesticTimelineDemo===false&&VuesticTimelineItemDemo===false&&VuesticTimelineSeparatorDemo===false){}
+if( SquareWithIconDemo===false&&VuesticTreeCategoryDemo===false&&VuesticTreeNodeDemo===false&&VuesticTreeRootDemo===false){}

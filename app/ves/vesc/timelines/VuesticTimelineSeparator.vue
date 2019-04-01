@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../vuestic-sass/resources/resources';
+@import '../../sass/resources/resources';
 
 .vuestic-timeline-separator {
   display: flex;

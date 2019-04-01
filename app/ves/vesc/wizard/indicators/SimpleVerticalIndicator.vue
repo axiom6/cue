@@ -21,7 +21,7 @@
     >
       <span
         class="wizard-step-line"
-      />
+      ></span>
       <span class="wizard-step-line completed-line"></span>
       <span class="wizard-step-label ellipsis"></span>
       <span class="wizard-step-indicator"></span>
@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../../../../vuestic-theme/vuestic-sass/resources/resources";
+  @import "../../../sass/resources/resources";
 $wizard-steps-height: 100%;
 $wizard-steps-width: 100%;
 $wizard-steps-p-v: 2.5rem;

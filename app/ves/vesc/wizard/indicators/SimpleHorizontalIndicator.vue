@@ -9,10 +9,10 @@
       v-for="(step, index) of steps"
       :key="index"
     >
-      <span class="wizard-step-line"/>
-      <span class="wizard-step-line completed-line"/>
+      <span class="wizard-step-line"></span>
+      <span class="wizard-step-line completed-line"></span>
       <span class="wizard-step-label ellipsis">{{step.label}}</span>
-      <span class="wizard-step-indicator"/>
+      <span class="wizard-step-indicator"></span>
     </li>
     <li
       v-if="!steps"
@@ -20,12 +20,12 @@
       :style="{ height: 100 + '%' }"
       :class="{'active': isActive}"
     >
-      <span class="wizard-step-line first-line"/>
+      <span class="wizard-step-line first-line"></span>
       <span
         class="wizard-step-line completed-line"
         :class="{'makeActive': isActive}"
-      />
-      <span class="wizard-step-indicator"/>
+      ></span>
+      <span class="wizard-step-indicator"></span>
     </li>
   </ul>
 </template>
@@ -57,7 +57,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../../../../vuestic-theme/vuestic-sass/resources/resources";
+  @import "../../../sass/resources/resources";
 $wizard-step-height: 3.75rem;
 $wizard-step-indicator-height: 1rem;
 $wizard-step-label-font-size: $font-size-h4;

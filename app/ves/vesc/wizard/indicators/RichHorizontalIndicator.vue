@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../../../../vuestic-theme/vuestic-sass/resources/resources";
+  @import "../../../sass/resources/resources";
 $wizard-step-height: 5.5rem;
 $wizard-step-label-font-size: $font-size-h4;
 $wizard-step-padding-v: 0;

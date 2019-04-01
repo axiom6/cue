@@ -1,7 +1,7 @@
 <template>
   <div class="vuestic-profile-card flex align--center">
     <div class="photo">
-      <img :src="photoSource"/>
+      <img :src="photoSource" alt="Photo Source">
     </div>
     <h5 class="name">{{name}}</h5>
     <span class="location"><span
@@ -28,6 +28,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../../sass/resources/resources";
 $vuestic-profile-card-width: 12.6875rem;
 $vuestic-profile-card-photo-diameter: 9.375rem;
 

@@ -10,10 +10,7 @@
 </template>
 
 <script>
-import {
-  colorConfig,
-  VuesticTheme,
-} from './../../vuestic-color-picker/VuesticTheme'
+import { colorConfig, VuesticTheme } from './../../color-picker/VuesticTheme.js'
 
 export default {
   data () {
@@ -123,7 +120,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../../vuestic-sass/resources/resources";
+  @import "../../../sass/resources/resources";
 .circle-bar {
   $step: 1;
   $loops: 100 / $step;

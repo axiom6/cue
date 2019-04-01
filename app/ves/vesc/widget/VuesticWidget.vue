@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../vuestic-sass/resources/resources";
+  @import "../../sass/resources/resources";
 .vuestic-widget {
   background: $widget-bg;
   box-shadow: $widget-box-shadow;

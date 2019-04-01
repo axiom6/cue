@@ -7,8 +7,8 @@
       :disabled="disabled"
       :animated="animated"
       :theme="theme"
-      v-if="type == 'horizontal'"
-    />
+      v-if="type === 'horizontal'"
+    ></horizontal-bar>
     <vertical-bar
       :value="transformedValue"
       :text="text"
@@ -16,8 +16,8 @@
       :disabled="disabled"
       :animated="animated"
       :theme="theme"
-      v-if="type == 'vertical'"
-    />
+      v-if="type === 'vertical'"
+    ></vertical-bar>
     <circle-bar
       :value="transformedValue"
       :text="text"
@@ -25,8 +25,8 @@
       :animated="animated"
       :theme="theme"
       :background-theme="backgroundTheme"
-      v-if="type == 'circle'"
-    />
+      v-if="type === 'circle'"
+    ></circle-bar>
   </div>
 </template>
 

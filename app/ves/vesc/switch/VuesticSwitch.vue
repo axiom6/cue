@@ -29,6 +29,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../../sass/resources/resources";
 .vuestic-switch {
   cursor: pointer;
   display: flex;

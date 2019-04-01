@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import VuesticTag from './VuesticTag.vue'
-import { logMixin } from '../vuestic-popup/quasar/mixins/logMixin'
+import VuesticTag   from './VuesticTag.vue'
+import { logMixin } from '../popup/quasar/mixins/logMixin.js'
 
 export default {
   mixins: [logMixin],

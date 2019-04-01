@@ -22,7 +22,7 @@
 import {
   colorConfig,
   VuesticTheme,
-} from './../../vuestic-color-picker/VuesticTheme'
+} from './../../color-picker/VuesticTheme.js'
 
 export default {
   props: {
@@ -77,7 +77,7 @@ export default {
 
 <style lang="scss">
 .vertical-bar {
-  @import "../../../vuestic-sass/resources/resources";
+  @import "../../../sass/resources/resources";
   font-size: $progress-bar-value-font-size;
   font-weight: $font-weight-bold;
 

@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import   Slider   from '../../../vue-lib/VueSliderComponent.vue'
-import { Store  } from '../../../store/Store.js'
+import   Slider   from '../../libs/VueSlider/VueSliderComponent.vue'
+import { Store  } from '../../vuex/store/Store.js'
 
 export default {
   name: 'vuestic-slider',

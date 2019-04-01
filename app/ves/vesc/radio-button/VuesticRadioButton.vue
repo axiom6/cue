@@ -3,30 +3,29 @@
     class="vuestic-radio-button"
     :class="computedClass"
     @click="onClick"
-  >
+  ></div>
     <div
       class="vuestic-radio-button__content"
       @mousedown="focused = false"
       @mouseup="focused = false"
       :class="{'active': isActive}"
-    >
-      <input
+    ></div>
+      <label><input
         @focus="focused = true"
         @mouseout="focused = false"
         @blur="focused = false"
         :checked="isActive" type="radio" class="vuestic-radio-button__input"
         :disabled="disabled"
-      />
+      ></label>
       <div class="vuestic-radio-button__icon">
-        <div class="vuestic-radio-button__icon-circle"/>
+        <div class="vuestic-radio-button__icon-circle"></div>
       </div>
-    </div>
     <div class="vuestic-radio-button__slot-container">
       <slot name="label">
         {{ computedLabel }}
       </slot>
     </div>
-  </div>
+
 </template>
 
 <script>
@@ -86,8 +85,9 @@ export default {
 </script>
 
 <style lang="scss">
-
+  @import "../../sass/resources/resources";
 .vuestic-radio-button {
+  
   cursor: pointer;
   display: flex;
   flex-direction: row;

@@ -4,7 +4,8 @@
       <vuestic-slider
         :options="options"
         v-model="iconSize"
-      />
+        value=""
+      ></vuestic-slider>
       {{ value }}
     </div>
   </div>

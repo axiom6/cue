@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../vuestic-sass/resources/resources";
+  @import "../../sass/resources/resources";
 .vuestic-navbar {
   .layout-fixed & {
     position: fixed;

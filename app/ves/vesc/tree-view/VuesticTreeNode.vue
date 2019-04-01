@@ -31,9 +31,10 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '../../sass/resources/resources';
 .vuestic-tree-node {
   .form-group {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
   display: flex;
   &-checkbox {

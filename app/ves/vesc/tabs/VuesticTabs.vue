@@ -35,7 +35,7 @@
 
 <script>
 // d-none and d-lg-flex were deleted, bug will be fixed in the nearest update
-import VuesticSimpleSelect from '../vuestic-simple-select/VuesticSimpleSelect.vue'
+import VuesticSimpleSelect from '../simple-select/VuesticSimpleSelect.vue'
 export default {
   name: 'vuestic-tabs',
   components: { VuesticSimpleSelect },
@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../vuestic-sass/resources/resources";
+  @import "../../sass/resources/resources";
 .vuestic-tabs {
   background-color: white;
   .simple-select {

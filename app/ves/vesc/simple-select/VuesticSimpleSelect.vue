@@ -57,8 +57,8 @@
 </template>
 
 <script>
-import Dropdown  from '../../vuestic-directives/Dropdown.js'
-import Scrollbar from '../vuestic-scrollbar/VuesticScrollbar.vue'
+import Dropdown  from '../directives/Dropdown.js'
+import Scrollbar from '../scrollbar/VuesticScrollbar.vue'
 
 export default {
   name: 'vuestic-simple-select',
@@ -205,7 +205,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../../vuestic-theme/vuestic-sass/resources/resources";
+  @import "../../sass/resources/resources";
 .vuestic-simple-select {
 
   &__unselect {

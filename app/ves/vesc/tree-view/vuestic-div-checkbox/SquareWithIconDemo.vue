@@ -2,7 +2,7 @@
   <div
     style="left: 420px; top: 180px; background-color: white; position: absolute"
   >
-    <square-with-icon iconClass="ion ion-md-checkmark"/>
+    <square-with-icon iconClass="ion ion-md-checkmark"></square-with-icon>
   </div>
 </template>
 

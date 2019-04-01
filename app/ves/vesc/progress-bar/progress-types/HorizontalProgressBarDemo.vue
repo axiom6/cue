@@ -16,7 +16,7 @@
 
 <script>
 
-import HorizontalBar from './../progress-types/HorizontalProgressBar'
+import HorizontalBar from './HorizontalProgressBar.vue'
 
 export default {
   components: {

@@ -6,11 +6,12 @@
       <vuestic-checkbox
         slot="checkbox"
         v-model="checkboxValue"
-      />
+        value=""
+      ></vuestic-checkbox>
       <div slot="icon" class="icon">
         <span aria-hidden="true"
               class="ion ion-md-nutrition"
-        />
+        ></span>
       </div>
       Some text
     </vuestic-tree-node>
@@ -20,7 +21,7 @@
 <script>
 import VuesticTreeNode from './VuesticTreeNode.vue'
 
-import VuesticCheckbox from '../vuestic-checkbox/VuesticCheckbox'
+import VuesticCheckbox from '../checkbox/VuesticCheckbox.vue'
 
 export default {
   components: {

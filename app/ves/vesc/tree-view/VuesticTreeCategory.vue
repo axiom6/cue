@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import SquareWithIcon from './vuestic-div-checkbox/SquareWithIcon.vue'
-import VuesticCheckbox from '../vuestic-checkbox/VuesticCheckbox'
+import SquareWithIcon  from './vuestic-div-checkbox/SquareWithIcon.vue'
+import VuesticCheckbox from '../checkbox/VuesticCheckbox.vue'
 
 export default {
   name: 'vuestic-tree-category',
@@ -91,6 +91,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '../../sass/resources/resources';
 .vuestic-tree-category {
   &__header {
     cursor: pointer;

@@ -4,11 +4,11 @@
     v-dropdown
     :class="{'has-error': hasErrors()}">
     <div class="input-group dropdown-toggle">
-      <input
+      <label><input
         readonly
         :class="{'has-value': !!displayValue}"
         v-bind:value="displayValue"
-        required/>
+        required></label>
       <label class="control-label">{{label}}</label><i class="bar"></i>
       <small v-show="hasErrors()" class="help text-danger">{{
         showRequiredError() }}
@@ -42,8 +42,8 @@
 </template>
 
 <script>
-import Dropdown from 'vuestic-directives/Dropdown'
-import Scrollbar from '../vuestic-scrollbar/VuesticScrollbar.vue'
+import Dropdown from '../directives/Dropdown.js'
+import Scrollbar from '../scrollbar/VuesticScrollbar.vue'
 
 export default {
   name: 'vuestic-multi-select',
@@ -91,7 +91,7 @@ export default {
 
   methods: {
     unselectOptions () {
-      this.value.splice(0, this.value.length)
+      this.value['splice'](0, this.value.length)
       this.displayValue = ''
       this.$emit('input', this.value)
     },
@@ -146,6 +146,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import "../../sass/resources/resources";
 .multiselect-form-group {
   &__unselect {
     margin-right: 20px;

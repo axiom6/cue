@@ -165,6 +165,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../../sass/resources/resources";
 //Modals
 $modal-header-padding-x: $widget-padding;
 $modal-header-padding-y: 0;
@@ -228,8 +229,7 @@ $modal-lg: 850px;
 
   .modal-footer {
     justify-content: center;
-    padding: 0 $modal-inner-padding;
-    padding-bottom: calc(#{$modal-inner-padding} - #{$modal-footer-btns-padding-bottom});
+    padding: 0 $modal-inner-padding calc(#{$modal-inner-padding} - #{$modal-footer-btns-padding-bottom});
     flex-wrap: wrap;
     .btn {
       margin: 0 $modal-footer-btns-margin-x $modal-footer-btns-padding-bottom $modal-footer-btns-margin-x;

@@ -63,7 +63,7 @@
           </button>
         </div>
 
-        <div class="btn-container" v-if="currentStep == steps.length - 1">
+        <div class="btn-container" v-if="currentStep === steps.length - 1">
           <button class="btn btn-primary wizard-next pull-right final-step"
                   @click.prevent="completeWizard()">
             {{lastStepLabel}}
@@ -75,8 +75,7 @@
 </template>
 
 <script>
-import SimpleHorizontalIndicator
-  from './indicators/SimpleHorizontalIndicator.vue'
+import SimpleHorizontalIndicator from './indicators/SimpleHorizontalIndicator.vue'
 import RichHorizontalIndicator from './indicators/RichHorizontalIndicator.vue'
 import RichVerticalIndicator from './indicators/RichVerticalIndicator.vue'
 import SimpleVerticalIndicator from './indicators/SimpleVerticalIndicator.vue'

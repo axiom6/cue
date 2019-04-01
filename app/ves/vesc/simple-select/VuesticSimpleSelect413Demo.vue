@@ -6,7 +6,8 @@
         v-model="value"
         option-key="description"
         :options="imagePositions"
-      />
+        value=""
+      ></vuestic-simple-select>
     </div>
   </div>
 </template>
@@ -14,11 +15,11 @@
 <script>
 // Fixes https://github.com/epicmaxco/vuestic-admin/issues/413
 
-import VuesticSimpleSelect from './VuesticSimpleSelect'
+import VuesticSimpleSelect from './VuesticSimpleSelect.vue'
 
 export default {
   name: 'my-component',
-  components: { VuesticSimpleSelect },
+  components: { 'vuestic-simple-select':VuesticSimpleSelect },
   data: () => {
     return {
       value: null,

@@ -24,7 +24,7 @@
 import {
   colorConfig,
   VuesticTheme,
-} from './../../vuestic-color-picker/VuesticTheme'
+} from './../../color-picker/VuesticTheme.js'
 
 export default {
   props: {
@@ -78,7 +78,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../../vuestic-sass/resources/resources";
+  @import "../../../sass/resources/resources";
 .horizontal-bar {
   display: inline-block;
   width: 100%;
