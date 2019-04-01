@@ -23,6 +23,11 @@ import VuesticDatePickerDemo from '../vesc/date-picker/VuesticDatePickerDemo.vue
 import VuesticDropdownDemo from '../vesc/dropdown/VuesticDropdownDemo.vue'
 import VuesticPopupDemo from '../vesc/popup/quasar/components/popup/VuesticPopupDemo.vue'
 import { installQuasarPlatform } from '../vesc/popup/quasar/install.js'
+import VuesticFileUpload from '../vesc/file-upload/VuesticFileUpload.vue'
+import VuesticIconDemo from '../vesc/icon/VuesticIconDemo.vue'
+import VuesticIconVuesticDemo from '../vesc/icon/VuesticIconVuesticDemo.vue'
+import VuesticMediumEditor from '../vesc/medium-editor/VuesticMediumEditor.vue'
+import VuesticToasted from '../vesc/mixins/VuesticToasted.js'
 
 
 if( router === false && VuesticAlert===false && VuesticCardDemo===false && VuesticChartDemo===false ) {}
@@ -32,3 +37,5 @@ if( VuesticColorInputDemo===false && VuesticColorPickerInputDemo===false && Vues
 if( VuesticSliderColorPickerDemo===false && ItemsPerPageDemo===false) {}
 if( VuetablePaginationDropdown===false && VuetablePaginationInfo === false && VuesticDatePickerDemo ===false ) {}
 if( VuesticDropdownDemo===false && VuesticPopupDemo === false && installQuasarPlatform===false ) {}
+if( VuesticFileUpload===false && VuesticIconDemo===false&&VuesticIconVuesticDemo===false) {}
+if( VuesticMediumEditor===false &&VuesticToasted===false) {}

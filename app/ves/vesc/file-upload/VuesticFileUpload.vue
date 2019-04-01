@@ -76,7 +76,7 @@ export default {
         const extn = fileName.substring(fileName.lastIndexOf('.') + 1)
           .toLowerCase()
         if (this.fileTypes.indexOf(extn) === -1) {
-          this.$refs.mediumModal.open()
+          this.$refs['mediumModal'].open()
         }
         return this.fileTypes.indexOf(extn) !== -1
       })
@@ -96,6 +96,7 @@ export default {
 </script>
 
 <style lang='scss'>
+  @import "../../sass/resources/resources";
 .vuestic-file-upload {
   &--dropzone {
     background-color: $lighter-green;

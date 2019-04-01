@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MediumEditor from 'medium-editor'
+//import MediumEditor from 'medium-editor.j' // medioum-editor.js is NodeJS
 
 export default {
   name: 'vuestic-medium-editor',
@@ -49,12 +49,12 @@ export default {
 
   methods: {
     initEditor () {
-      this.editor = new MediumEditor(this.$el, this.editorOptions)
-      this.$emit('initialized', this.editor)
+      //this.editor = new MediumEditor(this.$el, this.editorOptions)
+      //this.$emit('initialized', this.editor)
     },
 
     destroyEditor () {
-      this.editor.destroy()
+      //this.editor.destroy()
     },
   },
 }

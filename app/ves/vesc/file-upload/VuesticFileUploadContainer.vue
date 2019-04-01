@@ -8,10 +8,10 @@
         class="vuestic-file-upload-container__field__text"
         v-if="dropzone"
       >
-        {{ $t('fileUpload.dragNdropFiles') }}
+        {{ $t('$ref.fileUpload.dragNdropFiles') }}
       </div>
       <button type="button" class="btn btn-primary btn-micro">
-        {{ $t('fileUpload.uploadFile') }}
+        {{ $t('$ref.fileUpload.uploadFile') }}
       </button>
       <input
         type="file"
@@ -46,13 +46,14 @@ export default {
   methods: {
     changeFieldValue (e) {
       this.$emit('upload', e)
-      this.$refs.fieldInput.value = ''
+      this.$refs['fieldInput'].value = ''
     },
   },
 }
 </script>
 
 <style lang='scss'>
+  @import "../../sass/resources/resources";
 .vuestic-file-upload-container {
   position: relative;
 

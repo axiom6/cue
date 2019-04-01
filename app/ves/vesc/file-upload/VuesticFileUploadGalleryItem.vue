@@ -67,8 +67,8 @@ export default {
       reader.readAsDataURL(this.file.image)
       reader.onload = (e) => {
         for (let i = 0; i < imageFileTypes.length; i++) {
-          if (e.target.result.indexOf(imageFileTypes[i]) >= 0) {
-            this.previewImage = e.target.result
+          if (e.target['result'].indexOf(imageFileTypes[i]) >= 0) {
+            this.previewImage = e.target['result']
           }
         }
       }
@@ -88,6 +88,7 @@ export default {
 </script>
 
 <style lang='scss'>
+  @import "../../sass/resources/resources";
 .file-upload-gallery-item {
   position: relative;
   width: 100%;

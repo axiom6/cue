@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Resize from '../../../directives/ResizeHandler'
+import Resize from '../directives/ResizeHandler.js'
 export default {
   name: 'vuestic-layout',
   props: {

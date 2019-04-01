@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../../vuestic-theme/vuestic-sass/resources/resources";
+  @import "../../sass/resources/resources";
 .vuestic-feed {
   padding-top: .5rem;
   padding-bottom: .5rem;
